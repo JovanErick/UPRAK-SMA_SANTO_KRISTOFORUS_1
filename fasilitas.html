@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fasilitas — SMA Santo Kristoforus 1</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/Image/Rectangle Logo Sekolah Kristoforus.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* ══════════════════════════════════════════════
+         PAGE HERO
+         ══════════════════════════════════════════════ */
+      .fac-hero {
+        position: relative;
+        min-height: 400px;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+        color: var(--clr-white);
+      }
+
+      .fac-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background: url("Image/Carousel_1.jpeg") center / cover no-repeat;
+      }
+
+      .fac-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(
+          to top,
+          rgba(20, 28, 50, 0.95) 0%,
+          rgba(20, 28, 50, 0.6) 55%,
+          rgba(0, 0, 0, 0.1) 100%
+        );
+      }
+
+      .fac-hero__content {
+        position: relative;
+        z-index: 1;
+        padding: 0 clamp(16px, 8vw, 275px) 56px;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 32px;
+        flex-wrap: wrap;
+      }
+
+      .fac-hero__breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 16px;
+      }
+
+      .fac-hero__breadcrumb a {
+        color: rgba(255, 255, 255, 0.45);
+        transition: color 0.2s;
+      }
+      .fac-hero__breadcrumb a:hover {
+        color: var(--clr-white);
+      }
+      .fac-hero__breadcrumb i {
+        font-size: 9px;
+      }
+
+      .fac-hero__label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--clr-primary);
+        margin-bottom: 12px;
+      }
+
+      .fac-hero__title {
+        font-family: var(--ff-heading);
+        font-size: clamp(32px, 5.5vw, 58px);
+        color: var(--clr-white);
+        line-height: 1.1;
+      }
+
+      /* Count badge row */
+      .fac-hero__meta {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+        padding-bottom: 6px;
+      }
+
+      .fac-hero__meta-item {
+        text-align: center;
+      }
+
+      .fac-hero__meta-num {
+        font-family: var(--ff-heading);
+        font-size: clamp(28px, 3.5vw, 44px);
+        color: var(--clr-white);
+        line-height: 1;
+        display: block;
+      }
+
+      .fac-hero__meta-label {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .fac-hero__meta-divider {
+        width: 1px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      /* ══════════════════════════════════════════════
+         FILTER BAR
+         ══════════════════════════════════════════════ */
+      .fac-filter {
+        background: var(--clr-white);
+        padding: 0 clamp(16px, 8vw, 275px);
+        border-bottom: 1px solid #e8eef7;
+        position: sticky;
+        top: var(--header-h);
+        z-index: 90;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .fac-filter__list {
+        display: flex;
+        gap: 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .fac-filter__list::-webkit-scrollbar {
+        display: none;
+      }
+
+      .fac-filter__btn {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 16px 20px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: #888;
+        background: none;
+        border: none;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        white-space: nowrap;
+        transition:
+          color 0.2s,
+          border-color 0.2s;
+      }
+
+      .fac-filter__btn i {
+        font-size: 13px;
+      }
+
+      .fac-filter__btn:hover {
+        color: var(--clr-primary);
+      }
+
+      .fac-filter__btn.is-active {
+        color: var(--clr-primary);
+        border-bottom-color: var(--clr-primary);
+      }
+
+      /* ══════════════════════════════════════════════
+         MAIN GRID SECTION
+         ══════════════════════════════════════════════ */
+      .fac-main {
+        padding: clamp(48px, 6vw, 80px) clamp(16px, 8vw, 275px);
+        background: var(--clr-tertiary);
+      }
+
+      .fac-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      /* CARD */
+      .fac-card {
+        background: var(--clr-white);
+        border-radius: var(--radius);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 2px 12px rgba(61, 109, 183, 0.06);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .fac-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 36px rgba(61, 109, 183, 0.14);
+      }
+
+      .fac-card__media {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 16 / 10;
+        background: var(--clr-tertiary);
+        flex-shrink: 0;
+      }
+
+      .fac-card__media img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.45s ease;
+      }
+
+      .fac-card:hover .fac-card__media img {
+        transform: scale(1.06);
+      }
+
+      /* Placeholder when no image */
+      .fac-card__placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #dde8f5, #c8d9ee);
+        color: var(--clr-primary);
+        opacity: 0.7;
+      }
+
+      .fac-card__placeholder i {
+        font-size: 36px;
+      }
+      .fac-card__placeholder span {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .fac-card__badge {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        padding: 3px 10px;
+        background: var(--clr-primary);
+        color: var(--clr-white);
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        border-radius: 3px;
+        z-index: 1;
+      }
+
+      .fac-card__badge--green {
+        background: #2e7d52;
+      }
+      .fac-card__badge--amber {
+        background: #b07d25;
+      }
+      .fac-card__badge--dark {
+        background: var(--clr-secondary);
+      }
+
+      .fac-card__body {
+        padding: 20px 22px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+      }
+
+      .fac-card__category {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--clr-primary);
+      }
+
+      .fac-card__name {
+        font-family: var(--ff-heading);
+        font-size: clamp(16px, 1.8vw, 20px);
+        color: var(--clr-secondary);
+        line-height: 1.2;
+      }
+
+      .fac-card__desc {
+        font-size: 13px;
+        color: #666;
+        line-height: 1.75;
+        flex: 1;
+      }
+
+      .fac-card__footer {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-top: 12px;
+        border-top: 1px solid #eef2f8;
+        margin-top: 4px;
+        flex-wrap: wrap;
+      }
+
+      .fac-card__tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 11px;
+        font-weight: 600;
+        color: #888;
+      }
+
+      .fac-card__tag i {
+        color: var(--clr-primary);
+        font-size: 11px;
+      }
+
+      /* ══════════════════════════════════════════════
+         SECTION HEADERS inside main
+         ══════════════════════════════════════════════ */
+      .fac-section-title {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-top: 12px;
+      }
+
+      .fac-section-title__line {
+        flex: 1;
+        height: 1px;
+        background: #d0ddef;
+      }
+
+      .fac-section-title__text {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--clr-primary);
+        white-space: nowrap;
+      }
+
+      /* ══════════════════════════════════════════════
+         CTA
+         ══════════════════════════════════════════════ */
+      .fac-cta {
+        background: var(--clr-primary);
+        padding: clamp(48px, 6vw, 72px) clamp(16px, 8vw, 275px);
+        text-align: center;
+        color: var(--clr-white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .fac-cta__title {
+        font-family: var(--ff-heading);
+        font-size: clamp(24px, 3.5vw, 38px);
+        color: var(--clr-white);
+      }
+
+      .fac-cta__desc {
+        font-size: clamp(13px, 1.4vw, 15px);
+        color: rgba(255, 255, 255, 0.75);
+        max-width: 520px;
+        line-height: 1.8;
+      }
+
+      .fac-cta__btns {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 8px;
+      }
+
+      .btn--white {
+        color: var(--clr-primary);
+        background: var(--clr-white);
+        border-color: var(--clr-white);
+      }
+
+      .btn--white:hover {
+        background: transparent;
+        color: var(--clr-white);
+      }
+
+      .btn--ghost-white {
+        color: var(--clr-white);
+        background: transparent;
+        border-color: rgba(255, 255, 255, 0.55);
+      }
+
+      .btn--ghost-white:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: var(--clr-white);
+      }
+
+      /* ══════════════════════════════════════════════
+         RESPONSIVE
+         ══════════════════════════════════════════════ */
+      @media (max-width: 992px) {
+        .fac-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .fac-hero__content {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .fac-grid {
+          grid-template-columns: 1fr;
+        }
+        .fac-filter__btn {
+          padding: 14px 14px;
+          font-size: 11px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .fac-hero {
+          min-height: 340px;
+        }
+        .fac-hero__meta {
+          gap: 16px;
+        }
+        .fac-main {
+          padding: 36px 16px;
+        }
+      }
+
+      /* Filter hide/show */
+      .fac-card[data-category] {
+        transition:
+          opacity 0.3s,
+          transform 0.3s;
+      }
+      .fac-card.is-hidden {
+        display: none;
+      }
+      .fac-section-title.is-hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <a href="/" class="site-header__logo-link">
+        <img
+          src="/Image/Logo Sekolah Kristoforus_REMAKE.png"
+          alt="Logo Sekolah Katolik Santo Kristoforus"
+          class="site-header__logo"
+        />
+      </a>
+      <nav class="site-nav" id="main-nav" aria-label="Navigasi Utama">
+        <a href="index.html#tentang-kami" class="site-nav__link">Tentang</a>
+        <a href="index.html#kristoforus-value" class="site-nav__link">Nilai</a>
+        <a href="index.html#fasilitas-teaser" class="site-nav__link is-active"
+          >Fasilitas</a
+        >
+        <a href="index.html#academics" class="site-nav__link">Ekskul</a>
+        <a href="index.html#berita" class="site-nav__link">Berita</a>
+      </nav>
+      <div class="site-header__cta">
+        <a
+          href="#"
+          class="btn btn--outline"
+          style="font-size: 12px; padding: 8px 16px"
+          >Hubungi Kami</a
+        >
+      </div>
+      <button
+        class="site-header__hamburger"
+        id="hamburgerBtn"
+        aria-label="Buka menu"
+        aria-expanded="false"
+        aria-controls="mobileNav"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigasi Mobile">
+      <div class="mobile-nav__header">
+        <span
+          style="
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--clr-secondary);
+            letter-spacing: 1px;
+          "
+          >MENU</span
+        >
+        <button
+          class="mobile-nav__close"
+          id="mobileNavClose"
+          aria-label="Tutup menu"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="mobile-nav__links">
+        <a
+          href="index.html#tentang-kami"
+          class="mobile-nav__link"
+          data-mobile-link
+          ><i class="fas fa-school"></i> Tentang Kami</a
+        >
+        <a
+          href="index.html#kristoforus-value"
+          class="mobile-nav__link"
+          data-mobile-link
+          ><i class="fas fa-heart"></i> Kristoforus Value</a
+        >
+        <a
+          href="index.html#fasilitas-teaser"
+          class="mobile-nav__link"
+          data-mobile-link
+          ><i class="fas fa-building"></i> Fasilitas</a
+        >
+        <a href="index.html#academics" class="mobile-nav__link" data-mobile-link
+          ><i class="fas fa-star"></i> Ekstrakulikuler</a
+        >
+        <a href="index.html#berita" class="mobile-nav__link" data-mobile-link
+          ><i class="fas fa-newspaper"></i> Berita &amp; Pengumuman</a
+        >
+      </div>
+      <div
+        style="padding: 20px 24px; display: flex; gap: 10px; flex-wrap: wrap"
+      >
+        <a
+          href="#"
+          class="btn btn--outline"
+          style="font-size: 12px; padding: 8px 16px"
+          >Hubungi Kami</a
+        >
+      </div>
+      <div class="mobile-nav__footer">
+        SMA Santo Kristoforus 1 &mdash; Jakarta Barat
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO -->
+      <section class="fac-hero" aria-label="Hero Fasilitas">
+        <div class="fac-hero__content">
+          <div class="fac-hero__left">
+            <nav class="fac-hero__breadcrumb" aria-label="Breadcrumb">
+              <a href="index.html">Beranda</a>
+              <i class="fas fa-chevron-right"></i>
+              <span>Fasilitas</span>
+            </nav>
+            <p class="fac-hero__label">Sarana &amp; Prasarana</p>
+            <h1 class="fac-hero__title">Fasilitas Sekolah</h1>
+          </div>
+          <div class="fac-hero__meta" aria-label="Ringkasan fasilitas">
+            <div class="fac-hero__meta-item">
+              <span class="fac-hero__meta-num">14</span>
+              <span class="fac-hero__meta-label">Fasilitas</span>
+            </div>
+            <div class="fac-hero__meta-divider" aria-hidden="true"></div>
+            <div class="fac-hero__meta-item">
+              <span class="fac-hero__meta-num">4</span>
+              <span class="fac-hero__meta-label">Laboratorium</span>
+            </div>
+            <div class="fac-hero__meta-divider" aria-hidden="true"></div>
+            <div class="fac-hero__meta-item">
+              <span class="fac-hero__meta-num">2</span>
+              <span class="fac-hero__meta-label">Lapangan</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FILTER BAR -->
+      <div class="fac-filter" role="navigation" aria-label="Filter fasilitas">
+        <ul class="fac-filter__list">
+          <li>
+            <button class="fac-filter__btn is-active" data-filter="all">
+              <i class="fas fa-th-large"></i> Semua
+            </button>
+          </li>
+          <li>
+            <button class="fac-filter__btn" data-filter="seni">
+              <i class="fas fa-music"></i> Seni &amp; Budaya
+            </button>
+          </li>
+          <li>
+            <button class="fac-filter__btn" data-filter="lab">
+              <i class="fas fa-flask"></i> Laboratorium
+            </button>
+          </li>
+          <li>
+            <button class="fac-filter__btn" data-filter="olahraga">
+              <i class="fas fa-running"></i> Olahraga
+            </button>
+          </li>
+          <li>
+            <button class="fac-filter__btn" data-filter="umum">
+              <i class="fas fa-door-open"></i> Umum
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- GRID -->
+      <section class="fac-main" aria-label="Daftar fasilitas">
+        <div class="fac-grid" id="facGrid">
+          <!-- ─── SENI & BUDAYA ─────────────────────── -->
+          <div class="fac-section-title" data-section="seni">
+            <span class="fac-section-title__text">Seni &amp; Budaya</span>
+            <div class="fac-section-title__line"></div>
+          </div>
+
+          <!-- Ruang MD -->
+          <div class="fac-card" data-category="seni" id="r-md">
+            <div class="fac-card__media">
+              <img
+                src="Image/Fasilitas/Ruang-band_1.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Seni Musik</p>
+              <h2 class="fac-card__name">Ruang Band</h2>
+              <p class="fac-card__desc">
+                Ruang khusus untuk mengasah keterampilan dan kreativitas dalam
+                bermusik. Dilengkapi dengan alat musik modern dan fasilitas
+                pendukung, sebagai sarana untuk mengekspresikan bakat musik.
+              </p>
+            </div>
+          </div>
+
+          <!-- Ruang Padus -->
+          <div class="fac-card" data-category="seni" id="r-padus">
+            <div class="fac-card__media">
+              <img
+                src="Image/Fasilitas/Ruang-band_1.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Seni Vokal</p>
+              <h2 class="fac-card__name">Ruang Paduan Suara</h2>
+              <p class="fac-card__desc">
+                Ruang khusus untuk melatih vokal dan harmonisasi dalam paduan
+                suara. Dilengkapi dengan fasilitas akustik sebagai wadah untuk
+                mengembangkan kemampuan bernyanyi bersama.
+              </p>
+            </div>
+          </div>
+
+          <!-- ─── LABORATORIUM ─────────────────────── -->
+          <div class="fac-section-title" data-section="lab">
+            <span class="fac-section-title__text">Laboratorium</span>
+            <div class="fac-section-title__line"></div>
+          </div>
+
+          <!-- Lab Fisika -->
+          <div class="fac-card" data-category="lab" id="lab-fis">
+            <div class="fac-card__media">
+              <img
+                src="Image/Fasilitas/Lab-fisika_1.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Ilmu Pengetahuan Alam</p>
+              <h2 class="fac-card__name">Laboratorium Fisika</h2>
+              <p class="fac-card__desc">
+                Peralatan eksperimen fisika yang lengkap untuk mendukung
+                pembelajaran konsep-konsep mekanika, listrik, optik, dan
+                gelombang secara praktis dan interaktif.
+              </p>
+            </div>
+          </div>
+
+          <!-- Lab Kimia -->
+          <div class="fac-card" data-category="lab" id="lab-kim">
+            <div class="fac-card__media">
+              <img
+                src="Image/Fasilitas/Lab-biologi_1.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Ilmu Pengetahuan Alam</p>
+              <h2 class="fac-card__name">Laboratorium Kimia</h2>
+              <p class="fac-card__desc">
+                Laboratorium kimia berstandar keamanan tinggi, lengkap dengan
+                alat titrasi, spektroskopi, dan reagen kimia yang dibutuhkan
+                untuk praktikum kurikulum SMA.
+              </p>
+            </div>
+          </div>
+
+          <!-- Lab Biologi -->
+          <div class="fac-card" data-category="lab" id="lab-bio">
+            <div class="fac-card__media">
+              <img
+                src="Image/Fasilitas/Lab-biologi_2.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Ilmu Pengetahuan Alam</p>
+              <h2 class="fac-card__name">Laboratorium Biologi</h2>
+              <p class="fac-card__desc">
+                Dilengkapi dengan mikroskop, preparat, model anatomi, dan
+                koleksi spesimen yang memungkinkan siswa mempelajari ilmu
+                kehidupan secara langsung dan mendalam.
+              </p>
+            </div>
+          </div>
+
+          <div class="fac-card" data-category="lab" id="lab-komp">
+            <div class="fac-card__media">
+              <img
+                src="Image/Fasilitas/Lab-komputer_1.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Teknologi</p>
+              <h2 class="fac-card__name">Laboratorium Komputer</h2>
+              <p class="fac-card__desc">
+              Laboratorium komputer yang dilengkapi dengan perangkat terbaru dan koneksi internet cepat. Sebagai ruang untuk belajar, mengembangkan keterampilan digital, dan mendukung kegiatan praktikum serta penelitian di bidang teknologi informasi.
+              </p>
+            </div>
+          </div>
+          <!-- ─── OLAHRAGA ─────────────────────── -->
+          <div class="fac-section-title" data-section="olahraga">
+            <span class="fac-section-title__text"
+              >Olahraga &amp; Aktivitas Fisik</span
+            >
+            <div class="fac-section-title__line"></div>
+          </div>
+
+          <!-- Lapangan Bawah -->
+          <div class="fac-card" data-category="olahraga" id="lap-bawah">
+            <div class="fac-card__media">
+              <img
+                src="Image/Fasilitas/Ruang-band_1.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Olahraga</p>
+              <h2 class="fac-card__name">Lapangan Basket</h2>
+              <p class="fac-card__desc">
+                Area lapangan di lantai dasar untuk kegiatan olahraga outdoor.
+                Cocok untuk upacara bendera, senam pagi, dan berbagai kegiatan
+                fisik di ruang terbuka.
+              </p>
+            </div>
+          </div>
+
+          <!-- Ruang Olahraga -->
+          <div class="fac-card" data-category="olahraga" id="r-olahraga">
+            <div class="fac-card__media">
+              <img
+                src="Image/Fasilitas/Lapangan-badminton_1.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Olahraga</p>
+              <h2 class="fac-card__name">Lapangan Badminton</h2>
+              <p class="fac-card__desc">
+                Lapangan khusus untuk bermain badminton yang dirancang dengan
+                standar ukuran resmi sebagai sarana untuk berlatih, meningkatkan
+                keterampilan, dan menjunjung semangat olahraga di lingkungan
+                sekolah.
+              </p>
+            </div>
+          </div>
+
+          <!-- ─── UMUM ─────────────────────── -->
+          <div class="fac-section-title" data-section="umum">
+            <span class="fac-section-title__text">Fasilitas Umum</span>
+            <div class="fac-section-title__line"></div>
+          </div>
+
+          <!-- Kantin -->
+          <div class="fac-card" data-category="umum" id="kantin">
+            <div class="fac-card__media">
+              <img
+                src="Image/Fasilitas/Ruang-band_1.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Konsumsi</p>
+              <h2 class="fac-card__name">Kantin</h2>
+              <p class="fac-card__desc">
+                Kantin sekolah yang menyediakan makanan dan minuman sehat dengan
+                harga terjangkau. Dikelola dengan standar kebersihan yang ketat
+                untuk menjaga kesehatan seluruh warga sekolah.
+              </p>
+            </div>
+          </div>
+
+          <!-- Toilet Atas -->
+          <div class="fac-card" data-category="umum" id="toilet">
+            <div class="fac-card__media">
+              <img
+                src="Image/Fasilitas/Toilet_2.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Sanitasi</p>
+              <h2 class="fac-card__name">Toilet</h2>
+              <p class="fac-card__desc">
+                Fasilitas sanitasi yang selalu dijaga kebersihan
+                dan ketersediaan airnya. Terpisah antara putra dan putri,
+                dirancang untuk kenyamanan dan privasi siswa.
+              </p>
+            </div>
+          </div>
+
+          <!-- Toilet Bawah -->
+          <div class="fac-card" data-category="umum" id="Kelas">
+            <div class="fac-card__media">
+              <img
+                src="Image/Fasilitas/Kelas_1.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Pembelajaran</p>
+              <h2 class="fac-card__name">Kelas</h2>
+              <p class="fac-card__desc">
+             Ruang pembelajaran yang dilengkapi dengan meja, kursi, papan tulis, dan perangkat multimedia. Sebagai tempat untuk mengembangkan pengetahuan, keterampilan, dan interaksi antara guru dan siswa dalam proses belajar-mengajar.
+              </p>
+            </div>
+          </div>
+          <div class="fac-card" data-category="umum" id="gereja">
+            <div class="fac-card__media">
+              <img
+                src="Image/Fasilitas/Gereja_1.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Rohani</p>
+              <h2 class="fac-card__name">Gereja</h2>
+              <p class="fac-card__desc">
+          Tempat ibadah yang dirancang untuk mendalami kehidupan spiritual. Dilengkapi dengan fasilitas yang mendukung kegiatan ibadah, doa, dan pembelajaran agama, sebagai ruang untuk memperkuat iman dan kebersamaan umat.
+              </p>
+            </div>
+          </div>
+
+          <div class="fac-card" data-category="umum" id="r-bk">
+            <div class="fac-card__media">
+              <img
+                src="Image/Fasilitas/Ruang-BK_1.webp"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Layanan Siswa</p>
+              <h2 class="fac-card__name">Ruang Bimbingan & Konseling</h2>
+              <p class="fac-card__desc">
+          Ruang yang dirancang untuk memberikan layanan bimbingan dan konseling kepada siswa.Sebagai tempat untuk mendiskusikan permasalahan pribadi, akademik, dan sosial secara nyaman dan terbuka.
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <!-- /fac-grid -->
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="site-footer">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <div class="site-footer__logo-wrap">
+            <img
+              src="/Image/Rectangle Logo Sekolah Kristoforus.png"
+              alt="Logo SMA Santo Kristoforus"
+              class="site-footer__logo"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Tautan Cepat</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+            <li><a href="kristoforus-values.html">Kristoforus Values</a></li>
+            <li><a href="#">Berita &amp; Pengumuman</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Ikuti Kami</p>
+          <ul class="footer-socmed">
+            <li>
+              <a
+                href="https://www.instagram.com/osis_smaxto1/"
+                class="footer-socmed__item"
+              >
+                <span class="footer-socmed__icon footer-socmed__icon--ig"
+                  ><i class="fab fa-instagram"></i
+                ></span>
+                <span class="footer-socmed__info"
+                  ><span class="footer-socmed__name">Instagram</span
+                  ><span class="footer-socmed__handle"
+                    >@osis_smaxto1</span
+                  ></span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/people/SMA-Santo-Kristoforus-1/100067754111313/"
+                class="footer-socmed__item"
+              >
+                <span class="footer-socmed__icon footer-socmed__icon--fb"
+                  ><i class="fab fa-facebook-f"></i
+                ></span>
+                <span class="footer-socmed__info"
+                  ><span class="footer-socmed__name">Facebook</span
+                  ><span class="footer-socmed__handle"
+                    >SMA Santo Kristoforus 1</span
+                  ></span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/@SMAXTO1_Official"
+                class="footer-socmed__item"
+              >
+                <span class="footer-socmed__icon footer-socmed__icon--yt"
+                  ><i class="fab fa-youtube"></i
+                ></span>
+                <span class="footer-socmed__info"
+                  ><span class="footer-socmed__name">YouTube</span
+                  ><span class="footer-socmed__handle"
+                    >SMA Santo Kristoforus 1 Official</span
+                  ></span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/@osis_smaxto1"
+                class="footer-socmed__item"
+              >
+                <span class="footer-socmed__icon footer-socmed__icon--tt"
+                  ><i class="fab fa-tiktok"></i
+                ></span>
+                <span class="footer-socmed__info"
+                  ><span class="footer-socmed__name">TikTok</span
+                  ><span class="footer-socmed__handle"
+                    >@osis_smaxto1</span
+                  ></span
+                >
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Hubungi Kami</p>
+          <ul class="footer-contact">
+            <li class="footer-contact__item">
+              <i
+                class="fas fa-map-marker-alt footer-contact__icon"
+                aria-hidden="true"
+              ></i
+              ><span>Jl. Rahayu No.1A, Jelambar, Grogol</span>
+            </li>
+            <li class="footer-contact__item">
+              <i
+                class="fas fa-phone-alt footer-contact__icon"
+                aria-hidden="true"
+              ></i
+              ><span>(021) 56960276</span>
+            </li>
+            <li class="footer-contact__item">
+              <i
+                class="fas fa-envelope footer-contact__icon"
+                aria-hidden="true"
+              ></i
+              ><span>info@kristo.sch.id</span>
+            </li>
+            <li class="footer-contact__item">
+              <i
+                class="fas fa-clock footer-contact__icon"
+                aria-hidden="true"
+              ></i
+              ><span>Senin &ndash; Jumat: 07.00 &ndash; 15.00 WIB</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="site-footer__divider" />
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">
+          Dibuat untuk memenuhi Ujian Praktek Coding 2026
+        </p>
+        <a href="#" class="site-footer__members">Anggota Kelompok</a>
+      </div>
+    </footer>
+
+    <script>
+      /* ── Mobile Nav ── */
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const mobileOverlay = document.getElementById("mobileOverlay");
+      const mobileNav = document.getElementById("mobileNav");
+      const mobileNavClose = document.getElementById("mobileNavClose");
+
+      function openMobileNav() {
+        mobileOverlay.style.display = "block";
+        requestAnimationFrame(() => {
+          mobileOverlay.classList.add("is-open");
+          mobileNav.classList.add("is-open");
+        });
+        hamburgerBtn.setAttribute("aria-expanded", "true");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeMobileNav() {
+        mobileOverlay.classList.remove("is-open");
+        mobileNav.classList.remove("is-open");
+        hamburgerBtn.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+        setTimeout(() => {
+          mobileOverlay.style.display = "none";
+        }, 300);
+      }
+
+      hamburgerBtn.addEventListener("click", openMobileNav);
+      mobileNavClose.addEventListener("click", closeMobileNav);
+      mobileOverlay.addEventListener("click", closeMobileNav);
+      document
+        .querySelectorAll("[data-mobile-link]")
+        .forEach((l) => l.addEventListener("click", closeMobileNav));
+
+      /* ── Filter ── */
+      const filterBtns = document.querySelectorAll(".fac-filter__btn");
+      const cards = document.querySelectorAll(".fac-card[data-category]");
+      const sections = document.querySelectorAll(
+        ".fac-section-title[data-section]",
+      );
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+
+          const filter = btn.dataset.filter;
+
+          cards.forEach((card) => {
+            if (filter === "all" || card.dataset.category === filter) {
+              card.classList.remove("is-hidden");
+            } else {
+              card.classList.add("is-hidden");
+            }
+          });
+
+          sections.forEach((sec) => {
+            if (filter === "all" || sec.dataset.section === filter) {
+              sec.classList.remove("is-hidden");
+            } else {
+              sec.classList.add("is-hidden");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami — SMA Santo Kristoforus 1</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/Image/Rectangle Logo Sekolah Kristoforus.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="aboutus.css" />
+  </head>
+  <body>
+    <!-- ════════════════════════════════
+         HEADER
+         ════════════════════════════════ -->
+    <header class="site-header">
+      <a href="/" class="site-header__logo-link">
+        <img
+          src="/Image/Logo Sekolah Kristoforus_REMAKE.png"
+          alt="Logo Sekolah Katolik Santo Kristoforus"
+          class="site-header__logo"
+        />
+      </a>
+      <nav class="site-nav" id="main-nav" aria-label="Navigasi Utama">
+        <a href="index.html#tentang-kami" class="site-nav__link is-active"
+          >Tentang</a
+        >
+        <a href="index.html#kristoforus-value" class="site-nav__link">Nilai</a>
+        <a href="index.html#fasilitas-teaser" class="site-nav__link"
+          >Fasilitas</a
+        >
+        <a href="index.html#academics" class="site-nav__link">Ekskul</a>
+        <a href="index.html#berita" class="site-nav__link">Berita</a>
+      </nav>
+      <div class="site-header__cta">
+        <a
+          href="#"
+          class="btn btn--outline"
+          style="font-size: 12px; padding: 8px 16px"
+          >Hubungi Kami</a
+        >
+      </div>
+      <button
+        class="site-header__hamburger"
+        id="hamburgerBtn"
+        aria-label="Buka menu"
+        aria-expanded="false"
+        aria-controls="mobileNav"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+
+    <!-- Mobile Nav Drawer -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigasi Mobile">
+      <div class="mobile-nav__header">
+        <span
+          style="
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--clr-secondary);
+            letter-spacing: 1px;
+          "
+          >MENU</span
+        >
+        <button
+          class="mobile-nav__close"
+          id="mobileNavClose"
+          aria-label="Tutup menu"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="mobile-nav__links">
+        <a
+          href="index.html#tentang-kami"
+          class="mobile-nav__link"
+          data-mobile-link
+          ><i class="fas fa-school"></i> Tentang Kami</a
+        >
+        <a
+          href="index.html#kristoforus-value"
+          class="mobile-nav__link"
+          data-mobile-link
+          ><i class="fas fa-heart"></i> Kristoforus Value</a
+        >
+        <a
+          href="index.html#fasilitas-teaser"
+          class="mobile-nav__link"
+          data-mobile-link
+          ><i class="fas fa-building"></i> Fasilitas</a
+        >
+        <a href="index.html#academics" class="mobile-nav__link" data-mobile-link
+          ><i class="fas fa-star"></i> Ekstrakulikuler</a
+        >
+        <a href="index.html#berita" class="mobile-nav__link" data-mobile-link
+          ><i class="fas fa-newspaper"></i> Berita &amp; Pengumuman</a
+        >
+      </div>
+      <div
+        style="padding: 20px 24px; display: flex; gap: 10px; flex-wrap: wrap"
+      >
+        <a
+          href="#"
+          class="btn btn--outline"
+          style="font-size: 12px; padding: 8px 16px"
+          >Hubungi Kami</a
+        >
+      </div>
+      <div class="mobile-nav__footer">
+        SMA Santo Kristoforus 1 &mdash; Jakarta Barat
+      </div>
+    </nav>
+
+    <main>
+      <!-- ════════════════════════════════
+           PAGE HERO
+           ════════════════════════════════ -->
+      <div class="page-hero">
+        <div class="page-hero__content">
+          <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Beranda</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Tentang Kami</span>
+          </nav>
+          <p class="page-hero__label">Profil Sekolah</p>
+          <h1 class="page-hero__title">Mengenal SMA Santo Kristoforus 1</h1>
+        </div>
+      </div>
+
+      <!-- ════════════════════════════════
+           KONTEN UTAMA
+           ════════════════════════════════ -->
+      <div class="about-page">
+        <!-- ── Intro ── -->
+        <div class="about-intro">
+          <div class="about-intro__media">
+            <div class="about-intro__img-wrap">
+              <img
+                src="https://kristo.sch.id/pages/sma1/images/Halaman-Dalam-SMA-I.jpg"
+                alt="Lingkungan SMA Santo Kristoforus 1"
+                loading="lazy"
+              />
+            </div>
+            <div class="about-intro__accent" aria-hidden="true"></div>
+          </div>
+          <div class="about-intro__text">
+            <div class="section-header">
+              <p class="section-header__label">Siapa Kami</p>
+              <h2 class="section-header__title">
+                Sekolah Katolik yang Unggul &amp; Berkarakter
+              </h2>
+              <div class="section-header__divider"></div>
+            </div>
+            <p class="about-intro__desc">
+              SMA Santo Kristoforus 1 adalah sekolah menengah atas Katolik yang
+              berdiri di jantung Jakarta Barat. Selama lebih dari empat dekade,
+              kami telah mendampingi ribuan siswa menemukan potensi terbaik
+              mereka — bukan hanya secara akademis, tetapi juga dalam membentuk
+              karakter yang kokoh, beriman, dan berbudi pekerti luhur.
+            </p>
+            <p class="about-intro__desc">
+              Kami percaya bahwa pendidikan sejati adalah perpaduan antara
+              kecerdasan intelektual, kematangan emosional, dan kedalaman
+              spiritualitas. Dengan kurikulum yang komprehensif, tenaga pendidik
+              berdedikasi, dan lingkungan yang kondusif, SMA Santo Kristoforus 1
+              hadir sebagai rumah kedua bagi setiap siswa yang ingin bertumbuh.
+            </p>
+          </div>
+        </div>
+
+        <!-- ── Statistik ── -->
+        <div class="about-stats-bar" aria-label="Statistik sekolah">
+          <div class="about-stats-bar__item">
+            <span class="about-stats-bar__num">1994</span>
+            <span class="about-stats-bar__label">Tahun Berdiri</span>
+          </div>
+          <div class="about-stats-bar__item">
+            <span class="about-stats-bar__num">32+</span>
+            <span class="about-stats-bar__label">Tahun Pengalaman</span>
+          </div>
+          <div class="about-stats-bar__item">
+            <span class="about-stats-bar__num">285</span>
+            <span class="about-stats-bar__label">Siswa Aktif</span>
+          </div>
+          <div class="about-stats-bar__item">
+            <span class="about-stats-bar__num">27</span>
+            <span class="about-stats-bar__label">Tenaga Pendidik</span>
+          </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <!-- ── Sejarah ── -->
+        <div class="about-history">
+          <div class="section-header">
+            <p class="section-header__label">Perjalanan Kami</p>
+            <h2 class="section-header__title">Sejarah Singkat</h2>
+            <div class="section-header__divider"></div>
+          </div>
+
+          <div class="about-history__grid">
+            <div class="about-history__text">
+              <p>
+                SMA Santo Kristoforus I didirikan pada tahun 1994 oleh Yayasan
+                Diannanda dengan tiga kelas dan 97 siswa. Meskipun sempat menuai
+                kontroversi dari Keuskupan Agung Jakarta, penjelasan Yayasan
+                Diannanda berhasil meyakinkan pihak terkait, sehingga sekolah
+                ini dapat terus berkembang.
+              </p>
+              <p>
+                Pada 24 Agustus 1997, Paroki Santo Kristoforus dan Yayasan
+                Diannanda merayakan peresmian Aula dan Gedung Sekolah yang
+                diberkati oleh Duta Besar Vatikan, Mgr. Pietro Sambi. Gedung ini
+                menjadi simbol kerjasama antara Paroki dan Yayasan Diannanda,
+                dengan aula yang mendukung kegiatan SMP dan SMA Santo
+                Kristoforus I.
+              </p>
+              <p>
+                Gedung ini terdiri dari empat lantai: lantai satu untuk aula,
+                dan lantai dua hingga empat untuk ruang kelas. Mgr. Pietro Sambi
+                menekankan pentingnya kerjasama dalam pembangunan ini dan
+                mengingatkan bahwa "Sekolah Katolik harus bermutu tinggi,
+                seperti pelita yang ditempatkan di atas kaki dian."
+              </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline" aria-label="Linimasa sejarah sekolah">
+              <div class="timeline__item">
+                <div class="timeline__year">1994</div>
+                <div class="timeline__body">
+                  <p class="timeline__event">Pendirian Sekolah</p>
+                  <p class="timeline__desc">
+                    Didirikan oleh Yayasan Diannanda dengan membuka 3 kelas
+                    untuk 97 siswa.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__year">1997</div>
+                <div class="timeline__body">
+                  <p class="timeline__event">Peresmian Gedung</p>
+                  <p class="timeline__desc">
+                    Peresmian dan pemberkatan gedung sekolah oleh Pietro Sambi.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__year">2016</div>
+                <div class="timeline__body">
+                  <p class="timeline__event">Legalitas &amp; Akreditasi</p>
+                  <p class="timeline__desc">
+                    Memperoleh pembaruan izin operasional serta akreditasi A
+                    dari Badan Akreditasi Nasional Sekolah/Madrasah.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__year">2021</div>
+                <div class="timeline__body">
+                  <p class="timeline__event">Reakreditasi</p>
+                  <p class="timeline__desc">
+                    Kembali memperoleh akreditasi A (unggul).
+                  </p>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__year">2026</div>
+                <div class="timeline__body">
+                  <p class="timeline__event">Perkembangan Berkelanjutan</p>
+                  <p class="timeline__desc">
+                    Terus meningkatkan kualitas pendidikan dengan dukungan
+                    fasilitas, internet, dan sistem pembelajaran modern.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <!-- ── Visi & Misi ── -->
+        <div class="about-vismis">
+          <div class="section-header">
+            <p class="section-header__label">Arah &amp; Tujuan</p>
+            <h2 class="section-header__title">Visi &amp; Misi</h2>
+            <div class="section-header__divider"></div>
+          </div>
+
+          <div class="about-vismis__grid">
+            <!-- Visi -->
+            <div class="vismis-card">
+              <div class="vismis-card__icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <p class="vismis-card__title">Visi</p>
+              <p class="vismis-card__text">
+                <strong
+                  >Menjadi Sekolah Katolik yang Unggul dan Profesional.</strong
+                >
+              </p>
+              <p class="vismis-card__text">
+                Visi ini menjadi kompas yang mengarahkan seluruh kegiatan
+                pendidikan kami — menghasilkan lulusan yang tidak hanya cerdas
+                secara intelektual, tetapi juga matang secara karakter dan
+                spiritualitas.
+              </p>
+            </div>
+
+            <!-- Misi -->
+            <div class="vismis-card">
+              <div class="vismis-card__icon">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <p class="vismis-card__title">Misi</p>
+              <ul class="misi-list">
+                <li class="misi-list__item">
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    >Meningkatkan dan mengembangkan kualitas SDM melalui
+                    penguasaan ilmu pengetahuan, teknologi dan bahasa.</span
+                  >
+                </li>
+                <li class="misi-list__item">
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    >Mengembangkan pendidikan karakter yang berbasis Iman dan
+                    Moral Kristiani.</span
+                  >
+                </li>
+                <li class="misi-list__item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Menanamkan nilai-nilai kebangsaan.</span>
+                </li>
+                <li class="misi-list__item">
+                  <i class="fas fa-check-circle"></i>
+                  <span
+                    >Menyelenggarakan tata kelola yang baik melalui fungsi
+                    manajemen yang profesional.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <!-- ── Struktur Pimpinan ── -->
+        <div class="about-team">
+          <div class="section-header">
+            <p class="section-header__label">Struktur Organisasi</p>
+            <h2 class="section-header__title">
+              Kepala &amp; Wakil Kepala Sekolah
+            </h2>
+            <div class="section-header__divider"></div>
+          </div>
+
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-card__img-wrap">
+                <img
+                  src="/Image/F.X.-Sri-Wahyudi-S.Pd_-705x452.gif"
+                  alt="F. X. Sri Wahyudi, S.Pd."
+                />
+              </div>
+              <div class="team-card__body">
+                <p class="team-card__name">F. X. Sri Wahyudi, S.Pd.</p>
+                <p class="team-card__role">Kepala Sekolah</p>
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="team-card__img-wrap">
+                <img
+                  src="/Image/Dhessy-Riasari-S.Pd_-705x452.gif"
+                  alt="Dhessy Riasari, S.Pd."
+                />
+              </div>
+              <div class="team-card__body">
+                <p class="team-card__name">Dhessy Riasari, S.Pd.</p>
+                <p class="team-card__role">Wakasek Kesiswaan</p>
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="team-card__img-wrap">
+                <img
+                  src="/Image/Chatarina-Erni-Setyasih-S.Si_-300x192-1.gif"
+                  alt="Chatarina Erni Setyasih, S.Si."
+                />
+              </div>
+              <div class="team-card__body">
+                <p class="team-card__name">Chatarina Erni Setyasih, S.Si.</p>
+                <p class="team-card__role">Wakasek Kurikulum</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <!-- ── Akreditasi ── -->
+        <div class="about-accreditation">
+          <!-- Kiri: Badge -->
+          <div class="about-accreditation__badge-col">
+            <div class="section-header">
+              <p class="section-header__label">Pengakuan &amp; Mutu</p>
+              <h2 class="section-header__title">Akreditasi Sekolah</h2>
+              <div class="section-header__divider"></div>
+            </div>
+            <div class="accreditation-badge">
+              <span class="accreditation-badge__grade">A</span>
+              <span class="accreditation-badge__label">Nilai Sangat Baik</span>
+            </div>
+          </div>
+
+          <!-- Kanan: Penjelasan -->
+          <div class="about-accreditation__desc-col">
+            <div class="section-header">
+              <p class="section-header__label">Tentang Akreditasi</p>
+              <h2 class="section-header__title">
+                Mengapa Akreditasi A Penting?
+              </h2>
+              <div class="section-header__divider"></div>
+            </div>
+            <p class="about-accreditation__desc">
+              SMA Santo Kristoforus 1 telah meraih akreditasi
+              <strong>A (Sangat Baik)</strong> dari Badan Akreditasi Nasional
+              Sekolah/Madrasah (BAN-S/M). Akreditasi ini merupakan bukti nyata
+              komitmen kami terhadap standar mutu pendidikan nasional yang
+              tinggi.
+            </p>
+            <p class="about-accreditation__desc">
+              Penilaian akreditasi mencakup delapan standar nasional pendidikan,
+              meliputi standar isi, proses, kompetensi lulusan, pendidik dan
+              tenaga kependidikan, sarana dan prasarana, pengelolaan,
+              pembiayaan, serta penilaian pendidikan.
+            </p>
+          </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- ════════════════════════════════
+         FOOTER
+         ════════════════════════════════ -->
+    <footer id="footer" class="site-footer">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <div class="site-footer__logo-wrap">
+            <img
+              src="/Image/Rectangle Logo Sekolah Kristoforus.png"
+              alt="Logo SMA Santo Kristoforus"
+              class="site-footer__logo"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Tautan Cepat</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="#">Ekstrakulikuler</a></li>
+            <li><a href="#">Fasilitas</a></li>
+            <li><a href="#">Berita &amp; Pengumuman</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Ikuti Kami</p>
+          <ul class="footer-socmed">
+            <li>
+              <a
+                href="https://www.instagram.com/osis_smaxto1/"
+                class="footer-socmed__item"
+              >
+                <span class="footer-socmed__icon footer-socmed__icon--ig"
+                  ><i class="fab fa-instagram"></i
+                ></span>
+                <span class="footer-socmed__info">
+                  <span class="footer-socmed__name">Instagram</span>
+                  <span class="footer-socmed__handle">@osis_smaxto1</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/people/SMA-Santo-Kristoforus-1/100067754111313/"
+                class="footer-socmed__item"
+              >
+                <span class="footer-socmed__icon footer-socmed__icon--fb"
+                  ><i class="fab fa-facebook-f"></i
+                ></span>
+                <span class="footer-socmed__info">
+                  <span class="footer-socmed__name">Facebook</span>
+                  <span class="footer-socmed__handle"
+                    >SMA Santo Kristoforus 1</span
+                  >
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/@SMAXTO1_Official"
+                class="footer-socmed__item"
+              >
+                <span class="footer-socmed__icon footer-socmed__icon--yt"
+                  ><i class="fab fa-youtube"></i
+                ></span>
+                <span class="footer-socmed__info">
+                  <span class="footer-socmed__name">YouTube</span>
+                  <span class="footer-socmed__handle"
+                    >SMA Santo Kristoforus 1 Official</span
+                  >
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/@osis_smaxto1"
+                class="footer-socmed__item"
+              >
+                <span class="footer-socmed__icon footer-socmed__icon--tt"
+                  ><i class="fab fa-tiktok"></i
+                ></span>
+                <span class="footer-socmed__info">
+                  <span class="footer-socmed__name">TikTok</span>
+                  <span class="footer-socmed__handle">@osis_smaxto1</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Hubungi Kami</p>
+          <ul class="footer-contact">
+            <li class="footer-contact__item">
+              <i
+                class="fas fa-map-marker-alt footer-contact__icon"
+                aria-hidden="true"
+              ></i>
+              <span>Jl. Rahayu No.1A, Jelambar, Grogol</span>
+            </li>
+            <li class="footer-contact__item">
+              <i
+                class="fas fa-phone-alt footer-contact__icon"
+                aria-hidden="true"
+              ></i>
+              <span>(021) 56960276</span>
+            </li>
+            <li class="footer-contact__item">
+              <i
+                class="fas fa-envelope footer-contact__icon"
+                aria-hidden="true"
+              ></i>
+              <span>info@kristo.sch.id</span>
+            </li>
+            <li class="footer-contact__item">
+              <i
+                class="fas fa-clock footer-contact__icon"
+                aria-hidden="true"
+              ></i>
+              <span>Senin &ndash; Jumat: 07.00 &ndash; 15.00 WIB</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="site-footer__divider" />
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">
+          Dibuat untuk memenuhi Ujian Praktek Coding 2026
+        </p>
+        <a href="#" class="site-footer__members">Anggota Kelompok</a>
+      </div>
+    </footer>
+
+    <script src="header.js"></script>
+  </body>
+</html>
