@@ -1,0 +1,707 @@
+/* ============================================================
+   CARDS.CSS — Shared card & grid styles
+   Digunakan oleh: fasilitas.html, ekstrakulikuler.html
+   ============================================================ */
+
+/* ══════════════════════════════════════════════
+   SHARED: FILTER BAR
+   ══════════════════════════════════════════════ */
+.fac-filter,
+.ekskul-filter {
+  background: var(--clr-white);
+  padding: 0 clamp(16px, 8vw, 275px);
+  border-bottom: 1px solid #e8eef7;
+  position: sticky;
+  top: var(--header-h);
+  z-index: 90;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.fac-filter__list,
+.ekskul-filter__list {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.fac-filter__list::-webkit-scrollbar,
+.ekskul-filter__list::-webkit-scrollbar { display: none; }
+
+.fac-filter__btn,
+.ekskul-filter__btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 16px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #888;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.fac-filter__btn i,
+.ekskul-filter__btn i { font-size: 13px; }
+
+.fac-filter__btn:hover,
+.ekskul-filter__btn:hover { color: var(--clr-primary); }
+
+.fac-filter__btn.is-active,
+.ekskul-filter__btn.is-active {
+  color: var(--clr-primary);
+  border-bottom-color: var(--clr-primary);
+}
+
+/* ══════════════════════════════════════════════
+   SHARED: MAIN WRAPPER
+   ══════════════════════════════════════════════ */
+.fac-main,
+.ekskul-main {
+  padding: clamp(48px, 6vw, 80px) clamp(16px, 8vw, 275px);
+  background: var(--clr-tertiary);
+}
+
+/* ══════════════════════════════════════════════
+   SHARED: SECTION DIVIDER LABEL
+   ══════════════════════════════════════════════ */
+.fac-section-title,
+.ekskul-section-label {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.fac-section-title__line,
+.ekskul-section-label__line {
+  flex: 1;
+  height: 1px;
+  background: #cddaee;
+}
+
+.fac-section-title__text,
+.ekskul-section-label__text {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  white-space: nowrap;
+}
+
+/* ══════════════════════════════════════════════
+   SHARED: GRID
+   ══════════════════════════════════════════════ */
+.fac-grid,
+.ekskul-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ══════════════════════════════════════════════
+   SHARED: CARD BASE
+   ══════════════════════════════════════════════ */
+.fac-card,
+.ekskul-card {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 12px rgba(61,109,183,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.fac-card:hover,
+.ekskul-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 36px rgba(61,109,183,0.14);
+}
+
+/* Accent line — ekskul only */
+.ekskul-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--clr-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* ── Media ── */
+.fac-card__media,
+.ekskul-card__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: var(--clr-tertiary);
+  flex-shrink: 0;
+}
+
+.fac-card__media img,
+.ekskul-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.fac-card:hover .fac-card__media img:first-child,
+.ekskul-card:hover .ekskul-card__media img:first-child { transform: scale(1.06); }
+
+/* ── Placeholder ── */
+.fac-card__placeholder,
+.ekskul-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #dde8f5, #c8d9ee);
+  color: var(--clr-primary);
+  opacity: 0.7;
+}
+
+.fac-card__placeholder i,
+.ekskul-card__placeholder i { font-size: 36px; }
+
+.fac-card__placeholder span,
+.ekskul-card__placeholder span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ── Badge ── */
+.fac-card__badge,
+.ekskul-card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 3px 10px;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.fac-card__badge--green,
+.ekskul-card__badge--green  { background: #2e7d52; }
+
+.fac-card__badge--amber,
+.ekskul-card__badge--amber  { background: #b07d25; }
+
+.fac-card__badge--dark,
+.ekskul-card__badge--dark   { background: var(--clr-secondary); }
+
+.ekskul-card__badge--red    { background: #c0392b; }
+.ekskul-card__badge--purple { background: #6d3db7; }
+
+/* ── Body ── */
+.fac-card__body,
+.ekskul-card__body {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.fac-card__category,
+.ekskul-card__category {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+}
+
+.fac-card__name,
+.ekskul-card__name {
+  font-family: var(--ff-heading);
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: var(--clr-secondary);
+  line-height: 1.2;
+}
+
+.fac-card__desc,
+.ekskul-card__desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.75;
+  flex: 1;
+}
+
+.fac-card__footer,
+.ekskul-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #eef2f8;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.fac-card__tag,
+.ekskul-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+}
+
+.fac-card__tag i,
+.ekskul-card__tag i { color: var(--clr-primary); font-size: 10px; }
+
+/* ── Filter hide/show ── */
+.fac-card.is-hidden,
+.ekskul-card.is-hidden          { display: none; }
+
+.fac-section-title.is-hidden,
+.ekskul-section-label.is-hidden { display: none; }
+
+/* ══════════════════════════════════════════════
+   FAC HERO
+   ══════════════════════════════════════════════ */
+.fac-hero {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: var(--clr-white);
+}
+
+.fac-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("/Image/Index/Carousel_1.jpeg") center / cover no-repeat;
+}
+
+.fac-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgba(20,28,50,0.95) 0%, rgba(20,28,50,0.6) 55%, rgba(0,0,0,0.1) 100%);
+}
+
+.fac-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 0 clamp(16px, 8vw, 275px) 56px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.fac-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 16px;
+}
+
+.fac-hero__breadcrumb a { color: rgba(255,255,255,0.45); transition: color 0.2s; }
+.fac-hero__breadcrumb a:hover { color: var(--clr-white); }
+.fac-hero__breadcrumb i { font-size: 9px; }
+
+.fac-hero__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  margin-bottom: 12px;
+}
+
+.fac-hero__title {
+  font-family: var(--ff-heading);
+  font-size: clamp(32px, 5.5vw, 58px);
+  color: var(--clr-white);
+  line-height: 1.1;
+}
+
+.fac-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-bottom: 6px;
+}
+
+.fac-hero__meta-item { text-align: center; }
+
+.fac-hero__meta-num {
+  font-family: var(--ff-heading);
+  font-size: clamp(28px, 3.5vw, 44px);
+  color: var(--clr-white);
+  line-height: 1;
+  display: block;
+}
+
+.fac-hero__meta-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+.fac-hero__meta-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.15);
+}
+
+/* ══════════════════════════════════════════════
+   EKSKUL HERO
+   ══════════════════════════════════════════════ */
+  .ekskul-hero {
+        position: relative;
+        padding: clamp(48px, 8vw, 80px) clamp(16px, 8vw, 275px) clamp(40px, 6vw, 64px);
+        background: var(--clr-secondary);
+        overflow: hidden;
+        color: var(--clr-white);
+      }
+      .ekskul-hero::before {
+        content: "";
+        position: absolute; inset: 0; z-index: 0;
+        background: linear-gradient(135deg, #1a2a4a 0%, var(--clr-secondary) 100%);
+        opacity: 0.95;
+      }
+      /* Dekoratif: lingkaran samar */
+      .ekskul-hero::after {
+        content: "";
+        position: absolute;
+        width: 520px; height: 520px;
+        border-radius: 50%;
+        border: 80px solid rgba(61,109,183,0.12);
+        top: -160px; right: -120px;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .ekskul-hero__inner {
+        position: relative; z-index: 1;
+        max-width: 640px;
+      }
+      .ekskul-hero__breadcrumb {
+        display: flex; align-items: center; gap: 8px;
+        font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+        color: rgba(255,255,255,0.5); margin-bottom: 20px;
+      }
+      .ekskul-hero__breadcrumb a { color: rgba(255,255,255,0.6); transition: color var(--transition); }
+      .ekskul-hero__breadcrumb a:hover { color: var(--clr-white); }
+      .ekskul-hero__breadcrumb i { font-size: 9px; }
+      .ekskul-hero__label {
+        font-size: 11px; font-weight: 600; letter-spacing: 3px;
+        text-transform: uppercase; color: var(--clr-primary);
+        margin-bottom: 12px; display: block;
+      }
+      .ekskul-hero__title {
+        font-family: var(--ff-heading);
+        font-size: clamp(28px, 5vw, 52px);
+        color: var(--clr-white);
+        line-height: 1.15;
+        margin-bottom: 16px;
+      }
+      .ekskul-hero__desc {
+        font-size: clamp(13px, 1.5vw, 15px);
+        color: rgba(255,255,255,0.6);
+        line-height: 1.8;
+        max-width: 500px;
+      }
+
+/* ══════════════════════════════════════════════
+   CARD IMAGE SLIDER
+   Aktif ketika card diklik — overlay slider manual
+   ══════════════════════════════════════════════ */
+
+/* Overlay backdrop */
+.card-slider-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.card-slider-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Slider container */
+.card-slider {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  background: var(--clr-secondary, #323232);
+  border-radius: 10px;
+  overflow: hidden;
+  transform: scale(0.92);
+  transition: transform 0.3s ease;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+}
+
+.card-slider-overlay.is-open .card-slider {
+  transform: scale(1);
+}
+
+/* Image track */
+.card-slider__track-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #111;
+}
+
+.card-slider__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.42s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.card-slider__slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.card-slider__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+/* Placeholder slide */
+.card-slider__slide-placeholder {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #1a2540, #0f1827);
+  color: rgba(255,255,255,0.3);
+}
+
+.card-slider__slide-placeholder i { font-size: 48px; }
+.card-slider__slide-placeholder span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Prev / Next buttons */
+.card-slider__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.card-slider__btn:hover {
+  background: var(--clr-primary, #3d6db7);
+  border-color: transparent;
+}
+
+.card-slider__btn--prev { left: 12px; }
+.card-slider__btn--next { right: 12px; }
+
+.card-slider__btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Dots */
+.card-slider__dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.card-slider__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.card-slider__dot.is-active {
+  background: var(--clr-white, #fff);
+  transform: scale(1.25);
+}
+
+/* Counter badge */
+.card-slider__counter {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.55);
+  color: rgba(255,255,255,0.8);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 2;
+  backdrop-filter: blur(4px);
+}
+
+/* Info panel below image */
+.card-slider__info {
+  padding: 18px 24px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card-slider__category {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--clr-primary, #3d6db7);
+  margin-bottom: 3px;
+}
+
+.card-slider__title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+}
+
+/* Close button */
+.card-slider__close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.7);
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.card-slider__close:hover {
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+}
+
+/* Cursor hint on cards */
+.fac-card__media,
+.ekskul-card__media {
+  cursor: pointer;
+}
+
+.fac-card__media img,
+.ekskul-card__media img{
+  object-fit: cover;
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════════ */
+@media (max-width: 992px) {
+  .fac-grid,
+  .ekskul-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .ekskul-cta { grid-template-columns: 1fr; }
+  .ekskul-cta__btns { flex-direction: row; flex-wrap: wrap; }
+}
+
+@media (max-width: 768px) {
+  .fac-hero__content { flex-direction: column; align-items: flex-start; }
+
+  .fac-grid,
+  .ekskul-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+  .fac-filter__btn,
+  .ekskul-filter__btn { padding: 14px 13px; font-size: 11px; }
+}
+
+@media (max-width: 520px) {
+  .fac-hero { min-height: 340px; }
+  .fac-hero__meta { gap: 16px; }
+
+  .fac-main,
+  .ekskul-main { padding: 36px 16px; }
+
+  .fac-grid,
+  .ekskul-grid { grid-template-columns: 1fr; }
+
+  .ekskul-hero { min-height: 360px; }
+  .ekskul-cta__btns { flex-direction: column; }
+}

@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berita &amp; Pengumuman — SMA Santo Kristoforus 1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/template.css" />
+    <link rel="stylesheet" href="/CSS/allnews.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <a href="../index.html" class="site-header__logo-link">
+        <img
+          src="../Image/Template/Logo-Sekolah-Kristoforus_REMAKE.png"
+          alt="Logo SMA Kristoforus"
+          class="site-header__logo"
+          onerror="
+            this.style.display = 'none';
+            this.nextElementSibling.style.display = 'block';
+          "
+        />
+        <!-- Fallback teks logo -->
+        <span
+          style="
+            display: none;
+            font-family: var(--ff-heading);
+            font-size: 18px;
+            color: var(--clr-primary);
+            font-weight: bold;
+          "
+          >Santo Kristoforus</span
+        >
+      </a>
+      <nav class="site-nav" id="main-nav" aria-label="Navigasi Utama">
+        <a href="/index.html#tentang-kami" class="site-nav__link">Tentang</a>
+        <a href="/index.html#kristoforus-value" class="site-nav__link">Nilai</a>
+        <a href="/index.html#fasilitas-teaser" class="site-nav__link"
+          >Fasilitas</a
+        >
+        <a href="/index.html#academics" class="site-nav__link">Ekskul</a>
+        <a href="#" class="site-nav__link is-active">Berita</a>
+      </nav>
+      <div class="site-header__cta">
+        <a href="contact.html" class="btn btn--outline">Hubungi Kami</a>
+        <a
+          href="https://sma1.kristo.sch.id/psb/psb_v2.php"
+          class="btn btn--solid"
+          >Daftar</a
+        >
+      </div>
+      <button
+        class="site-header__hamburger"
+        id="hamburgerBtn"
+        aria-label="Buka menu"
+        aria-expanded="false"
+        aria-controls="mobileNav"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigasi Mobile">
+      <div class="mobile-nav__header">
+        <span>MENU</span>
+        <button
+          class="mobile-nav__close"
+          id="mobileNavClose"
+          aria-label="Tutup menu"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="mobile-nav__links">
+        <a
+          href="/index.html#tentang-kami"
+          class="mobile-nav__link"
+          data-mobile-link
+          ><i class="fas fa-school"></i> Tentang Kami</a
+        >
+        <a
+          href="/index.html#kristoforus-value"
+          class="mobile-nav__link"
+          data-mobile-link
+          ><i class="fas fa-heart"></i> Kristoforus Value</a
+        >
+        <a
+          href="/index.html#fasilitas-teaser"
+          class="mobile-nav__link"
+          data-mobile-link
+          ><i class="fas fa-building"></i> Fasilitas</a
+        >
+        <a
+          href="/index.html#academics"
+          class="mobile-nav__link"
+          data-mobile-link
+          ><i class="fas fa-star"></i> Ekstrakulikuler</a
+        >
+        <a href="#" class="mobile-nav__link is-active" data-mobile-link
+          ><i class="fas fa-newspaper"></i> Berita &amp; Pengumuman</a
+        >
+      </div>
+      <div
+        style="padding: 20px 24px; display: flex; gap: 10px; flex-wrap: wrap"
+      >
+        <a
+          href="contact.html"
+          class="btn btn--outline"
+          style="font-size: 12px; padding: 8px 16px"
+          >Hubungi Kami</a
+        >
+        <a
+          href="https://sma1.kristo.sch.id/psb/psb_v2.php"
+          class="btn btn--solid"
+          style="font-size: 12px; padding: 8px 16px"
+          >Daftar</a
+        >
+      </div>
+      <div class="mobile-nav__footer">
+        SMA Santo Kristoforus 1 &mdash; Jakarta Barat
+      </div>
+    </nav>
+
+    <main>
+      <!-- PAGE HERO -->
+      <section class="page-hero" aria-label="Berita dan Pengumuman">
+        <div class="page-hero__inner">
+          <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Beranda</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Berita &amp; Pengumuman</span>
+          </nav>
+          <span class="page-hero__label">Informasi Terkini</span>
+          <h1 class="page-hero__title">Berita &amp; Pengumuman</h1>
+          <p class="page-hero__desc">
+            Ikuti perkembangan terbaru dari SMA Santo Kristoforus 1 — prestasi,
+            kegiatan, pengumuman, dan cerita inspiratif dari komunitas kami.
+          </p>
+        </div>
+      </section>
+
+      <!-- FILTER BAR -->
+      <div
+        class="filter-bar"
+        role="navigation"
+        aria-label="Filter kategori berita"
+      >
+        <div class="filter-bar__inner">
+          <div class="filter-bar__tabs" id="filterTabs">
+            <button class="filter-tab is-active" data-filter="semua">
+              Semua
+            </button>
+            <button class="filter-tab" data-filter="pengumuman">
+              Pengumuman
+            </button>
+            <button class="filter-tab" data-filter="prestasi">Prestasi</button>
+            <button class="filter-tab" data-filter="kegiatan">Kegiatan</button>
+          </div>
+          <p class="filter-bar__count" id="filterCount">
+            Menampilkan <span id="countNum">4</span> berita
+          </p>
+        </div>
+      </div>
+
+      <!-- NEWS PAGE CONTENT -->
+      <section class="news-page" aria-label="Daftar berita">
+        <!-- FEATURED / PINNED -->
+        <div class="news-pinned" id="pinnedSection">
+          <p class="news-pinned__label">Berita Terkini</p>
+          <a
+            href="berita-ppdb.html"
+            class="news-featured-card"
+            data-reveal="up"
+            data-category="pengumuman"
+          >
+            <div class="news-featured-card__media">
+              <img
+                src="/Image/Berita-Kegiatan/PPDB/PPDB_1.jpeg"
+                alt="Penerimaan Peserta Didik Baru"
+                class="news-featured-card__img"
+                loading="lazy"
+              />
+              <div class="news-featured-card__badge-wrap">
+                <span class="news-badge">Pengumuman</span>
+              </div>
+            </div>
+            <div class="news-featured-card__body">
+              <p class="news-date">
+                <i class="fas fa-calendar-alt" aria-hidden="true"></i> 18 Maret
+                2026
+              </p>
+              <h2 class="news-featured-card__title">
+                Penerimaan Peserta Didik Baru Tahun Ajaran 2026/2027 Resmi
+                Dibuka
+              </h2>
+              <p class="news-featured-card__excerpt">
+                SMA Santo Kristoforus 1 dengan bangga mengumumkan bahwa
+                Penerimaan Peserta Didik Baru (PPDB) Tahun Ajaran 2026/2027
+                resmi dibuka. Program ini memberikan kesempatan bagi calon siswa
+                untuk bergabung dengan keluarga besar SMA Santo Kristoforus 1
+                yang dikenal dengan kualitas pendidikan yang unggul, lingkungan
+                yang mendukung, dan fasilitas yang memadai.
+              </p>
+              <span class="news-readmore"
+                >Baca Selengkapnya
+                <i class="fas fa-arrow-right" aria-hidden="true"></i
+              ></span>
+            </div>
+          </a>
+        </div>
+
+        <!-- ALL NEWS GRID -->
+        <p class="news-section-title" id="allNewsLabel">Semua Berita</p>
+
+        <ul class="news-grid" id="newsGrid" aria-label="Semua berita">
+          <!-- Berita 1 -->
+          <li data-reveal="up" data-delay="100" data-category="kegiatan">
+            <a href="berita-juara-short-movie.html" class="news-item">
+              <figure class="news-item__media">
+                <img
+                  src="/Image/Berita-Kegiatan/Pelantikan osis/Pelantikan-Osis_2.jpg"
+                  alt="Pelantikan OSIS"
+                  class="news-item__img"
+                  loading="lazy"
+                />
+                <div class="news-item__badge-wrap">
+                  <span class="news-badge news-badge--gold">Kegiatan</span>
+                </div>
+              </figure>
+              <div class="news-item__body">
+                <p class="news-date">
+                  <i class="fas fa-calendar-alt"></i>13 Maret 2026
+                </p>
+                <h3 class="news-item__title">
+                  Pelantikan Pengurus OSIS Periode 2026/2027 SMA Santo
+                  Kristoforus 1
+                </h3>
+                <p class="news-item__excerpt">
+                  SMA Santo Kristoforus 1menggelar kegiatan pelantikan pengurus
+                  Organisasi Siswa Intra Sekolah (OSIS) periode 2026/2027
+                  padaJumat, 13 Maret 2026 di Lapangan SMA Santo Kristoforus 1.
+                  Acara ini dihadiri oleh kepala sekolah, para guru, staf, serta
+                  seluruh siswa yang turut menyaksikan pergantian kepengurusan
+                  secara resmi.
+                </p>
+                <span class="news-readmore"
+                  >Baca Selengkapnya <i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </li>
+
+          <!-- Berita 2 -->
+          <li data-reveal="up" data-delay="200" data-category="kegiatan">
+            <a href="berita-imlek.html" class="news-item">
+              <figure class="news-item__media">
+                <img
+                  src="/Image/Berita-Kegiatan/Imlek/Imlek_1.jpg"
+                  alt="Perayaan Imlek"
+                  class="news-item__img"
+                  loading="lazy"
+                  onerror="
+                    this.src =
+                      'https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&q=80'
+                  "
+                />
+                <div class="news-item__badge-wrap">
+                  <span class="news-badge news-badge--gold">Kegiatan</span>
+                </div>
+              </figure>
+              <div class="news-item__body">
+                <p class="news-date">
+                  <i class="fas fa-calendar-alt"></i> 26 Februari 2026
+                </p>
+                <h3 class="news-item__title">
+                  Perayaan Tahun Baru Imlek SMA Santo Kristoforus 1 Tahun 2026
+                </h3>
+                <p class="news-item__excerpt">
+                  SMA Santo Kristoforus 1 menggelar kegiatan perayaan Tahun Baru
+                  Imlek pada Kamis, 26 Februari 2026 di aula sekolah. Kegiatan
+                  ini dihadiri oleh para guru, staf, serta seluruh siswa.
+                </p>
+                <span class="news-readmore"
+                  >Baca Selengkapnya <i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </li>
+
+          <!-- Berita 3 -->
+          <li data-reveal="up" data-delay="300" data-category="kegiatan">
+            <a href="berita-live-in.html" class="news-item">
+              <figure class="news-item__media">
+                <img
+                  src="/Image/Berita-Kegiatan/Natal/Natal_1.jpeg"
+                  alt="Live In"
+                  class="news-item__img"
+                  loading="lazy"
+                />
+                <div class="news-item__badge-wrap">
+                  <span class="news-badge news-badge--gold">Kegiatan</span>
+                </div>
+              </figure>
+              <div class="news-item__body">
+                <p class="news-date">
+                  <i class="fas fa-calendar-alt"></i>13 Januari 2026
+                </p>
+                <h3 class="news-item__title">
+                  Perayaan Natal SMA Santo Kristoforus 1: Semarak Lomba dan
+                  Kreativitas
+                </h3>
+                <p class="news-item__excerpt">
+                  Perayaan Natal tahun ini di SMA Santo Kristoforus 1
+                  berlangsung semakin semarak dengan diadakannya tiga perlombaan
+                  yang menarik dan melibatkan banyak peserta. Rangkaian kegiatan
+                  yang digelar pada bulan Januari 2026 ini menjadi puncak
+                  kebersamaan seluruh warga sekolah dalam menyambut sukacita
+                  Natal.
+                </p>
+                <span class="news-readmore"
+                  >Baca Selengkapnya <i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </li>
+
+          <!-- Berita 1 -->
+          <li data-reveal="up" data-delay="100" data-category="prestasi">
+            <a href="berita-juara-3-xtofest.html" class="news-item">
+              <figure class="news-item__media">
+                <img
+                  src="/Image/Berita-Kegiatan/Juara-Band-XTOFEST/Juara-Band_1.jpeg"
+                  alt="Pelantikan OSIS"
+                  class="news-item__img"
+                  loading="lazy"
+                />
+                <div class="news-item__badge-wrap">
+                  <span class="news-badge news-badge--green">Prestasi</span>
+                </div>
+              </figure>
+              <div class="news-item__body">
+                <p class="news-date">
+                  <i class="fas fa-calendar-alt"></i>24 November 2025
+                </p>
+                <h3 class="news-item__title">
+                  Tim Band XCORE dari SMA Santo Kristoforus 1 Raih Juara 3 di
+                  Kompetisi Band XTOFEST 2025
+                </h3>
+                <p class="news-item__excerpt">
+                  Tim band XCORE dari SMA Santo Kristoforus 1 meraih Juara 3
+                  dalam kompetisi band XTOFEST 2025 yang diselenggarakan pada 24
+                  November 2025 di SMA Santo Kristoforus II. Ini adalah juara
+                  perdana bagi XCORE.
+                </p>
+                <span class="news-readmore"
+                  >Baca Selengkapnya <i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </li>
+
+          <!-- Berita 2 -->
+          <li data-reveal="up" data-delay="200" data-category="prestasi">
+            <a href="berita-juara-short-movie.html" class="news-item">
+              <figure class="news-item__media">
+                <img
+                  src="/Image/Berita-Kegiatan/Short-Movie/Short-movie_2.jpeg"
+                  alt="Perayaan Imlek"
+                  class="news-item__img"
+                  loading="lazy"
+                />
+                <div class="news-item__badge-wrap">
+                  <span class="news-badge news-badge--green">Prestasi</span>
+                </div>
+              </figure>
+              <div class="news-item__body">
+                <p class="news-date">
+                  <i class="fas fa-calendar-alt"></i> 25 Maret 2025
+                </p>
+                <h3 class="news-item__title">
+                  Tim Senyawa Studios dari SMA Santo Kristoforus 1 Menangkan Dua
+                  Perlombaan Short Movie Berturut-turut
+                </h3>
+                <p class="news-item__excerpt">
+                  Tim Senyawa Studios dari SMA Santo Kristoforus 1 meraih
+                  prestasi luar biasa dengan memenangkan dua perlombaan short
+                  movie berturut-turut. Kemenangan ini menjadi bukti konsistensi
+                  dan kualitas karya siswa dalam dunia perfilman pelajar.
+                </p>
+                <span class="news-readmore"
+                  >Baca Selengkapnya <i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </li>
+
+          <!-- Berita 3 -->
+          <li data-reveal="up" data-delay="300" data-category="kegiatan">
+            <a href="berita-roadshow-dbl.html" class="news-item">
+              <figure class="news-item__media">
+                <img
+                  src="../Image/Berita-Kegiatan/Roadshow-DBL/Roadshow-DBL_1.JPG"
+                  alt="Live In"
+                  class="news-item__img"
+                  loading="lazy"
+                />
+                <div class="news-item__badge-wrap">
+                  <span class="news-badge news-badge--gold">Kegiatan</span>
+                </div>
+              </figure>
+              <div class="news-item__body">
+                <p class="news-date">
+                  <i class="fas fa-calendar-alt"></i> 31 Juli 2025
+                </p>
+                <h3 class="news-item__title">
+                  SMA St. Kristoforus Kedatangan Tim DBL Indonesia dalam
+                  Roadshow DBL Jakarta - WEST
+                </h3>
+                <p class="news-item__excerpt">
+                  Pada Kamis, 31 Juli 2025, SMA Santo Kristoforus mendapat
+                  kehormatan dengan kedatangan tim dari DBL Indonesia dalam
+                  rangka roadshow DBL Jakarta - WEST. Acara yang diselenggarakan
+                  di lapangan Sekolah Katolik Santo Kristoforus ini berlangsung
+                  sangat meriah, dengan berbagai rangkaian mini games yang
+                  diikuti oleh siswa-siswi dari jenjang SMP dan SMA.
+                </p>
+                <span class="news-readmore"
+                  >Baca Selengkapnya <i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </li>
+
+          <li data-reveal="up" data-delay="100" data-category="prestasi">
+            <a href="berita-live-in.html" class="news-item">
+              <figure class="news-item__media">
+                <img
+                  src="/Image/Berita-Kegiatan/Live in/Live-in_1.jpeg"
+                  alt="Pelantikan OSIS"
+                  class="news-item__img"
+                  loading="lazy"
+                />
+                <div class="news-item__badge-wrap">
+                  <span class="news-badge news-badge--green">Prestasi</span>
+                </div>
+              </figure>
+              <div class="news-item__body">
+                <p class="news-date">
+                  <i class="fas fa-calendar-alt"></i>10 November 2024
+                </p>
+                <h3 class="news-item__title">
+               Kegiatan Kristoforus Life Skill Project Kelas XI SMA Santo Kristoforus 1 Tahun 2024
+                </h3>
+                <p class="news-item__excerpt">
+    Siswa kelas XI SMA Santo Kristoforus 1 mengikuti kegiatan Live In yang dilaksanakan pada tanggal 3–9 November 2024. Kegiatan ini merupakan bagian dari pembelajaran di luar kelas yang bertujuan untuk memberikan pengalaman hidup bermasyarakat secara langsung.
+                </p>
+                <span class="news-readmore"
+                  >Baca Selengkapnya <i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <div class="site-footer__logo-wrap">
+            <img
+              src="../Image/Template/Rectangle-Logo-Sekolah-Kristoforus.png"
+              alt="Logo SMA Santo Kristoforus"
+              class="site-footer__logo"
+              loading="lazy"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Tautan Cepat</p>
+          <ul class="footer-links">
+            <li><a href="aboutus.html">Tentang Kami</a></li>
+            <li><a href="ekstrakulikuler.html">Ekstrakulikuler</a></li>
+            <li><a href="fasilitas.html">Fasilitas</a></li>
+            <li><a href="#">Berita &amp; Pengumuman</a></li>
+            <li><a href="contact.html">Hubungi Kami</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Ikuti Kami</p>
+          <ul class="footer-socmed">
+            <li>
+              <a
+                href="https://www.instagram.com/osis_smaxto1/"
+                class="footer-socmed__item"
+              >
+                <span class="footer-socmed__icon footer-socmed__icon--ig"
+                  ><i class="fab fa-instagram"></i
+                ></span>
+                <span class="footer-socmed__info">
+                  <span class="footer-socmed__name">Instagram</span>
+                  <span class="footer-socmed__handle">@osis_smaxto1</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/people/SMA-Santo-Kristoforus-1/100067754111313/"
+                class="footer-socmed__item"
+              >
+                <span class="footer-socmed__icon footer-socmed__icon--fb"
+                  ><i class="fab fa-facebook-f"></i
+                ></span>
+                <span class="footer-socmed__info">
+                  <span class="footer-socmed__name">Facebook</span>
+                  <span class="footer-socmed__handle"
+                    >SMA Santo Kristoforus 1</span
+                  >
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/@SMAXTO1_Official"
+                class="footer-socmed__item"
+              >
+                <span class="footer-socmed__icon footer-socmed__icon--yt"
+                  ><i class="fab fa-youtube"></i
+                ></span>
+                <span class="footer-socmed__info">
+                  <span class="footer-socmed__name">YouTube</span>
+                  <span class="footer-socmed__handle"
+                    >SMA Santo Kristoforus 1 Official</span
+                  >
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.tiktok.com/@osis_smaxto1"
+                class="footer-socmed__item"
+              >
+                <span class="footer-socmed__icon footer-socmed__icon--tt"
+                  ><i class="fab fa-tiktok"></i
+                ></span>
+                <span class="footer-socmed__info">
+                  <span class="footer-socmed__name">TikTok</span>
+                  <span class="footer-socmed__handle">@osis_smaxto1</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Hubungi Kami</p>
+          <ul class="footer-contact">
+            <li class="footer-contact__item">
+              <i class="fas fa-map-marker-alt footer-contact__icon"></i>
+              <span>Jl. Rahayu No.1A, Jelambar, Grogol</span>
+            </li>
+            <li class="footer-contact__item">
+              <i class="fas fa-phone-alt footer-contact__icon"></i>
+              <span>(021) 56960276</span>
+            </li>
+            <li class="footer-contact__item">
+              <i class="fas fa-envelope footer-contact__icon"></i>
+              <span>info@kristo.sch.id</span>
+            </li>
+            <li class="footer-contact__item">
+              <i class="fas fa-clock footer-contact__icon"></i>
+              <span>Senin &ndash; Jumat</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="site-footer__divider" />
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">
+          Dibuat untuk memenuhi Ujian Praktek Coding 2026
+        </p>
+        <a href="developer.html" class="site-footer__members"
+          >Anggota Kelompok</a
+        >
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        "use strict";
+
+        /* ── Scroll Reveal ── */
+        const SELECTOR = "[data-reveal]";
+        const THRESHOLD = 0.12;
+
+        function initReveal() {
+          const elements = document.querySelectorAll(SELECTOR);
+          if (!elements.length) return;
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-visible");
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: THRESHOLD },
+          );
+          elements.forEach((el) => observer.observe(el));
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initReveal);
+        } else {
+          initReveal();
+        }
+
+        /* ── Mobile Nav ── */
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.getElementById("hamburgerBtn");
+          const mobileNav = document.getElementById("mobileNav");
+          const overlay = document.getElementById("mobileOverlay");
+          const closeBtn = document.getElementById("mobileNavClose");
+          const mobileLinks = document.querySelectorAll("[data-mobile-link]");
+
+          function openNav() {
+            mobileNav.classList.add("is-open");
+            overlay.classList.add("is-open");
+            overlay.style.display = "block";
+            hamburger.setAttribute("aria-expanded", "true");
+            document.body.style.overflow = "hidden";
+          }
+          function closeNav() {
+            mobileNav.classList.remove("is-open");
+            overlay.classList.remove("is-open");
+            hamburger.setAttribute("aria-expanded", "false");
+            document.body.style.overflow = "";
+            setTimeout(() => {
+              overlay.style.display = "none";
+            }, 300);
+          }
+
+          hamburger.addEventListener("click", openNav);
+          closeBtn.addEventListener("click", closeNav);
+          overlay.addEventListener("click", closeNav);
+          mobileLinks.forEach((link) =>
+            link.addEventListener("click", closeNav),
+          );
+
+          /* ── Filter ── */
+          const tabs = document.querySelectorAll(".filter-tab");
+          const gridItems = document.querySelectorAll("#newsGrid li");
+          const pinned = document.querySelector(".news-featured-card");
+          const pinnedSec = document.getElementById("pinnedSection");
+          const empty = document.getElementById("newsEmpty");
+          const countNum = document.getElementById("countNum");
+
+          function updateCount(n) {
+            countNum.textContent = n;
+          }
+
+          tabs.forEach((tab) => {
+            tab.addEventListener("click", function () {
+              tabs.forEach((t) => t.classList.remove("is-active"));
+              this.classList.add("is-active");
+
+              const filter = this.dataset.filter;
+              let visible = 0;
+
+              // Pinned (featured) card
+              if (filter === "semua" || filter === pinned.dataset.category) {
+                pinnedSec.style.display = "";
+                visible++;
+              } else {
+                pinnedSec.style.display = "none";
+              }
+
+              // Grid items
+              gridItems.forEach((item) => {
+                const cat = item.dataset.category;
+                if (filter === "semua" || cat === filter) {
+                  item.style.display = "";
+                  visible++;
+                } else {
+                  item.style.display = "none";
+                }
+              });
+
+              empty.style.display = visible === 0 ? "block" : "none";
+              updateCount(visible);
+            });
+          });
+
+          // Initial count
+          updateCount(1 + gridItems.length);
+        });
+      })();
+    </script>
+  </body>
+</html>

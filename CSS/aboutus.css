@@ -1,0 +1,554 @@
+/* ══════════════════════════════════════════════
+         PAGE HERO — Tentang Kami
+         ══════════════════════════════════════════════ */
+.page-hero {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: var(--clr-white);
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("https://kristo.sch.id/pages/sma1/images/Halaman-Dalam-SMA-I.jpg")
+    center / cover no-repeat;
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to top,
+    rgba(30, 40, 70, 0.92) 0%,
+    rgba(30, 40, 70, 0.55) 60%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 0 clamp(16px, 8vw, 275px) 56px;
+  width: 100%;
+}
+
+.page-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 16px;
+}
+
+.page-hero__breadcrumb a {
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.2s;
+}
+.page-hero__breadcrumb a:hover {
+  color: var(--clr-white);
+}
+.page-hero__breadcrumb i {
+  font-size: 10px;
+}
+
+.page-hero__label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  margin-bottom: 10px;
+}
+
+.page-hero__title {
+  font-family: var(--ff-heading);
+  font-size: clamp(28px, 5vw, 52px);
+  color: var(--clr-white);
+  line-height: 1.15;
+  max-width: 640px;
+}
+
+/* ══════════════════════════════════════════════
+         LAYOUT WRAPPER
+         ══════════════════════════════════════════════ */
+.about-page {
+  padding: clamp(48px, 6vw, 80px) clamp(16px, 8vw, 275px);
+  background: var(--clr-white);
+}
+
+/* ── Intro grid ── */
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+  margin-bottom: clamp(56px, 8vw, 96px);
+}
+
+.about-intro__media {
+  position: relative;
+}
+
+.about-intro__img-wrap {
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.about-intro__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Decorative accent box */
+.about-intro__accent {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  background: var(--clr-primary);
+  border-radius: var(--radius);
+  z-index: -1;
+  opacity: 0.25;
+}
+
+.about-intro__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-intro__desc {
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: #555;
+  line-height: 1.9;
+}
+
+/* ── Stats bar ── */
+.about-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-bottom: clamp(56px, 8vw, 96px);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.about-stats-bar__item {
+  background: var(--clr-primary);
+  padding: clamp(20px, 3vw, 36px) 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.about-stats-bar__item:nth-child(even) {
+  background: #2d5a9e;
+}
+
+.about-stats-bar__num {
+  font-family: var(--ff-heading);
+  font-size: clamp(28px, 3.5vw, 48px);
+  color: var(--clr-white);
+  line-height: 1;
+}
+
+.about-stats-bar__label {
+  font-size: clamp(10px, 1vw, 12px);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ── Sejarah ── */
+.about-history {
+  margin-bottom: clamp(56px, 8vw, 96px);
+}
+
+.about-history__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+  margin-top: 36px;
+}
+
+.about-history__text {
+  font-size: clamp(13px, 1.4vw, 15px);
+  color: #555;
+  line-height: 1.9;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 20px;
+  position: relative;
+}
+
+.timeline__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 26px;
+  top: 36px;
+  bottom: -4px;
+  width: 2px;
+  background: #e0e9f5;
+}
+
+.timeline__year {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+  text-align: center;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline__body {
+  padding: 12px 0 28px;
+}
+
+.timeline__event {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--clr-secondary);
+  margin-bottom: 4px;
+}
+
+.timeline__desc {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.75;
+}
+
+/* ── Visi Misi ── */
+.about-vismis {
+  margin-bottom: clamp(56px, 8vw, 96px);
+  background: var(--clr-tertiary);
+  border-radius: var(--radius);
+  padding: clamp(36px, 5vw, 64px);
+}
+
+.about-vismis__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 4vw, 56px);
+  margin-top: 36px;
+}
+
+.vismis-card {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  padding: clamp(24px, 3vw, 36px);
+  box-shadow: 0 2px 20px rgba(61, 109, 183, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vismis-card__icon {
+  width: 48px;
+  height: 48px;
+  background: var(--clr-primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-white);
+  font-size: 20px;
+}
+
+.vismis-card__title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+}
+
+.vismis-card__text {
+  font-size: clamp(13px, 1.4vw, 15px);
+  color: #444;
+  line-height: 1.85;
+}
+
+/* Misi list */
+.misi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.misi-list__item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: clamp(13px, 1.3vw, 14px);
+  color: #444;
+  line-height: 1.75;
+}
+
+.misi-list__item i {
+  color: var(--clr-primary);
+  font-size: 14px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* ── Struktur & Tim ── */
+.about-team {
+  margin-bottom: clamp(56px, 8vw, 96px);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.team-card {
+  border: 1px solid #e8eef7;
+  border-radius: var(--radius);
+  background-color: var(--clr-tertiary);
+  overflow: hidden;
+  text-align: center;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.team-card__img-wrap {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--clr-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.team-card__body {
+  padding: 20px 16px 24px;
+}
+
+.team-card__name {
+  font-family: var(--ff-heading);
+  font-size: 18px;
+  color: var(--clr-secondary);
+  margin-bottom: 4px;
+}
+
+.team-card__role {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+}
+
+/* ── Akreditasi & Penghargaan ── */
+.about-accreditation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 5vw, 72px);
+    
+
+}
+
+/* Kolom kiri: badge */
+.about-accreditation__badge-col {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+/* Kolom kanan: deskripsi */
+.about-accreditation__desc-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-accreditation__desc {
+  font-size: clamp(13px, 1.4vw, 15px);
+  color: #555;
+  line-height: 1.9;
+  
+}
+
+/* Badge */
+.accreditation-badge {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  border-radius: var(--radius);
+  padding: clamp(32px, 4vw, 52px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  min-height: 240px;
+}
+
+.accreditation-badge__grade {
+  font-family: var(--ff-heading);
+  font-size: clamp(64px, 8vw, 96px);
+  line-height: 1;
+  color: var(--clr-white);
+}
+
+.accreditation-badge__label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ══════════════════════════════════════════════
+         SECTION DIVIDER
+         ══════════════════════════════════════════════ */
+.section-divider {
+  border: none;
+  border-top: 1px solid #e8eef7;
+  margin: clamp(40px, 6vw, 72px) 0;
+}
+
+/* ══════════════════════════════════════════════
+         RESPONSIVE
+         ══════════════════════════════════════════════ */
+@media (max-width: 992px) {
+  .about-intro {
+    grid-template-columns: 1fr;
+  }
+  .about-intro__accent {
+    display: none;
+  }
+  .about-stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-history__grid {
+    grid-template-columns: 1fr;
+  }
+  .about-vismis__grid {
+    grid-template-columns: 1fr;
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-accreditation {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 320px;
+  }
+  .about-stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Center alignment mobile */
+  .section-header {
+    text-align: center;
+  }
+  .section-header__divider {
+    margin-inline: auto;
+  }
+  .about-intro__desc {
+    text-align: center;
+  }
+  .about-history__text {
+    text-align: center;
+  }
+  .timeline__item {
+    grid-template-columns: 52px 1fr;
+    gap: 14px;
+  }
+  .vismis-card {
+    text-align: center;
+  }
+  .vismis-card__icon {
+    margin-inline: auto;
+  }
+  .misi-list__item {
+    text-align: left;
+  }
+  .award-item {
+    text-align: left;
+  }
+  .accreditation-badge {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 520px) {
+  .about-page {
+    padding: 40px 20px;
+  }
+  .about-stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+  .about-vismis {
+    padding: 28px 20px;
+  }
+}

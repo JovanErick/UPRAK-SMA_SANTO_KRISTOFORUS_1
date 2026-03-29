@@ -4,29 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sekolah Katolik Santo Kristoforus</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="/Image/Rectangle Logo Sekolah Kristoforus.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" href="Image/Index/Rectangle Logo Sekolah Kristoforus.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="CSS/template.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/animation.css" />
   </head>
   <body>
-    <!-- ════════════════════════════════
-         HEADER
-         ════════════════════════════════ -->
+
     <header class="site-header">
-      <a href="/" class="site-header__logo-link">
-        <img
-          src="/Image/Logo Sekolah Kristoforus_REMAKE.png"
-          alt="Logo Sekolah Katolik Santo Kristoforus"
-          class="site-header__logo"
-        />
+      <a href="index.html" class="site-header__logo-link">
+        <img src="Image/Template/Logo-Sekolah-Kristoforus_REMAKE.png" alt="Logo Sekolah Katolik Santo Kristoforus" class="site-header__logo" />
       </a>
       <nav class="site-nav" id="main-nav" aria-label="Navigasi Utama">
         <a href="#tentang-kami" class="site-nav__link">Tentang</a>
@@ -37,134 +25,65 @@
       </nav>
       <div class="site-header__cta">
         <a href="contact.html" class="btn btn--outline">Hubungi Kami</a>
-        <a
-          href="https://sma1.kristo.sch.id/psb/psb_v2.php"
-          class="btn btn--solid"
-          >Daftar</a
-        >
+        <a href="https://sma1.kristo.sch.id/psb/psb_v2.php" class="btn btn--solid">Daftar</a>
       </div>
-      <button
-        class="site-header__hamburger"
-        id="hamburgerBtn"
-        aria-label="Buka menu"
-        aria-expanded="false"
-        aria-controls="mobileNav"
-      >
+      <button class="site-header__hamburger" id="hamburgerBtn" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileNav">
         <i class="fas fa-bars"></i>
       </button>
     </header>
 
-    <!-- Mobile Drawer Overlay -->
     <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
-
-    <!-- Mobile Nav Drawer -->
     <nav class="mobile-nav" id="mobileNav" aria-label="Navigasi Mobile">
       <div class="mobile-nav__header">
-        <span
-          style="
-            font-weight: 700;
-            font-size: 14px;
-            color: var(--clr-secondary);
-            letter-spacing: 1px;
-          "
-          >MENU</span
-        >
-        <button
-          class="mobile-nav__close"
-          id="mobileNavClose"
-          aria-label="Tutup menu"
-        >
-          <i class="fas fa-times"></i>
-        </button>
+        <span>MENU</span>
+        <button class="mobile-nav__close" id="mobileNavClose" aria-label="Tutup menu"><i class="fas fa-times"></i></button>
       </div>
       <div class="mobile-nav__links">
-        <a href="#tentang-kami" class="mobile-nav__link" data-mobile-link
-          ><i class="fas fa-school"></i> Tentang Kami</a
-        >
-        <a href="#kristoforus-value" class="mobile-nav__link" data-mobile-link
-          ><i class="fas fa-heart"></i> Kristoforus Value</a
-        >
-        <a href="#fasilitas-teaser" class="mobile-nav__link" data-mobile-link
-          ><i class="fas fa-building"></i> Fasilitas</a
-        >
-        <a href="#academics" class="mobile-nav__link" data-mobile-link
-          ><i class="fas fa-star"></i> Ekstrakulikuler</a
-        >
-        <a href="#berita" class="mobile-nav__link" data-mobile-link
-          ><i class="fas fa-newspaper"></i> Berita &amp; Pengumuman</a
-        >
+        <a href="#tentang-kami" class="mobile-nav__link" data-mobile-link><i class="fas fa-school"></i> Tentang Kami</a>
+        <a href="#kristoforus-value" class="mobile-nav__link" data-mobile-link><i class="fas fa-heart"></i> Kristoforus Value</a>
+        <a href="#fasilitas-teaser" class="mobile-nav__link" data-mobile-link><i class="fas fa-building"></i> Fasilitas</a>
+        <a href="#academics" class="mobile-nav__link" data-mobile-link><i class="fas fa-star"></i> Ekstrakulikuler</a>
+        <a href="#berita" class="mobile-nav__link" data-mobile-link><i class="fas fa-newspaper"></i> Berita &amp; Pengumuman</a>
       </div>
-      <div
-        style="padding: 20px 24px; display: flex; gap: 10px; flex-wrap: wrap"
-      >
-        <a
-          href="#"
-          class="btn btn--outline"
-          style="font-size: 12px; padding: 8px 16px"
-          >Hubungi Kami</a
-        >
+      <div style="padding: 20px 24px; display: flex; gap: 10px; flex-wrap: wrap">
+        <a href="#" class="btn btn--outline" style="font-size: 12px; padding: 8px 16px">Hubungi Kami</a>
+        <a href="#" class="btn btn--solid" style="font-size: 12px; padding: 8px 16px">Daftar</a>
       </div>
-      <div class="mobile-nav__footer">
-        SMA Santo Kristoforus 1 &mdash; Jakarta Barat
-      </div>
+      <div class="mobile-nav__footer">SMA Santo Kristoforus 1 &mdash; Jakarta Barat</div>
     </nav>
 
     <main>
-      <!-- ════════════════════════════════
-           HERO
-           ════════════════════════════════ -->
+
+      <!-- HERO: tidak pakai reveal, langsung tampil -->
       <section id="hero" class="hero" aria-label="Hero">
         <div class="hero__content">
           <p class="hero__eyebrow">Pendidikan Berbasis Nilai</p>
-
-          <!-- Keyword carousel -->
           <div class="hero__keyword-wrapper" id="keywordWrapper">
             <div class="hero__keyword-track" id="keywordTrack">
               <span>Iman</span>
               <span>Moral</span>
               <span>Pengetahuan</span>
-              <span>Iman</span
-              ><!-- duplikat untuk loop seamless -->
+              <span>Iman</span>
             </div>
           </div>
-
-          <!-- Deskripsi bergantian -->
           <div class="hero__desc-wrapper">
-            <p class="hero__desc is-active" data-index="0">
-              Membangun keyakinan yang kokoh sebagai fondasi karakter dan
-              kehidupan bermakna.
-            </p>
-            <p class="hero__desc" data-index="1">
-              Membentuk akhlak mulia dan integritas yang menjadi cahaya di
-              tengah masyarakat.
-            </p>
-            <p class="hero__desc" data-index="2">
-              Mengasah kecerdasan dan wawasan untuk menjawab tantangan zaman
-              dengan bijaksana.
-            </p>
+            <p class="hero__desc is-active" data-index="0">Membangun keyakinan yang kokoh sebagai fondasi karakter dan kehidupan bermakna.</p>
+            <p class="hero__desc" data-index="1">Membentuk akhlak mulia dan integritas yang menjadi cahaya di tengah masyarakat.</p>
+            <p class="hero__desc" data-index="2">Mengasah kecerdasan dan wawasan untuk menjawab tantangan zaman dengan bijaksana.</p>
           </div>
-
-          <!-- Progress bar -->
           <div class="hero__progress-wrap">
             <div class="hero__progress-fill" id="progressFill"></div>
           </div>
         </div>
       </section>
 
-      <!-- ════════════════════════════════
-           TENTANG KAMI
-           ════════════════════════════════ -->
+      <!-- ════ TENTANG KAMI ════ -->
       <section id="tentang-kami" class="section">
         <div class="about__grid">
-          <!-- Kiri: foto + statistik -->
-          <div class="about__media">
+          <!-- Kiri: foto muncul dari kiri -->
+          <div class="about__media" data-reveal="left">
             <figure class="about__photo-wrap">
-              <img
-                class="about__photo"
-                src="https://kristo.sch.id/pages/sma1/images/Halaman-Dalam-SMA-I.jpg"
-                alt="Foto interior SMA Santo Kristoforus"
-                loading="lazy"
-              />
+              <img class="about__photo" src="https://kristo.sch.id/pages/sma1/images/Halaman-Dalam-SMA-I.jpg" alt="Foto interior SMA Santo Kristoforus" loading="lazy" />
             </figure>
             <ul class="about__stats" aria-label="Statistik sekolah">
               <li class="about__stat">
@@ -176,406 +95,255 @@
                 <span class="about__stat-label">Siswa Aktif</span>
               </li>
               <li class="about__stat">
-                <span class="about__stat-num">27</span>
+                <span class="about__stat-num">25</span>
                 <span class="about__stat-label">Pendidik</span>
               </li>
             </ul>
           </div>
 
-          <!-- Kanan: teks -->
-          <div class="about__body">
+          <!-- Kanan: teks muncul dari kanan, sedikit delay -->
+          <div class="about__body" data-reveal="right" data-delay="200">
             <header class="section-header">
               <p class="section-header__label">Tentang Kami</p>
-              <h2 class="section-header__title">
-                Bersama Kami Meraih Impianmu!
-              </h2>
+              <h2 class="section-header__title">Bersama Kami Meraih Impianmu!</h2>
               <div class="section-header__divider"></div>
             </header>
             <p class="section__desc">
-              SMA Santo Kristoforus 1 berdiri dengan komitmen penuh untuk
-              membentuk siswa yang berprestasi, berkarakter mulia, dan siap
-              menghadapi masa depan. Dengan lingkungan belajar yang kondusif,
-              fasilitas modern, dan tenaga pendidik berpengalaman, kami hadir
-              mendampingi setiap langkah perjalanan belajar para siswa.
+              SMA Santo Kristoforus 1 berdiri dengan komitmen penuh untuk membentuk siswa yang berprestasi, berkarakter mulia, dan siap menghadapi masa depan. Dengan lingkungan belajar yang kondusif, fasilitas modern, dan tenaga pendidik berpengalaman, kami hadir mendampingi setiap langkah perjalanan belajar para siswa.
             </p>
             <ul class="about__vm-list">
               <li class="about__vm-item">
                 <span class="about__vm-icon" aria-hidden="true">✦</span>
                 <div>
                   <p class="about__vm-title">Visi</p>
-                  <p class="about__vm-text">
-                    Menjadi Sekolah Katolik yang Unggul dan Profesional.
-                  </p>
+                  <p class="about__vm-text">Menjadi Sekolah Katolik yang Unggul dan Profesional.</p>
                 </div>
               </li>
               <li class="about__vm-item">
                 <span class="about__vm-icon" aria-hidden="true">✦</span>
                 <div>
                   <p class="about__vm-title">Misi</p>
-                  <p class="about__vm-text">
-                    Meningkatkan kualitas SDM melalui pengembangan IPTEK,
-                    mengembangkan pendidikan karakter berbasis iman dan moral,
-                    menanamkan nilai kebangsaan, serta tata kelola yang
-                    profesional.
-                  </p>
+                  <p class="about__vm-text">Meningkatkan kualitas SDM melalui pengembangan IPTEK, mengembangkan pendidikan karakter berbasis iman dan moral, menanamkan nilai kebangsaan, serta tata kelola yang profesional.</p>
                 </div>
               </li>
             </ul>
           </div>
         </div>
 
-        <!-- Tombol aksi -->
-        <div class="about__actions">
-          <a href="aboutus.html" class="btn btn--outline">Baca Selengkapnya</a>
+        <!-- Tombol muncul dari bawah setelah grid -->
+        <div class="about__actions" data-reveal="up" data-delay="300">
+          <a href="Pages/aboutus.html" class="btn btn--outline">Baca Selengkapnya</a>
         </div>
       </section>
 
-      <!-- ════════════════════════════════
-           KRISTOFORUS VALUE
-           ════════════════════════════════ -->
+      <!-- ════ KRISTOFORUS VALUE ════ -->
       <section id="kristoforus-value" class="section section--split">
-        <div class="section--split__text">
+        <!-- Teks dari kiri -->
+        <div class="section--split__text" data-reveal="left">
           <header class="section-header">
             <p class="section-header__label">Karakter &amp; Spiritualitas</p>
             <h2 class="section-header__title">Kristoforus Value</h2>
             <div class="section-header__divider"></div>
           </header>
           <p class="section__desc">
-            Kristoforus Values adalah dasar yang membimbing kami untuk hidup
-            dalam iman, kasih, dan integritas. Kami percaya bahwa pendidikan
-            yang sejati membentuk bukan hanya akal, tetapi juga hati.
+            Kristoforus Values adalah dasar yang membimbing kami untuk hidup dalam iman, kasih, dan integritas. Kami percaya bahwa pendidikan yang sejati membentuk bukan hanya akal, tetapi juga hati.
           </p>
-          <a href="kristoforusvalue.html" class="btn btn--outline"
-            >Baca Selengkapnya</a
-          >
+          <a href="Pages/kristoforusvalue.html" class="btn btn--outline">Baca Selengkapnya</a>
         </div>
-        <figure class="section--split__media">
-          <img
-            src="https://catholicleader.com.au/wp-content/uploads/2023/06/Sacred-Heart-2.jpg"
-            alt="Ilustrasi Kristoforus Values"
-            loading="lazy"
-          />
+        <!-- Gambar dari kanan -->
+        <figure class="section--split__media" data-reveal="right" data-delay="200">
+          <img src="https://catholicleader.com.au/wp-content/uploads/2023/06/Sacred-Heart-2.jpg" alt="Ilustrasi Kristoforus Values" loading="lazy" />
         </figure>
       </section>
 
-      <!-- ════════════════════════════════
-           FASILITAS
-           ════════════════════════════════ -->
+      <!-- ════ FASILITAS ════ -->
       <section id="fasilitas-teaser" class="section section--facilities">
-        <header class="section-header section-header--center">
+        <!-- Header dari atas -->
+        <header class="section-header section-header--center" data-reveal="up">
           <p class="section-header__label">Sarana &amp; Prasarana</p>
           <h2 class="section-header__title">Fasilitas Sekolah</h2>
           <div class="section-header__divider"></div>
         </header>
 
+        <!-- Grid: featured scale-in, sisanya naik bergantian (stagger) -->
         <ul class="facility-grid" aria-label="Daftar fasilitas">
-          <li class="facility-grid__item facility-grid__item--featured">
+          <li class="facility-grid__item facility-grid__item--featured" data-reveal="scale" data-delay="100">
             <a class="facility-card" href="fasilitas.html">
-              <img
-                class="facility-card__img"
-                src="Image/Fasilitas/Gereja_1.webp"
-                alt="Gereja"
-                loading="lazy"
-              />
+              <img class="facility-card__img" src="Image/Fasilitas/Gereja_1.webp" alt="Gereja" loading="lazy" />
               <div class="facility-card__label">
                 <span class="facility-card__badge">Unggulan</span>
                 <span class="facility-card__name">Gereja</span>
               </div>
             </a>
           </li>
-          <li class="facility-grid__item">
+          <li class="facility-grid__item" data-reveal="up" data-delay="100">
             <a class="facility-card" href="fasilitas.html">
-              <img
-                class="facility-card__img"
-                src="Image/Carousel_1.jpeg"
-                alt="Aula"
-                loading="lazy"
-              />
-              <div class="facility-card__label">
-                <span class="facility-card__name">Aula</span>
-              </div>
+              <img class="facility-card__img" src="Image/Index/Carousel_1.jpeg" alt="Aula" loading="lazy" />
+              <div class="facility-card__label"><span class="facility-card__name">Aula</span></div>
             </a>
           </li>
-          <li class="facility-grid__item">
+          <li class="facility-grid__item" data-reveal="up" data-delay="200">
             <a class="facility-card" href="fasilitas.html">
-              <img
-                class="facility-card__img"
-                src="Image/Fasilitas/Kelas_1.webp"
-                alt="Kelas"
-                loading="lazy"
-              />
-              <div class="facility-card__label">
-                <span class="facility-card__name">Kelas</span>
-              </div>
+              <img class="facility-card__img" src="Image/Fasilitas/Kelas_1.webp" alt="Kelas" loading="lazy" />
+              <div class="facility-card__label"><span class="facility-card__name">Kelas</span></div>
             </a>
           </li>
-          <li class="facility-grid__item">
+          <li class="facility-grid__item" data-reveal="up" data-delay="300">
             <a class="facility-card" href="fasilitas.html">
-              <img
-                class="facility-card__img"
-                src="Image/Carousel_1.jpeg"
-                alt="Lapangan"
-                loading="lazy"
-              />
-              <div class="facility-card__label">
-                <span class="facility-card__name">Lapangan</span>
-              </div>
+              <img class="facility-card__img" src="Image/Index/Carousel_1.jpeg" alt="Lapangan" loading="lazy" />
+              <div class="facility-card__label"><span class="facility-card__name">Lapangan</span></div>
             </a>
           </li>
-          <li class="facility-grid__item">
+          <li class="facility-grid__item" data-reveal="up" data-delay="400">
             <a class="facility-card" href="fasilitas.html">
-              <img
-                class="facility-card__img"
-                src="Image/Fasilitas/Ruang-band_1.webp"
-                alt="Ruang Band "
-                loading="lazy"
-              />
-              <div class="facility-card__label">
-                <span class="facility-card__name">Ruang Band</span>
-              </div>
+              <img class="facility-card__img" src="Image/Fasilitas/Ruang-band_1.webp" alt="Ruang Band" loading="lazy" />
+              <div class="facility-card__label"><span class="facility-card__name">Ruang Band</span></div>
             </a>
           </li>
-          <li class="facility-grid__item">
+          <li class="facility-grid__item" data-reveal="up" data-delay="500">
             <a class="facility-card" href="fasilitas.html">
-              <img
-                class="facility-card__img"
-                src="Image/Carousel_1.jpeg"
-                alt="Kantin"
-                loading="lazy"
-              />
-              <div class="facility-card__label">
-                <span class="facility-card__name">Kantin</span>
-              </div>
+              <img class="facility-card__img" src="Image/Index/Carousel_1.jpeg" alt="Kantin" loading="lazy" />
+              <div class="facility-card__label"><span class="facility-card__name">Kantin</span></div>
             </a>
           </li>
         </ul>
 
-        <div class="facility__actions">
-          <a href="fasilitas.html" class="btn btn--outline"
-            >Lihat Semua Fasilitas</a
-          >
+        <div class="facility__actions" data-reveal="up" data-delay="200">
+          <a href="Pages/fasilitas.html" class="btn btn--outline">Lihat Semua Fasilitas</a>
         </div>
       </section>
 
-      <!-- ════════════════════════════════
-           EKSTRAKULIKULER
-           ════════════════════════════════ -->
+      <!-- ════ EKSTRAKULIKULER ════ -->
       <section id="academics" class="section section--ekskul">
-        <figure class="ekskul__media">
-          <img
-            src="Image/Carousel_1.jpeg"
-            alt="Kegiatan ekstrakulikuler"
-            loading="lazy"
-          />
+        <!-- Foto kiri -->
+        <figure class="ekskul__media" data-reveal="left">
+          <img src="Image/Ekstrakulikuler/Modern-Dance_1.jpg" alt="Kegiatan ekstrakulikuler" loading="lazy" />
         </figure>
-        <div class="ekskul__body">
+        <!-- Teks tengah, fade -->
+        <div class="ekskul__body" data-reveal="fade" data-delay="200">
           <header class="section-header section-header--center">
             <p class="section-header__label">Pengembangan Diri</p>
             <h2 class="section-header__title">Ekstrakulikuler</h2>
             <div class="section-header__divider"></div>
           </header>
-          <p class="section__desc">
-            Di SMA Santo Kristoforus 1, kami berkomitmen untuk menginspirasi
-            pemikiran maju generasi masa depan.
-          </p>
-          <a href="ekstrakulikuler.html" class="btn btn--outline"
-            >Baca Selengkapnya</a
-          >
+          <p class="section__desc">Di SMA Santo Kristoforus 1, kami berkomitmen untuk menginspirasi pemikiran maju generasi masa depan.</p>
+          <a href="Pages/ekstrakulikuler.html" class="btn btn--outline">Baca Selengkapnya</a>
         </div>
-        <figure class="ekskul__media">
-          <img
-            src="Image/Carousel_1.jpeg"
-            alt="Kegiatan ekstrakulikuler"
-            loading="lazy"
-          />
+        <!-- Foto kanan -->
+        <figure class="ekskul__media" data-reveal="right" data-delay="100">
+          <img src="Image/Ekstrakulikuler/Futsal_1.jpg" alt="Kegiatan ekstrakulikuler" loading="lazy" />
         </figure>
       </section>
 
-      <!-- ════════════════════════════════
-           BERITA & PENGUMUMAN
-           ════════════════════════════════ -->
+      <!-- ════ BERITA & PENGUMUMAN ════ -->
       <section id="berita" class="section section--news">
-        <!-- Header berita -->
-        <div class="news-header">
+        <!-- Header -->
+        <div class="news-header" data-reveal="up">
           <header class="section-header">
             <p class="section-header__label">Informasi Terkini</p>
             <h2 class="section-header__title">Berita &amp; Pengumuman</h2>
             <div class="section-header__divider"></div>
           </header>
-          <a href="#" class="btn btn--outline">Lihat Semua Berita</a>
+          <a href="Pages/all-news.html" class="btn btn--outline">Lihat Semua Berita</a>
         </div>
         <hr class="news-header__line" />
 
         <!-- Card featured -->
-        <a href="berita_1.html" class="news-featured">
+        <a href="Pages/berita-ppdb.html" class="news-featured" data-reveal="up" data-delay="100">
           <figure class="news-featured__media">
-            <img
-              src="Image/Carousel_1.jpeg"
-              alt="Berita utama"
-              class="news-featured__img"
-              loading="lazy"
-            />
+            <img src="/Image/Berita-Kegiatan/PPDB/PPDB_1.jpeg" alt="Berita utama" class="news-featured__img" loading="lazy" />
             <span class="news-badge">Pengumuman</span>
           </figure>
           <div class="news-featured__body">
-            <p class="news-date">
-              <i class="fas fa-calendar-alt" aria-hidden="true"></i> 18 Maret
-              2025
-            </p>
-            <h3 class="news-featured__title">
-              Penerimaan Peserta Didik Baru Tahun Ajaran 2025/2026 Resmi Dibuka
-            </h3>
-            <p class="news-featured__excerpt">
-              SMA Santo Kristoforus 1 dengan bangga mengumumkan pembukaan
-              penerimaan siswa baru. Daftarkan dirimu sekarang dan jadilah
-              bagian dari keluarga besar Kristoforus yang berprestasi, beriman,
-              dan berkarakter.
-            </p>
-            <span class="news-readmore"
-              >Baca Selengkapnya
-              <i class="fas fa-arrow-right" aria-hidden="true"></i
-            ></span>
+            <p class="news-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 18 Maret 2025</p>
+            <h3 class="news-featured__title">Penerimaan Peserta Didik Baru Tahun Ajaran 2025/2026 Resmi Dibuka</h3>
+            <p class="news-featured__excerpt">SMA Santo Kristoforus 1 dengan bangga mengumumkan pembukaan penerimaan siswa baru. Daftarkan dirimu sekarang dan jadilah bagian dari keluarga besar Kristoforus yang berprestasi, beriman, dan berkarakter.</p>
+            <span class="news-readmore">Baca Selengkapnya <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
           </div>
         </a>
 
         <hr class="news-separator" />
 
-        <!-- 3 card berita kecil -->
+        <!-- 3 card kecil: stagger naik -->
         <ul class="news-list" aria-label="Berita lainnya">
-          <li>
-            <a href="#" class="news-card">
+           <li data-reveal="up" data-delay="100">
+            <a href="Pages/berita-juara-short-movie.html" class="news-card">
               <figure class="news-card__media">
-                <img
-                  src="Image/Carousel_1.jpeg"
-                  alt="Berita"
-                  class="news-card__img"
-                  loading="lazy"
-                />
-                <span class="news-badge news-badge--green">Prestasi</span>
-              </figure>
-              <div class="news-card__body">
-                <p class="news-date">
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i> 10
-                  Maret 2025
-                </p>
-                <h3 class="news-card__title">
-                  Siswa Kristoforus Raih Medali Emas Olimpiade Sains Nasional
-                </h3>
-                <p class="news-card__excerpt">
-                  Kebanggaan bagi seluruh civitas sekolah atas prestasi gemilang
-                  yang diraih di tingkat nasional.
-                </p>
-                <span class="news-readmore"
-                  >Baca Selengkapnya
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i
-                ></span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="news-card">
-              <figure class="news-card__media">
-                <img
-                  src="Image/Carousel_1.jpeg"
-                  alt="Berita"
-                  class="news-card__img"
-                  loading="lazy"
-                />
+                <img src="/Image/Berita-Kegiatan/Pelantikan osis/Pelantikan-Osis_2.jpg" alt="Berita" class="news-card__img" loading="lazy" />
                 <span class="news-badge news-badge--gold">Kegiatan</span>
               </figure>
               <div class="news-card__body">
-                <p class="news-date">
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i> 5 Maret
-                  2025
-                </p>
-                <h3 class="news-card__title">
-                  Perayaan Ekaristi dan Retret Rohani Siswa Kelas XII
-                </h3>
-                <p class="news-card__excerpt">
-                  Kegiatan rohani tahunan yang mempererat iman dan kebersamaan
-                  seluruh siswa kelas XII.
-                </p>
-                <span class="news-readmore"
-                  >Baca Selengkapnya
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i
-                ></span>
+                <p class="news-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i>13 Maret 2026</p>
+                <h3 class="news-card__title">Pelantikan Pengurus OSIS Periode 2026/2027 SMA Santo Kristoforus 1</h3>
+                <p class="news-card__excerpt">SMA Santo Kristoforus 1 menggelar kegiatan
+              pelantikan pengurus Organisasi Siswa Intra Sekolah (OSIS) periode
+              2026/2027 padaJumat, 13 Maret 2026 di Lapangan
+              SMA Santo Kristoforus 1. Acara ini dihadiri oleh kepala sekolah,
+              para guru, staf, serta seluruh siswa yang turut menyaksikan
+              pergantian kepengurusan secara resmi.</p>
+                <span class="news-readmore">Baca Selengkapnya <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
               </div>
             </a>
           </li>
-          <li>
-            <a href="#" class="news-card">
+          <li data-reveal="up" data-delay="250">
+            <a href="Pages/berita-imlek.html" class="news-card">
               <figure class="news-card__media">
-                <img
-                  src="Image/Carousel_1.jpeg"
-                  alt="Berita"
-                  class="news-card__img"
-                  loading="lazy"
-                />
-                <span class="news-badge">Pengumuman</span>
+                <img src="/Image/Berita-Kegiatan/Imlek/Imlek_1.jpg" alt="Berita" class="news-card__img" loading="lazy" />
+                <span class="news-badge news-badge--gold">Kegiatan</span>
               </figure>
               <div class="news-card__body">
-                <p class="news-date">
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i> 28 Feb
-                  2025
-                </p>
-                <h3 class="news-card__title">
-                  Jadwal Ujian Akhir Semester Genap Tahun Pelajaran 2024/2025
-                </h3>
-                <p class="news-card__excerpt">
-                  Informasi lengkap jadwal dan tata tertib pelaksanaan ujian
-                  akhir semester genap.
-                </p>
-                <span class="news-readmore"
-                  >Baca Selengkapnya
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i
-                ></span>
+                <p class="news-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i>26 Februari 2026</p>
+                <h3 class="news-card__title">Perayaan Tahun Baru Imlek SMA Santo Kristoforus 1 Tahun 2026</h3>
+                <p class="news-card__excerpt">SMA Santo Kristoforus 1 menggelar kegiatan perayaan Tahun Baru Imlek pada Kamis, 26 Februari 2026 di aula sekolah. Kegiatan ini dihadiri oleh para guru, staf, serta seluruh siswa yang turut meramaikan perayaan dengan penuh semangat dan sukacita.</p>
+                <span class="news-readmore">Baca Selengkapnya <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
               </div>
             </a>
           </li>
+
+          <li data-reveal="up" data-delay="400">
+            <a href="Pages/berita-juara-short-movie.html" class="news-card">
+              <figure class="news-card__media">
+                <img src="/Image/Berita-Kegiatan/Short-Movie/Short-movie_2.jpeg" alt="Berita" class="news-card__img" loading="lazy" />
+                <span class="news-badge news-badge--green">Prestasi</span>
+              </figure>
+              <div class="news-card__body">
+                <p class="news-date"><i class="fas fa-calendar-alt" aria-hidden="true"></i> 20 November 2025</p>
+                <h3 class="news-card__title">Tim Senyawa Studios dari SMA Santo Kristoforus 1 Menangkan Dua Perlombaan Short Movie Berturut-turut</h3>
+                <p class="news-card__excerpt">Tim Senyawa Studios dari SMA Santo Kristoforus 1 meraih prestasi luar biasa dengan memenangkan dua perlombaan short movie berturut-turut. Kemenangan ini menjadi bukti konsistensi dan kualitas karya siswa dalam dunia perfilman pelajar.</p>
+                <span class="news-readmore">Baca Selengkapnya <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </li>
+          
         </ul>
       </section>
+
     </main>
 
-    <!-- ════════════════════════════════
-         FOOTER
-         ════════════════════════════════ -->
+    <!-- FOOTER -->
     <footer id="footer" class="site-footer">
       <div class="site-footer__top">
-        <!-- Kolom 1: Logo -->
         <div class="site-footer__brand">
           <div class="site-footer__logo-wrap">
-            <img
-              src="/Image/Rectangle Logo Sekolah Kristoforus.png"
-              alt="Logo SMA Santo Kristoforus"
-              class="site-footer__logo"
-              loading="lazy"
-            />
+            <img src="Image/Template/Rectangle-Logo-Sekolah-Kristoforus.png" alt="Logo SMA Santo Kristoforus" class="site-footer__logo" loading="lazy" />
           </div>
         </div>
-
-        <!-- Kolom 2: Tautan Cepat -->
         <div class="site-footer__col">
           <p class="site-footer__col-title">Tautan Cepat</p>
           <ul class="footer-links">
-            <li><a href="#">Tentang Kami</a></li>
-            <li><a href="#">Ekstrakulikuler</a></li>
-            <li><a href="#">Fasilitas</a></li>
-            <li><a href="#">Berita & Pengumuman Sekolah</a></li>
+            <li><a href="Pages/aboutus.html">Tentang Kami</a></li>
+            <li><a href="Pages/ekstrakulikuler.html">Ekstrakulikuler</a></li>
+            <li><a href="Pages/fasilitas.html">Fasilitas</a></li>
+            <li><a href="Pages/berita.html">Berita &amp; Pengumuman Sekolah</a></li>
+            <li><a href="Pages/contact.html">Hubungi Kami</a></li>
           </ul>
         </div>
-
-        <!-- Kolom 3: Media Sosial -->
         <div class="site-footer__col">
           <p class="site-footer__col-title">Ikuti Kami</p>
           <ul class="footer-socmed">
             <li>
-              <a
-                href="https://www.instagram.com/osis_smaxto1/"
-                class="footer-socmed__item"
-              >
-                <span class="footer-socmed__icon footer-socmed__icon--ig"
-                  ><i class="fab fa-instagram"></i
-                ></span>
+              <a href="https://www.instagram.com/osis_smaxto1/" class="footer-socmed__item">
+                <span class="footer-socmed__icon footer-socmed__icon--ig"><i class="fab fa-instagram"></i></span>
                 <span class="footer-socmed__info">
                   <span class="footer-socmed__name">Instagram</span>
                   <span class="footer-socmed__handle">@osis_smaxto1</span>
@@ -583,45 +351,26 @@
               </a>
             </li>
             <li>
-              <a
-                href="https://www.facebook.com/people/SMA-Santo-Kristoforus-1/100067754111313/"
-                class="footer-socmed__item"
-              >
-                <span class="footer-socmed__icon footer-socmed__icon--fb"
-                  ><i class="fab fa-facebook-f"></i
-                ></span>
+              <a href="https://www.facebook.com/people/SMA-Santo-Kristoforus-1/100067754111313/" class="footer-socmed__item">
+                <span class="footer-socmed__icon footer-socmed__icon--fb"><i class="fab fa-facebook-f"></i></span>
                 <span class="footer-socmed__info">
                   <span class="footer-socmed__name">Facebook</span>
-                  <span class="footer-socmed__handle"
-                    >SMA Santo Kristoforus 1</span
-                  >
+                  <span class="footer-socmed__handle">SMA Santo Kristoforus 1</span>
                 </span>
               </a>
             </li>
             <li>
-              <a
-                href="https://www.youtube.com/@SMAXTO1_Official"
-                class="footer-socmed__item"
-              >
-                <span class="footer-socmed__icon footer-socmed__icon--yt"
-                  ><i class="fab fa-youtube"></i
-                ></span>
+              <a href="https://www.youtube.com/@SMAXTO1_Official" class="footer-socmed__item">
+                <span class="footer-socmed__icon footer-socmed__icon--yt"><i class="fab fa-youtube"></i></span>
                 <span class="footer-socmed__info">
                   <span class="footer-socmed__name">YouTube</span>
-                  <span class="footer-socmed__handle"
-                    >SMA Santo Kristoforus 1 Official</span
-                  >
+                  <span class="footer-socmed__handle">SMA Santo Kristoforus 1 Official</span>
                 </span>
               </a>
             </li>
             <li>
-              <a
-                href="https://www.tiktok.com/@osis_smaxto1"
-                class="footer-socmed__item"
-              >
-                <span class="footer-socmed__icon footer-socmed__icon--tt"
-                  ><i class="fab fa-tiktok"></i
-                ></span>
+              <a href="https://www.tiktok.com/@osis_smaxto1" class="footer-socmed__item">
+                <span class="footer-socmed__icon footer-socmed__icon--tt"><i class="fab fa-tiktok"></i></span>
                 <span class="footer-socmed__info">
                   <span class="footer-socmed__name">TikTok</span>
                   <span class="footer-socmed__handle">@osis_smaxto1</span>
@@ -630,53 +379,37 @@
             </li>
           </ul>
         </div>
-
-        <!-- Kolom 4: Kontak -->
         <div class="site-footer__col">
           <p class="site-footer__col-title">Hubungi Kami</p>
           <ul class="footer-contact">
             <li class="footer-contact__item">
-              <i
-                class="fas fa-map-marker-alt footer-contact__icon"
-                aria-hidden="true"
-              ></i>
+              <i class="fas fa-map-marker-alt footer-contact__icon" aria-hidden="true"></i>
               <span>Jl. Rahayu No.1A, Jelambar, Grogol</span>
             </li>
             <li class="footer-contact__item">
-              <i
-                class="fas fa-phone-alt footer-contact__icon"
-                aria-hidden="true"
-              ></i>
+              <i class="fas fa-phone-alt footer-contact__icon" aria-hidden="true"></i>
               <span>(021) 56960276</span>
             </li>
             <li class="footer-contact__item">
-              <i
-                class="fas fa-envelope footer-contact__icon"
-                aria-hidden="true"
-              ></i>
+              <i class="fas fa-envelope footer-contact__icon" aria-hidden="true"></i>
               <span>info@kristo.sch.id</span>
             </li>
             <li class="footer-contact__item">
-              <i
-                class="fas fa-clock footer-contact__icon"
-                aria-hidden="true"
-              ></i>
-              <span>Senin &ndash; Jumat: 07.00 &ndash; 15.00 WIB</span>
+              <i class="fas fa-clock footer-contact__icon" aria-hidden="true"></i>
+              <span>Senin &ndash; Jumat</span>
             </li>
           </ul>
         </div>
       </div>
-
       <hr class="site-footer__divider" />
-
       <div class="site-footer__bottom">
-        <p class="site-footer__copy">
-          Dibuat untuk memenuhi Ujian Praktek Coding 2026
-        </p>
-        <a href="#" class="site-footer__members">Anggota Kelompok</a>
+        <p class="site-footer__copy">Dibuat untuk memenuhi Ujian Praktek Coding 2026</p>
+        <a href="Pages/developer.html" class="site-footer__members">Anggota Kelompok</a>
       </div>
     </footer>
-    <script src="header.js"></script>
-    <script src="script.js"></script>
+
+    <script src="Javascript/header.js"></script>
+    <script src="Javascript/index.js"></script>
+    <script src="Javascript/animation.js"></script>
   </body>
 </html>

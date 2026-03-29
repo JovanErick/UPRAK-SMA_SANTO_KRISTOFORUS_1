@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekstrakulikuler — SMA Santo Kristoforus 1</title>
+    <link rel="icon" type="image/png" href="Image/Rectangle Logo Sekolah Kristoforus.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="/CSS/template.css" />
+    <link rel="stylesheet" href="/CSS/cards.css">
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <a href="/index.html" class="site-header__logo-link">
+        <img src="/Image/Template/Logo-Sekolah-Kristoforus_REMAKE.png" alt="Logo Sekolah Katolik Santo Kristoforus" class="site-header__logo" />
+      </a>
+      <nav class="site-nav" id="main-nav" aria-label="Navigasi Utama">
+        <a href="/index.html#tentang-kami" class="site-nav__link">Tentang</a>
+        <a href="/index.html#kristoforus-value" class="site-nav__link">Nilai</a>
+        <a href="/index.html#fasilitas-teaser" class="site-nav__link">Fasilitas</a>
+        <a href="/index.html#academics" class="site-nav__link is-active">Ekskul</a>
+        <a href="/index.html#berita" class="site-nav__link">Berita</a>
+      </nav>
+      <div class="site-header__cta">
+        <a href="contact.html" class="btn btn--outline">Hubungi Kami</a>
+        <a href="https://sma1.kristo.sch.id/psb/psb_v2.php" class="btn btn--solid">Daftar</a>
+      </div>
+      <button class="site-header__hamburger" id="hamburgerBtn" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileNav">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigasi Mobile">
+      <div class="mobile-nav__header">
+        <span>MENU</span>
+        <button class="mobile-nav__close" id="mobileNavClose" aria-label="Tutup menu"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="mobile-nav__links">
+        <a href="#tentang-kami" class="mobile-nav__link" data-mobile-link><i class="fas fa-school"></i> Tentang Kami</a>
+        <a href="#kristoforus-value" class="mobile-nav__link" data-mobile-link><i class="fas fa-heart"></i> Kristoforus Value</a>
+        <a href="#fasilitas-teaser" class="mobile-nav__link" data-mobile-link><i class="fas fa-building"></i> Fasilitas</a>
+        <a href="#academics" class="mobile-nav__link" data-mobile-link><i class="fas fa-star"></i> Ekstrakulikuler</a>
+        <a href="#berita" class="mobile-nav__link" data-mobile-link><i class="fas fa-newspaper"></i> Berita &amp; Pengumuman</a>
+      </div>
+      <div style="padding: 20px 24px; display: flex; gap: 10px; flex-wrap: wrap">
+        <a href="#" class="btn btn--outline" style="font-size: 12px; padding: 8px 16px">Hubungi Kami</a>
+        <a href="#" class="btn btn--solid" style="font-size: 12px; padding: 8px 16px">Daftar</a>
+      </div>
+      <div class="mobile-nav__footer">SMA Santo Kristoforus 1 &mdash; Jakarta Barat</div>
+    </nav>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="ekskul-hero" aria-label="Ekstrakulikuler">
+        <div class="ekskul-hero__inner">
+          <nav class="ekskul-hero__breadcrumb" aria-label="Breadcrumb">
+            <a href="/index.html">Beranda</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Ekstrakulikuler</span>
+          </nav>
+          <span class="ekskul-hero__label">Pengembangan Diri</span>
+          <h1 class="ekskul-hero__title">Ekstrakulikuler</h1>
+          <p class="ekskul-hero__desc">Lebih dari sekadar belajar di kelas — kami percaya setiap siswa memiliki bakat unik yang perlu diasah. Temukan kegiatan yang paling cocok untukmu dan berkembang bersama komunitas yang saling mendukung.</p>
+        </div>
+      </section>
+
+      <!-- FILTER BAR -->
+      <div class="ekskul-filter" role="navigation" aria-label="Filter ekstrakulikuler">
+        <ul class="ekskul-filter__list">
+          <li><button class="ekskul-filter__btn" data-filter="all"><i class="fas fa-th-large"></i> Semua</button></li>
+          <li><button class="ekskul-filter__btn" data-filter="olahraga"><i class="fas fa-running"></i> Olahraga</button></li>
+          <li><button class="ekskul-filter__btn" data-filter="seni"><i class="fas fa-music"></i> Seni</button></li>
+          <li><button class="ekskul-filter__btn" data-filter="lainnya"><i class="fas fa-star"></i> Lainnya</button></li>
+        </ul>
+      </div>
+
+      <!-- GRID -->
+      <section class="ekskul-main" aria-label="Daftar ekstrakulikuler">
+        <div class="ekskul-grid" id="ekskGrid">
+
+          <!-- ─── OLAHRAGA ──────────────────── -->
+          <div class="ekskul-section-label" data-section="olahraga">
+            <span class="ekskul-section-label__text">Olahraga</span>
+            <div class="ekskul-section-label__line"></div>
+          </div>
+
+          <!-- Badminton -->
+          <div class="ekskul-card" data-category="olahraga" id="badminton" data-images="['/Image/Ekstrakulikuler/Badminton_1.jpg','/Image/Ekstrakulikuler/Badminton_2.jpg', '/Image/Ekstrakulikuler/Badminton_3.jpg', '/Image/Ekstrakulikuler/Badminton_4.jpg']">
+            <div class="ekskul-card__media">
+              <img
+                src="/Image/Ekstrakulikuler/Badminton_1.jpg"
+                alt=""
+                loading="lazy"
+              />
+              <img src="/Image/Ekstrakulikuler/Badminton_2.jpg" alt="" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Badminton_3.jpg" alt="" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Badminton_4.jpg" alt="" loading="lazy" />
+            </div>
+            <div class="ekskul-card__body">
+              <p class="ekskul-card__category">Olahraga Raket</p>
+              <h2 class="ekskul-card__name">Badminton</h2>
+              <p class="ekskul-card__desc">
+                Ekstrakulikuler badminton melatih kelincahan, koordinasi, dan stamina siswa.
+                Dibimbing oleh pelatih berpengalaman, tim badminton Kristoforus aktif mengikuti
+                kompetisi antar sekolah tingkat kota dan provinsi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Basket -->
+          <div class="ekskul-card" data-category="olahraga" id="basket" data-images="['/Image/Ekstrakulikuler/Basket_1.jpeg','/Image/Ekstrakulikuler/Basket_2.jpg']">
+            <div class="ekskul-card__media">
+              <img
+                src="/Image/Ekstrakulikuler/Basket_1.jpeg"
+                alt="Basket 1"
+                loading="lazy"
+              />
+              <img src="/Image/Ekstrakulikuler/Basket_2.jpg" alt="Basket 2" loading="lazy" />
+            </div>
+            <div class="ekskul-card__body">
+              <p class="ekskul-card__category">Olahraga Tim</p>
+              <h2 class="ekskul-card__name">Basket</h2>
+              <p class="ekskul-card__desc">
+                Tim basket Kristoforus dikenal dengan semangat juang dan kerja sama yang solid.
+                Program latihan mencakup teknik dasar, strategi permainan, dan pembentukan mental
+                atlet yang tangguh dan berkarakter.
+              </p>
+            </div>
+          </div>
+
+          <!-- Futsal -->
+          <div class="ekskul-card" data-category="olahraga" id="futsal" data-images="['/Image/Ekstrakulikuler/Futsal_1.jpg','/Image/Ekstrakulikuler/Futsal_2.jpg','/Image/Ekstrakulikuler/Futsal_3.jpg','/Image/Ekstrakulikuler/Futsal_4.jpg','/Image/Ekstrakulikuler/Futsal_5.jpg']">
+            <div class="ekskul-card__media">
+              <img
+                src="/Image/Ekstrakulikuler/Futsal_1.jpg"
+                alt="Futsal 1"
+                loading="lazy"
+              />
+              <img src="/Image/Ekstrakulikuler/Futsal_2.jpg" alt="Futsal 2" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Futsal_3.jpg" alt="Futsal 3" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Futsal_4.jpg" alt="Futsal 4" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Futsal_5.jpg" alt="Futsal 5" loading="lazy" />
+            </div>
+            <div class="ekskul-card__body">
+              <p class="ekskul-card__category">Olahraga Tim</p>
+              <h2 class="ekskul-card__name">Futsal</h2>
+              <p class="ekskul-card__desc">
+                Futsal mengajarkan kecepatan berpikir, kerja sama tim, dan ketepatan teknis.
+                Ekstrakulikuler ini menjadi salah satu yang paling diminati siswa dan rutin
+                mengikuti turnamen futsal antar SMA se-Jakarta Barat.
+              </p>
+            </div>
+          </div>
+
+          <!-- Voli -->
+          <div class="ekskul-card" data-category="olahraga" id="voli" data-images="['/Image/Ekstrakulikuler/Voli_1.jpg','/Image/Ekstrakulikuler/Voli_2.jpg','/Image/Ekstrakulikuler/Voli_3.jpg','/Image/Ekstrakulikuler/Voli_4.jpg']">
+            <div class="ekskul-card__media">
+              <img
+                src="/Image/Ekstrakulikuler/Voli_1.jpg"
+                alt="Voli 1"
+                loading="lazy"
+              />
+              <img src="/Image/Ekstrakulikuler/Voli_2.jpg" alt="Voli 2" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Voli_3.jpg" alt="Voli 3" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Voli_4.jpg" alt="Voli 4" loading="lazy" />
+            </div>
+            <div class="ekskul-card__body">
+              <p class="ekskul-card__category">Olahraga Tim</p>
+              <h2 class="ekskul-card__name">Voli</h2>
+              <p class="ekskul-card__desc">
+                Voli melatih komunikasi, refleks, dan sinergi antar pemain. Program latihan
+                intensif dengan pelatih profesional membentuk atlet voli yang siap bersaing
+                di kompetisi daerah maupun nasional.
+              </p>
+            </div>
+          </div>
+
+          <!-- Taekwondo -->
+          <div class="ekskul-card" data-category="olahraga" id="taekwondo" data-images="['/Image/Ekstrakulikuler/Taekwondo_1.jpg','/Image/Ekstrakulikuler/Taekwondo_2.jpeg']">
+            <div class="ekskul-card__media">
+              <img
+                src="/Image/Ekstrakulikuler/Taekwondo_1.jpg"
+                alt="Taekwondo 1"
+                loading="lazy"
+              />
+              <img src="/Image/Ekstrakulikuler/Taekwondo_2.jpeg" alt="Taekwondo 2" loading="lazy" />
+            </div>
+            <div class="ekskul-card__body">
+              <p class="ekskul-card__category">Seni Bela Diri</p>
+              <h2 class="ekskul-card__name">Taekwondo</h2>
+              <p class="ekskul-card__desc">
+                Taekwondo bukan hanya soal teknik bertarung — ini tentang disiplin, fokus, dan
+                pengendalian diri. Siswa dibimbing dari sabuk putih hingga sabuk berwarna oleh
+                instruktur berlisensi nasional.
+              </p>
+            </div>
+          </div>
+
+          <!-- ─── SENI ──────────────────────── -->
+          <div class="ekskul-section-label" data-section="seni">
+            <span class="ekskul-section-label__text">Seni</span>
+            <div class="ekskul-section-label__line"></div>
+          </div>
+
+          <!-- Band -->
+          <div class="ekskul-card" data-category="seni" id="band" data-images="['/Image/Ekstrakulikuler/Band_1.jpeg','/Image/Ekstrakulikuler/Band_2.jpeg','/Image/Ekstrakulikuler/Band_3.jpeg','/Image/Ekstrakulikuler/Band_4.jpeg']">
+            <div class="ekskul-card__media">
+              <img
+                src="/Image/Ekstrakulikuler/Band_1.jpeg"
+                alt="Band 1"
+                loading="lazy"
+              />
+              <img src="/Image/Ekstrakulikuler/Band_2.jpeg" alt="Band 2" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Band_3.jpeg" alt="Band 3" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Band_4.jpeg" alt="Band 4" loading="lazy" />
+            </div>
+            <div class="ekskul-card__body">
+              <p class="ekskul-card__category">Seni Musik</p>
+              <h2 class="ekskul-card__name">Band</h2>
+              <p class="ekskul-card__desc">
+                Ekstrakulikuler band mengasah kemampuan bermusik, kreativitas, dan kolaborasi.
+                Siswa belajar bermain instrumen, aransemen, dan tampil di berbagai acara sekolah
+                maupun kompetisi musik antar sekolah.
+              </p>
+            </div>
+          </div>
+
+          <!-- Ansamble -->
+          <div class="ekskul-card" data-category="seni" id="ansamble" data-images="['/Image/Ekstrakulikuler/Ansambel_1.jpeg','/Image/Ekstrakulikuler/Ansambel_2.jpeg']">
+            <div class="ekskul-card__media">
+              <img
+                src="/Image/Ekstrakulikuler/Ansambel_1.jpeg"
+                alt="Ansambel"
+                loading="lazy"
+              />
+                            <img
+                src="/Image/Ekstrakulikuler/Ansambel_2.jpeg"
+                alt="Ansambel"
+                loading="lazy"
+              />
+            </div>
+            <div class="ekskul-card__body">
+              <p class="ekskul-card__category">Seni Musik</p>
+              <h2 class="ekskul-card__name">Ansambel</h2>
+              <p class="ekskul-card__desc">
+                Ansambel musik melatih kekompakan dan kepekaan musikal dalam memainkan karya
+                bersama. Menggabungkan berbagai jenis instrumen untuk menghasilkan harmoni
+                yang indah dan membangun rasa kebersamaan.
+              </p>
+            </div>
+          </div>
+
+          <!-- Paduan Suara -->
+          <div class="ekskul-card" data-category="seni" id="padus" data-images="['/Image/Ekstrakulikuler/Paduan-Suara_1.jpg']">
+            <div class="ekskul-card__media">
+              <img
+                src="/Image/Ekstrakulikuler/Paduan-Suara_1.jpg"
+                alt="Paduan Suara"
+                loading="lazy"
+              />
+            </div>
+            <div class="ekskul-card__body">
+              <p class="ekskul-card__category">Seni Vokal</p>
+              <h2 class="ekskul-card__name">Paduan Suara</h2>
+              <p class="ekskul-card__desc">
+                Paduan suara Kristoforus dikenal dengan suara yang jernih dan harmonis. Tim ini
+                aktif tampil dalam Misa, upacara, dan festival paduan suara, meraih berbagai
+                penghargaan di tingkat keuskupan maupun nasional.
+              </p>
+            </div>
+          </div>
+
+          <!-- Modern Dance -->
+          <div class="ekskul-card" data-category="seni" id="modern-dance" data-images="['/Image/Ekstrakulikuler/Modern-Dance_1.jpg','/Image/Ekstrakulikuler/Modern-Dance_2.jpeg','/Image/Ekstrakulikuler/Modern-Dance_3.jpeg']">
+            <div class="ekskul-card__media">
+              <img
+                src="/Image/Ekstrakulikuler/Modern-Dance_1.jpg"
+                alt="Modern Dance 1"
+                loading="lazy"
+              />
+              <img src="/Image/Ekstrakulikuler/Modern-Dance_2.jpeg" alt="Modern Dance 2" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Modern-Dance_3.jpeg" alt="Modern Dance 3" loading="lazy" />
+            </div>
+            <div class="ekskul-card__body">
+              <p class="ekskul-card__category">Seni Tari</p>
+              <h2 class="ekskul-card__name">Modern Dance</h2>
+              <p class="ekskul-card__desc">
+                Modern dance menggabungkan berbagai aliran tari kontemporer — dari hip-hop hingga
+                contemporary. Ekstrakulikuler ini mengeksplorasi ekspresi diri melalui gerakan
+                dan sering tampil dalam pentas seni maupun lomba tari.
+              </p>
+            </div>
+          </div>
+
+          <!-- ─── LAINNYA ──────────────────── -->
+          <div class="ekskul-section-label" data-section="lainnya">
+            <span class="ekskul-section-label__text">Lainnya</span>
+            <div class="ekskul-section-label__line"></div>
+          </div>
+
+          <!-- Paskibra -->
+          <div class="ekskul-card" data-category="lainnya" id="paskibra" data-images="['/Image/Ekstrakulikuler/Paskibra_1.jpg','/Image/Ekstrakulikuler/Paskibra_2.jpeg','/Image/Ekstrakulikuler/Paskibra_3.jpeg']">
+            <div class="ekskul-card__media">
+              <img
+                src="/Image/Ekstrakulikuler/Paskibra_1.jpg"
+                alt="Paskibra 1"
+                loading="lazy"
+              />
+              <img src="/Image/Ekstrakulikuler/Paskibra_2.jpeg" alt="Paskibra 2" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Paskibra_3.jpeg" alt="Paskibra 3" loading="lazy" />
+            </div>
+            <div class="ekskul-card__body">
+              <p class="ekskul-card__category">Bela Negara</p>
+              <h2 class="ekskul-card__name">Paskibra</h2>
+              <p class="ekskul-card__desc">
+                Pasukan Pengibar Bendera Kristoforus menanamkan rasa cinta tanah air, disiplin,
+                dan kebanggaan sebagai warga negara. Anggota Paskibra bertugas dalam upacara
+                bendera dan kerap mewakili sekolah di berbagai kegiatan kebangsaan.
+              </p>
+            </div>
+          </div>
+
+          <!-- Jurnalistik -->
+          <div class="ekskul-card" data-category="lainnya" id="jurnalistik" data-images="['/Image/Ekstrakulikuler/Jurnalistik_1.jpg','/Image/Ekstrakulikuler/Jurnalistik_2.jpeg','/Image/Ekstrakulikuler/Jurnalistik_3.jpeg','/Image/Ekstrakulikuler/Jurnalistik_4.jpeg','/Image/Ekstrakulikuler/Jurnalistik_5.jpeg']">
+            <div class="ekskul-card__media">
+              <img
+                src="/Image/Ekstrakulikuler/Jurnalistik_1.jpg"
+                alt="Jurnalistik 1"
+                loading="lazy"
+              />
+              <img src="/Image/Ekstrakulikuler/Jurnalistik_2.jpeg" alt="Jurnalistik 2" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Jurnalistik_3.jpeg" alt="Jurnalistik 3" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Jurnalistik_4.jpeg" alt="Jurnalistik 4" loading="lazy" />
+              <img src="/Image/Ekstrakulikuler/Jurnalistik_5.jpeg" alt="Jurnalistik 5" loading="lazy" />
+            </div>
+            <div class="ekskul-card__body">
+              <p class="ekskul-card__category">Media &amp; Komunikasi</p>
+              <h2 class="ekskul-card__name">Jurnalistik</h2>
+              <p class="ekskul-card__desc">
+                Ekstrakulikuler jurnalistik melatih siswa dalam menulis berita, fotografi,
+                wawancara, dan produksi konten digital. Anggota aktif mengelola majalah dinding
+                dan media sosial resmi sekolah.
+              </p>
+
+            </div>
+          </div>
+
+        </div><!-- /ekskul-grid -->
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+     <footer id="footer" class="site-footer">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <div class="site-footer__logo-wrap">
+            <img src="/Image/Template/Rectangle-Logo-Sekolah-Kristoforus.png" alt="Logo SMA Santo Kristoforus" class="site-footer__logo" loading="lazy" />
+          </div>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Tautan Cepat</p>
+          <ul class="footer-links">
+            <li><a href="aboutus.html">Tentang Kami</a></li>
+            <li><a href="ekstrakulikuler.html">Ekstrakulikuler</a></li>
+            <li><a href="fasilitas.html">Fasilitas</a></li>
+            <li><a href="berita.html">Berita &amp; Pengumuman Sekolah</a></li>
+            <li><a href="contact.html">Hubungi Kami</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Ikuti Kami</p>
+          <ul class="footer-socmed">
+            <li>
+              <a href="https://www.instagram.com/osis_smaxto1/" class="footer-socmed__item">
+                <span class="footer-socmed__icon footer-socmed__icon--ig"><i class="fab fa-instagram"></i></span>
+                <span class="footer-socmed__info">
+                  <span class="footer-socmed__name">Instagram</span>
+                  <span class="footer-socmed__handle">@osis_smaxto1</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/people/SMA-Santo-Kristoforus-1/100067754111313/" class="footer-socmed__item">
+                <span class="footer-socmed__icon footer-socmed__icon--fb"><i class="fab fa-facebook-f"></i></span>
+                <span class="footer-socmed__info">
+                  <span class="footer-socmed__name">Facebook</span>
+                  <span class="footer-socmed__handle">SMA Santo Kristoforus 1</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@SMAXTO1_Official" class="footer-socmed__item">
+                <span class="footer-socmed__icon footer-socmed__icon--yt"><i class="fab fa-youtube"></i></span>
+                <span class="footer-socmed__info">
+                  <span class="footer-socmed__name">YouTube</span>
+                  <span class="footer-socmed__handle">SMA Santo Kristoforus 1 Official</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@osis_smaxto1" class="footer-socmed__item">
+                <span class="footer-socmed__icon footer-socmed__icon--tt"><i class="fab fa-tiktok"></i></span>
+                <span class="footer-socmed__info">
+                  <span class="footer-socmed__name">TikTok</span>
+                  <span class="footer-socmed__handle">@osis_smaxto1</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Hubungi Kami</p>
+          <ul class="footer-contact">
+            <li class="footer-contact__item">
+              <i class="fas fa-map-marker-alt footer-contact__icon" aria-hidden="true"></i>
+              <span>Jl. Rahayu No.1A, Jelambar, Grogol</span>
+            </li>
+            <li class="footer-contact__item">
+              <i class="fas fa-phone-alt footer-contact__icon" aria-hidden="true"></i>
+              <span>(021) 56960276</span>
+            </li>
+            <li class="footer-contact__item">
+              <i class="fas fa-envelope footer-contact__icon" aria-hidden="true"></i>
+              <span>info@kristo.sch.id</span>
+            </li>
+            <li class="footer-contact__item">
+              <i class="fas fa-clock footer-contact__icon" aria-hidden="true"></i>
+              <span>Senin &ndash; Jumat</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="site-footer__divider" />
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">Dibuat untuk memenuhi Ujian Praktek Coding 2026</p>
+        <a href="developer.html" class="site-footer__members">Anggota Kelompok</a>
+      </div>
+    </footer>
+
+    <script src="/Javascript/header.js"></script>
+    <script src="/Javascript/card-slider.js"></script>
+    <script>
+      /* Filter */
+      const filterBtns = document.querySelectorAll('.ekskul-filter__btn');
+      const cards      = document.querySelectorAll('.ekskul-card[data-category]');
+      const sections   = document.querySelectorAll('.ekskul-section-label[data-section]');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('is-active'));
+          btn.classList.add('is-active');
+
+          const filter = btn.dataset.filter;
+
+          cards.forEach(card => {
+            (filter === 'all' || card.dataset.category === filter)
+              ? card.classList.remove('is-hidden')
+              : card.classList.add('is-hidden');
+          });
+
+          sections.forEach(sec => {
+            (filter === 'all' || sec.dataset.section === filter)
+              ? sec.classList.remove('is-hidden')
+              : sec.classList.add('is-hidden');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
