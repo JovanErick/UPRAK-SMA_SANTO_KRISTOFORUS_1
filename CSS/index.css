@@ -30,7 +30,6 @@
   inset: 0;
   z-index: -2;
   background: url("/Image/Index/Carousel_4.jpeg") center / cover no-repeat;
-  background-color: #1a1a2e;
 }
 
 .hero::after {
