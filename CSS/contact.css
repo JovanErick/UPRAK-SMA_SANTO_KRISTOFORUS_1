@@ -472,7 +472,8 @@
 
 @media (max-width: 520px) {
   .contact-form-wrap {
-    padding: 24px 18px;
+    padding: 50px 32px;
+    min-height: unset;
   }
   .contact-socmed {
     gap: 8px;

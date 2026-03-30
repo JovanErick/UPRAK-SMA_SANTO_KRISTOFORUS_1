@@ -538,7 +538,8 @@
 
 @media (max-width: 520px) {
   .about-page {
-    padding: 40px 20px;
+    padding: 50px 32px;
+    min-height: unset;
   }
   .about-stats-bar {
     grid-template-columns: repeat(2, 1fr);

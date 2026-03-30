@@ -697,7 +697,8 @@
   .fac-hero__meta { gap: 16px; }
 
   .fac-main,
-  .ekskul-main { padding: 36px 16px; }
+  .ekskul-main { padding: 50px 32px;
+    min-height: unset;}
 
   .fac-grid,
   .ekskul-grid { grid-template-columns: 1fr; }

@@ -198,5 +198,6 @@
 
       @media (max-width: 520px) {
         .kv-full__item { grid-template-columns: 48px 1fr; }
-        .kv-full__body { padding: 16px; }
+        .kv-full__body { padding: 50px 32px;
+    min-height: unset;}
       }

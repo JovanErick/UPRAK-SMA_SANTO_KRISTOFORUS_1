@@ -948,11 +948,3 @@
     height: clamp(60px, 12vw, 80px);
   }
 }
-
-/* ============================================================
-   ANIMATION.CSS — Scroll Reveal Animations
-   Tambahkan <link rel="stylesheet" href="../CSS/animation.css" />
-   di dalam <head>, setelah index.css
-   ============================================================ */
-
-/* ── Base: semua elemen reveal dimulai tersembunyi ── */
