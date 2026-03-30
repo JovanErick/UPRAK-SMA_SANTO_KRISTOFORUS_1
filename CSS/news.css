@@ -547,3 +547,9 @@
         .article-layout { padding: 32px 16px; }
         .article-related { padding: 36px 16px; }
       }
+
+      
+      @media (max-width: 520px) {
+        .article-layout, .article-related { padding: 50px 32px;
+    min-height: unset;}
+      }
