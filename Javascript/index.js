@@ -1,18 +1,17 @@
-/* ============================================================
-   SCRIPT.JS
-   ============================================================ */
-
 /* ── Hero: Keyword Carousel + Progress Bar ────────────────── */
+// Mendapatkan elemen-elemen yang diperlukan untuk carousel
 const wrapper = document.getElementById('keywordWrapper');
 const track   = document.getElementById('keywordTrack');
 const descs   = document.querySelectorAll('.hero__desc');
 const fill    = document.getElementById('progressFill');
 
+// Konfigurasi interval dan jumlah item
 const INTERVAL = 3200;
 const total    = 3;
 let current    = 0;
 let locked     = false;
 
+// Fungsi untuk mengatur lebar setiap cell (span) agar sesuai dengan lebar wrapper
 function setCellWidths() {
   const w = wrapper.offsetWidth;
   track.querySelectorAll('span').forEach(s => s.style.width = w + 'px');
@@ -21,6 +20,7 @@ function setCellWidths() {
 setCellWidths();
 window.addEventListener('resize', setCellWidths);
 
+// Fungsi untuk memulai animasi progress bar
 function startProgress() {
   fill.style.transition = 'none';
   fill.style.width = '0%';
@@ -32,6 +32,7 @@ function startProgress() {
   });
 }
 
+// Fungsi untuk berpindah ke keyword berikutnya
 function next() {
   if (locked) return;
   locked = true;
@@ -57,13 +58,16 @@ function next() {
   }, 1000);
 }
 
+// Memulai progress bar dan interval perpindahan
 startProgress();
 setInterval(next, INTERVAL);
 
-/* ── Nav: Active Indicator (IntersectionObserver) ─────────── */
+/* ── Bagian Navigasi: Active Indicator dengan IntersectionObserver ── */
+// Ambil semua link navigasi desktop dan mobile
 const navLinks    = document.querySelectorAll('#main-nav .site-nav__link');
 const mobileLinks = document.querySelectorAll('[data-mobile-link]');
 
+// Dapatkan section yang dituju oleh setiap link
 const sections = [...navLinks].map(link => {
   const id = link.getAttribute('href').replace('#', '');
   return document.getElementById(id);
@@ -86,6 +90,7 @@ window.addEventListener('scroll', handleScroll);
 // Panggil sekali untuk memastikan keadaan awal saat halaman dimuat
 handleScroll();
 
+// Observasi perubahan posisi section
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;

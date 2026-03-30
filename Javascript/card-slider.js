@@ -1,22 +1,9 @@
-/* ============================================================
-   CARDS-SLIDER.JS
-   Slider manual gambar yang muncul ketika card diklik.
-   Mendukung: fac-card dan ekskul-card.
-
-   Cara pakai:
-   - Tambahkan data-images='["img1.jpg","img2.jpg"]' pada
-     elemen .fac-card atau .ekskul-card
-   - Atau biarkan kosong — slider akan otomatis mengambil
-     semua <img> yang ada di dalam .fac-card__media /
-     .ekskul-card__media
-
-   Script ini otomatis berjalan ketika halaman dimuat.
-   ============================================================ */
+/* ── Card Slider ────────────────── */
 
 (function () {
   'use strict';
 
-  /* ── Buat overlay sekali ───────────────────────────────── */
+  /* Buat overlay sekali */
   const overlay = document.createElement('div');
   overlay.className = 'card-slider-overlay';
   overlay.setAttribute('role', 'dialog');
@@ -48,7 +35,7 @@
   `;
   document.body.appendChild(overlay);
 
-  /* ── Referensi elemen ──────────────────────────────────── */
+  /* Referensi elemen */
   const track    = overlay.querySelector('#sliderTrack');
   const btnPrev  = overlay.querySelector('#sliderPrev');
   const btnNext  = overlay.querySelector('#sliderNext');
@@ -62,7 +49,7 @@
   let total   = 0;
   let dots    = [];
 
-  /* ── Navigasi ──────────────────────────────────────────── */
+  /* Navigasi */
   function goTo(index) {
     if (index < 0 || index >= total) return;
     current = index;
@@ -76,7 +63,7 @@
   btnPrev.addEventListener('click', () => goTo(current - 1));
   btnNext.addEventListener('click', () => goTo(current + 1));
 
-  /* ── Keyboard ──────────────────────────────────────────── */
+  /* Keyboard */
   document.addEventListener('keydown', (e) => {
     if (!overlay.classList.contains('is-open')) return;
     if (e.key === 'ArrowLeft')  goTo(current - 1);
@@ -84,7 +71,7 @@
     if (e.key === 'Escape')     closeSlider();
   });
 
-  /* ── Swipe (touch) ─────────────────────────────────────── */
+  /* Swipe (touch) */
   let touchStartX = 0;
   overlay.addEventListener('touchstart', (e) => {
     touchStartX = e.changedTouches[0].clientX;
@@ -97,7 +84,7 @@
     }
   }, { passive: true });
 
-  /* ── Tutup slider ──────────────────────────────────────── */
+  /* Tutup slider */
   function closeSlider() {
     overlay.classList.remove('is-open');
     document.body.style.overflow = '';
@@ -114,7 +101,7 @@
     if (e.target === overlay) closeSlider();
   });
 
-  /* ── Buka slider ───────────────────────────────────────── */
+  /* Buka slider */
   function openSlider(images, category, title, startIndex) {
     track.innerHTML    = '';
     dotsWrap.innerHTML = '';
@@ -125,7 +112,7 @@
     catEl.textContent   = category  || '';
     titleEl.textContent = title     || '';
 
-    /* Build slides */
+    // Build slides
     images.forEach((src, i) => {
       const slide = document.createElement('div');
 
@@ -143,7 +130,7 @@
 
       track.appendChild(slide);
 
-      /* Dot */
+      // Dot
       const dot = document.createElement('button');
       dot.className  = 'card-slider__dot';
       dot.setAttribute('aria-label', `Foto ${i + 1}`);
@@ -152,7 +139,7 @@
       dots.push(dot);
     });
 
-    /* Sembunyikan dots jika hanya 1 gambar */
+    // Sembunyikan dots jika hanya 1 gambar
     dotsWrap.style.display = total <= 1 ? 'none' : '';
     counter.style.display  = total <= 1 ? 'none' : '';
 
@@ -163,9 +150,9 @@
     closeBtn.focus();
   }
 
-  /* ── Pasang listener ke semua card ────────────────────── */
+  /* Pasang listener ke semua card */
   function getImages(card) {
-    /* 1. Cek data-images attribute (JSON array string) */
+    // 1. Cek data-images attribute (JSON array string)
     const dataImages = card.getAttribute('data-images');
     if (dataImages) {
       try {
@@ -174,7 +161,7 @@
       } catch (_) {}
     }
 
-    /* 2. Ambil semua <img> di dalam media wrapper */
+    // 2. Ambil semua <img> di dalam media wrapper
     const mediaWrap = card.querySelector(
       '.fac-card__media, .ekskul-card__media'
     );
@@ -183,7 +170,7 @@
       if (imgs.length) return imgs;
     }
 
-    /* 3. Fallback: placeholder */
+    // 3. Fallback: placeholder
     return [null];
   }
 
@@ -204,7 +191,7 @@
     const cards = document.querySelectorAll('.fac-card, .ekskul-card');
 
     cards.forEach((card) => {
-      /* Klik pada media area saja */
+      // Klik pada media area saja
       const media = card.querySelector(
         '.fac-card__media, .ekskul-card__media'
       );
@@ -219,14 +206,14 @@
     });
   }
 
-  /* Jalankan setelah DOM siap */
+  // Jalankan setelah DOM siap
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', attachListeners);
   } else {
     attachListeners();
   }
 
-  /* Expose untuk re-attach setelah filter */
+  // Expose untuk re-attach setelah filter
   window.CardSlider = { attach: attachListeners, open: openSlider };
 
 })();

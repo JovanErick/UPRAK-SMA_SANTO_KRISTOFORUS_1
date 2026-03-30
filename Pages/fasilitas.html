@@ -4,17 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fasilitas — SMA Santo Kristoforus 1</title>
-    <link
-      rel="icon"
-      type="image/png"
-      href="../Image/Template/Rectangle-Logo-Sekolah-Kristoforus.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <link rel="icon" type="image/png" href="../Image/Template/Rectangle-Logo-Sekolah-Kristoforus.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="../CSS/template.css" />
     <link rel="stylesheet" href="../CSS/cards.css" />
+    <link rel="stylesheet" href="../CSS/animation.css">
   </head>
   <body class="page">
     <!-- HEADER -->
@@ -60,20 +54,20 @@
 
     <main>
       <!-- HERO -->
-      <section data-reveal="up" class="fac-hero" aria-label="Hero Fasilitas">
+      <section class="fac-hero" aria-label="Hero Fasilitas">
         <div class="fac-hero__content">
-          <div class="fac-hero__left">
-            <nav class="fac-hero__breadcrumb" aria-label="Breadcrumb">
+          <div data-reveal="up" class="fac-hero__left">
+            <nav data-reveal="fade" data-delay="100" class="fac-hero__breadcrumb" aria-label="Breadcrumb">
               <a href="index.html">Beranda</a>
               <i class="fas fa-chevron-right"></i>
               <span>Fasilitas</span>
             </nav>
-            <p class="fac-hero__label">Sarana &amp; Prasarana</p>
-            <h1 class="fac-hero__title">Fasilitas Sekolah</h1>
+            <p data-reveal="up" data-delay="200" class="fac-hero__label">Sarana &amp; Prasarana</p>
+            <h1 data-reveal="up" data-delay="300" class="fac-hero__title">Fasilitas Sekolah</h1>
           </div>
-          <div class="fac-hero__meta" aria-label="Ringkasan fasilitas">
+          <div data-reveal="right" data-delay="200" class="fac-hero__meta" aria-label="Ringkasan fasilitas">
             <div class="fac-hero__meta-item">
-              <span class="fac-hero__meta-num">15</span>
+              <span class="fac-hero__meta-num">16</span>
               <span class="fac-hero__meta-label">Fasilitas</span>
             </div>
           </div>
@@ -81,53 +75,30 @@
       </section>
 
       <!-- FILTER BAR -->
-      <div class="fac-filter" role="navigation" aria-label="Filter fasilitas">
+      <div data-reveal="up" class="fac-filter" role="navigation" aria-label="Filter fasilitas">
         <ul class="fac-filter__list">
-          <li>
-            <button class="fac-filter__btn" data-filter="all">
-              <i class="fas fa-th-large"></i> Semua
-            </button>
-          </li>
-          <li>
-            <button class="fac-filter__btn" data-filter="seni">
-              <i class="fas fa-music"></i> Seni &amp; Budaya
-            </button>
-          </li>
-          <li>
-            <button class="fac-filter__btn" data-filter="lab">
-              <i class="fas fa-flask"></i> Laboratorium
-            </button>
-          </li>
-          <li>
-            <button class="fac-filter__btn" data-filter="olahraga">
-              <i class="fas fa-running"></i> Olahraga
-            </button>
-          </li>
-          <li>
-            <button class="fac-filter__btn" data-filter="umum">
-              <i class="fas fa-door-open"></i> Umum
-            </button>
-          </li>
+          <li><button class="fac-filter__btn" data-filter="all"><i class="fas fa-th-large"></i> Semua</button></li>
+          <li><button class="fac-filter__btn" data-filter="seni"><i class="fas fa-music"></i> Seni &amp; Budaya</button></li>
+          <li><button class="fac-filter__btn" data-filter="lab"><i class="fas fa-flask"></i> Laboratorium</button></li>
+          <li><button class="fac-filter__btn" data-filter="olahraga"><i class="fas fa-running"></i> Olahraga</button></li>
+          <li><button class="fac-filter__btn" data-filter="umum"><i class="fas fa-door-open"></i> Umum</button></li>
         </ul>
       </div>
 
       <!-- GRID -->
-      <section data-reveal="up" class="fac-main" aria-label="Daftar fasilitas">
+      <section class="fac-main" aria-label="Daftar fasilitas">
         <div class="fac-grid" id="facGrid">
+
           <!-- ─── SENI & BUDAYA ─────────────────────── -->
-          <div class="fac-section-title" data-section="seni">
+          <div data-reveal="left" class="fac-section-title" data-section="seni">
             <span class="fac-section-title__text">Seni &amp; Budaya</span>
             <div class="fac-section-title__line"></div>
           </div>
 
-          <!-- Ruang MD -->
-          <div class="fac-card" data-category="seni" id="r-md" data-images="['../Image/Fasilitas/Ruang-band_1.webp']">
+          <!-- Ruang Band -->
+          <div data-reveal="up" class="fac-card" data-category="seni" id="r-md" data-images="['../Image/Fasilitas/Ruang-band_1.webp']">
             <div class="fac-card__media">
-              <img
-                src="../Image/Fasilitas/Ruang-band_1.webp"
-                alt="Ruang Band"
-                loading="lazy"
-              />
+              <img src="../Image/Fasilitas/Ruang-band_1.webp" alt="Ruang Band" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Seni Musik</p>
@@ -141,13 +112,9 @@
           </div>
 
           <!-- Ruang Padus -->
-          <div class="fac-card" data-category="seni" id="r-padus" data-images="['../Image/Fasilitas/Ruang-padus_1.webp']">
+          <div data-reveal="up" data-delay="100" class="fac-card" data-category="seni" id="r-padus" data-images="['../Image/Fasilitas/Ruang-padus_1.webp']">
             <div class="fac-card__media">
-              <img
-                src="../Image/Fasilitas/Ruang-padus_1.webp"
-                alt="Ruang Paduan Suara"
-                loading="lazy"
-              />
+              <img src="../Image/Fasilitas/Ruang-padus_1.webp" alt="Ruang Paduan Suara" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Seni Vokal</p>
@@ -161,24 +128,16 @@
           </div>
 
           <!-- ─── LABORATORIUM ─────────────────────── -->
-          <div class="fac-section-title" data-section="lab">
+          <div data-reveal="left" class="fac-section-title" data-section="lab">
             <span class="fac-section-title__text">Laboratorium</span>
             <div class="fac-section-title__line"></div>
           </div>
 
           <!-- Lab Fisika -->
-          <div class="fac-card" data-category="lab" id="lab-fis" data-images="['../Image/Fasilitas/Lab-fisika_1.webp','../Image/Fasilitas/Lab-fisika_2.webp']">
+          <div data-reveal="up" class="fac-card" data-category="lab" id="lab-fis" data-images="['../Image/Fasilitas/Lab-fisika_1.webp','../Image/Fasilitas/Lab-fisika_2.webp']">
             <div class="fac-card__media">
-              <img
-                src="../Image/Fasilitas/Lab-fisika_1.webp"
-                alt="Laboratorium Fisika"
-                loading="lazy"
-              />
-              <img
-                src="../Image/Fasilitas/Lab-fisika_2.webp"
-                alt="Laboratorium Fisika"
-                loading="lazy"
-              />
+              <img src="../Image/Fasilitas/Lab-fisika_1.webp" alt="Laboratorium Fisika" loading="lazy" />
+              <img src="../Image/Fasilitas/Lab-fisika_2.webp" alt="Laboratorium Fisika" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Ilmu Pengetahuan Alam</p>
@@ -192,23 +151,11 @@
           </div>
 
           <!-- Lab Kimia -->
-          <div class="fac-card" data-category="lab" id="lab-kim" data-images="['../Image/Fasilitas/Lab-kimia_1.webp','../Image/Fasilitas/Lab-kimia_2.webp','../Image/Fasilitas/Lab-kimia_3.webp']">
+          <div data-reveal="up" data-delay="100" class="fac-card" data-category="lab" id="lab-kim" data-images="['../Image/Fasilitas/Lab-kimia_1.webp','../Image/Fasilitas/Lab-kimia_2.webp','../Image/Fasilitas/Lab-kimia_3.webp']">
             <div class="fac-card__media">
-              <img
-                src="../Image/Fasilitas/Lab-kimia_1.webp"
-                alt="Laboratorium Kimia"
-                loading="lazy"
-              />
-              <img
-                src="../Image/Fasilitas/Lab-kimia_2.webp"
-                alt="Laboratorium Kimia"
-                loading="lazy"
-              />
-              <img
-                src="../Image/Fasilitas/Lab-kimia_3.webp"
-                alt="Laboratorium Kimia"
-                loading="lazy"
-              />
+              <img src="../Image/Fasilitas/Lab-kimia_1.webp" alt="Laboratorium Kimia" loading="lazy" />
+              <img src="../Image/Fasilitas/Lab-kimia_2.webp" alt="Laboratorium Kimia" loading="lazy" />
+              <img src="../Image/Fasilitas/Lab-kimia_3.webp" alt="Laboratorium Kimia" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Ilmu Pengetahuan Alam</p>
@@ -222,23 +169,11 @@
           </div>
 
           <!-- Lab Biologi -->
-          <div class="fac-card" data-category="lab" id="lab-bio" data-images="['../Image/Fasilitas/Lab-biologi_1.webp','../Image/Fasilitas/Lab-biologi_2.webp','../Image/Fasilitas/Lab-biologi_3.webp']">
+          <div data-reveal="up" data-delay="200" class="fac-card" data-category="lab" id="lab-bio" data-images="['../Image/Fasilitas/Lab-biologi_1.webp','../Image/Fasilitas/Lab-biologi_2.webp','../Image/Fasilitas/Lab-biologi_3.webp']">
             <div class="fac-card__media">
-              <img
-                src="../Image/Fasilitas/Lab-biologi_1.webp"
-                alt="Laboratorium Biologi"
-                loading="lazy"
-              />
-                            <img
-                src="../Image/Fasilitas/Lab-biologi_2.webp"
-                alt="Laboratorium Biologi"
-                loading="lazy"
-              />
-                                          <img
-                src="../Image/Fasilitas/Lab-biologi_3.webp"
-                alt="Laboratorium Biologi"
-                loading="lazy"
-              />
+              <img src="../Image/Fasilitas/Lab-biologi_1.webp" alt="Laboratorium Biologi" loading="lazy" />
+              <img src="../Image/Fasilitas/Lab-biologi_2.webp" alt="Laboratorium Biologi" loading="lazy" />
+              <img src="../Image/Fasilitas/Lab-biologi_3.webp" alt="Laboratorium Biologi" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Ilmu Pengetahuan Alam</p>
@@ -251,23 +186,12 @@
             </div>
           </div>
 
-          <div class="fac-card" data-category="lab" id="lab-komp" data-images="['../Image/Fasilitas/Lab-komputer_1.webp','../Image/Fasilitas/Lab-komputer_2.webp','../Image/Fasilitas/Lab-komputer_3.webp']">
+          <!-- Lab Komputer -->
+          <div data-reveal="up" class="fac-card" data-category="lab" id="lab-komp" data-images="['../Image/Fasilitas/Lab-komputer_1.webp','../Image/Fasilitas/Lab-komputer_2.webp','../Image/Fasilitas/Lab-komputer_3.webp']">
             <div class="fac-card__media">
-              <img
-                src="../Image/Fasilitas/Lab-komputer_1.webp"
-                alt="Laboratorium Komputer"
-                loading="lazy"
-              />
-              <img
-                src="../Image/Fasilitas/Lab-komputer_2.webp"
-                alt="Laboratorium Komputer"
-                loading="lazy"
-              />
-              <img
-                src="../Image/Fasilitas/Lab-komputer_3.webp"
-                alt="Laboratorium Komputer"
-                loading="lazy"
-              />
+              <img src="../Image/Fasilitas/Lab-komputer_1.webp" alt="Laboratorium Komputer" loading="lazy" />
+              <img src="../Image/Fasilitas/Lab-komputer_2.webp" alt="Laboratorium Komputer" loading="lazy" />
+              <img src="../Image/Fasilitas/Lab-komputer_3.webp" alt="Laboratorium Komputer" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Teknologi</p>
@@ -280,27 +204,18 @@
               </p>
             </div>
           </div>
+
           <!-- ─── OLAHRAGA ─────────────────────── -->
-          <div class="fac-section-title" data-section="olahraga">
-            <span class="fac-section-title__text"
-              >Olahraga &amp; Aktivitas Fisik</span
-            >
+          <div data-reveal="left" class="fac-section-title" data-section="olahraga">
+            <span class="fac-section-title__text">Olahraga &amp; Aktivitas Fisik</span>
             <div class="fac-section-title__line"></div>
           </div>
 
-          <!-- Lapangan Bawah -->
-          <div class="fac-card" data-category="olahraga" id="lap-bawah" data-images="['../Image/Fasilitas/Lap-bawah_1.webp','../Image/Fasilitas/Lap-bawah_2.webp']">
+          <!-- Lapangan Basket -->
+          <div data-reveal="up" class="fac-card" data-category="olahraga" id="lap-bawah" data-images="['../Image/Fasilitas/Lap-bawah_1.webp','../Image/Fasilitas/Lap-bawah_2.webp']">
             <div class="fac-card__media">
-              <img
-                src="../Image/Fasilitas/Lap-bawah_1.webp"
-                alt="Lapangan Basket"
-                loading="lazy"
-              />
-              <img
-                src="../Image/Fasilitas/Lap-bawah_2.webp"
-                alt="Lapangan Basket"
-                loading="lazy"
-              />
+              <img src="../Image/Fasilitas/Lap-bawah_1.webp" alt="Lapangan Basket" loading="lazy" />
+              <img src="../Image/Fasilitas/Lap-bawah_2.webp" alt="Lapangan Basket" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Olahraga</p>
@@ -313,19 +228,11 @@
             </div>
           </div>
 
-          <!-- Ruang Olahraga -->
-          <div class="fac-card" data-category="olahraga" id="r-olahraga" data-images="['../Image/Fasilitas/Lap-badmin_1.webp','../Image/Fasilitas/Lap-badmin_2.webp']">
+          <!-- Lapangan Badminton -->
+          <div data-reveal="up" data-delay="100" class="fac-card" data-category="olahraga" id="r-olahraga" data-images="['../Image/Fasilitas/Lap-badmin_1.webp','../Image/Fasilitas/Lap-badmin_2.webp']">
             <div class="fac-card__media">
-              <img
-                src="../Image/Fasilitas/Lap-badmin_1.webp"
-                alt="Lapangan Badminton"
-                loading="lazy"
-              />
-              <img
-                src="../Image/Fasilitas/Lap-badmin_2.webp"
-                alt="Lapangan Badminton"
-                loading="lazy"
-              />
+              <img src="../Image/Fasilitas/Lap-badmin_1.webp" alt="Lapangan Badminton" loading="lazy" />
+              <img src="../Image/Fasilitas/Lap-badmin_2.webp" alt="Lapangan Badminton" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Olahraga</p>
@@ -340,24 +247,16 @@
           </div>
 
           <!-- ─── UMUM ─────────────────────── -->
-          <div class="fac-section-title" data-section="umum">
+          <div data-reveal="left" class="fac-section-title" data-section="umum">
             <span class="fac-section-title__text">Fasilitas Umum</span>
             <div class="fac-section-title__line"></div>
           </div>
 
           <!-- Kantin -->
-          <div class="fac-card" data-category="umum" id="kantin" data-images="['../Image/Fasilitas/Kantin_1.webp','../Image/Fasilitas/Kantin_2.webp']">
+          <div data-reveal="up" class="fac-card" data-category="umum" id="kantin" data-images="['../Image/Fasilitas/Kantin_1.webp','../Image/Fasilitas/Kantin_2.webp']">
             <div class="fac-card__media">
-              <img
-                src="../Image/Fasilitas/Kantin_1.webp"
-                alt="Kantin"
-                loading="lazy"
-              />
-              <img
-                src="../Image/Fasilitas/Kantin_2.webp"
-                alt="Kantin"
-                loading="lazy"
-              />
+              <img src="../Image/Fasilitas/Kantin_1.webp" alt="Kantin" loading="lazy" />
+              <img src="../Image/Fasilitas/Kantin_2.webp" alt="Kantin" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Konsumsi</p>
@@ -371,23 +270,11 @@
           </div>
 
           <!-- Parkiran -->
-          <div class="fac-card" data-category="umum" id="parkiran" data-images="['../Image/Fasilitas/Parkiran_1.webp','../Image/Fasilitas/Parkiran_2.webp','../Image/Fasilitas/Parkiran_3.webp']">
+          <div data-reveal="up" data-delay="100" class="fac-card" data-category="umum" id="parkiran" data-images="['../Image/Fasilitas/Parkiran_1.webp','../Image/Fasilitas/Parkiran_2.webp','../Image/Fasilitas/Parkiran_3.webp']">
             <div class="fac-card__media">
-              <img
-                src="../Image/Fasilitas/Parkiran_1.webp"
-                alt="Parkiran"
-                loading="lazy"
-              />
-              <img
-                src="../Image/Fasilitas/Parkiran_2.webp"
-                alt="Parkiran"
-                loading="lazy"
-              />
-              <img
-                src="../Image/Fasilitas/Parkiran_3.webp"
-                alt="Parkiran"
-                loading="lazy"
-              />
+              <img src="../Image/Fasilitas/Parkiran_1.webp" alt="Parkiran" loading="lazy" />
+              <img src="../Image/Fasilitas/Parkiran_2.webp" alt="Parkiran" loading="lazy" />
+              <img src="../Image/Fasilitas/Parkiran_3.webp" alt="Parkiran" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Fasilitas Umum</p>
@@ -400,28 +287,40 @@
             </div>
           </div>
 
-          <!-- Gedung -->
-          <div class="fac-card" data-category="umum" id="gedung" data-images="['../Image/Fasilitas/Gedung_2.webp']">
+          <!-- Ruang Guru -->
+          <div data-reveal="up" data-delay="200" class="fac-card" data-category="umum" id="r-guru" data-images="['../Image/Fasilitas/Ruang-guru_1.webp']">
             <div class="fac-card__media">
-              <img
-                src="../Image/Fasilitas/Gedung_2.webp"
-                alt="Gedung Sekolah"
-                loading="lazy"
-              />
+              <img src="../Image/Fasilitas/Ruang-guru_1.webp" alt="Ruang Guru" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Fasilitas Umum</p>
-              <h2 class="fac-card__name">Gedung Sekolah</h2>
+              <h2 class="fac-card__name">Ruang Guru</h2>
               <p class="fac-card__desc">
-                Gedung utama sekolah yang memuat ruang kelas, kantin, dan fasilitas
-                umum lain. Dirancang nyaman, bersih, dan modern untuk mendukung
-                kegiatan pembelajaran.
+                Ruang khusus untuk guru dalam menjalankan tugas mereka, termasuk
+                menyiapkan pelajaran, memberi tugas, dan berinteraksi dengan siswa.
+          
               </p>
             </div>
           </div>
 
-          <!-- Toilet Atas -->
-          <div class="fac-card" data-category="umum" id="toilet" data-images="['../Image/Fasilitas/Toilet_1.webp','../Image/Fasilitas/Toilet_2.webp','../Image/Fasilitas/Toilet_3.webp','../Image/Fasilitas/Toilet_4.webp','../Image/Fasilitas/Toilet_5.webp']">
+          
+          <!-- Ruang Guru -->
+          <div data-reveal="up" data-delay="200" class="fac-card" data-category="umum" id="aula" data-images="['../Image/Fasilitas/Aula_1.PNG','../Image/Fasilitas/Aula_2.webp']">
+            <div class="fac-card__media">
+              <img src="../Image/Fasilitas/Aula_1.PNG" alt="Aula" loading="lazy" />
+              <img src="../Image/Fasilitas/Aula_2.webp" alt="Aula" loading="lazy" />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Fasilitas Umum</p>
+              <h2 class="fac-card__name">Aula</h2>
+              <p class="fac-card__desc">
+            Ruang besar yang digunakan untuk acara sekolah dengan kapasitas banyak, seperti seminar, pentas seni, dan pertemuan umum, mendukung kelancaran kegiatan bersama.
+              </p>
+            </div>
+          </div>
+
+          <!-- Toilet -->
+          <div data-reveal="up" class="fac-card" data-category="umum" id="toilet" data-images="['../Image/Fasilitas/Toilet_1.webp','../Image/Fasilitas/Toilet_2.webp','../Image/Fasilitas/Toilet_3.webp','../Image/Fasilitas/Toilet_4.webp','../Image/Fasilitas/Toilet_5.webp']">
             <div class="fac-card__media">
               <img src="../Image/Fasilitas/Toilet_1.webp" alt="Toilet" loading="lazy" />
               <img src="../Image/Fasilitas/Toilet_2.webp" alt="Toilet" loading="lazy" />
@@ -440,8 +339,8 @@
             </div>
           </div>
 
-          <!-- Toilet Bawah -->
-          <div class="fac-card" data-category="umum" id="Kelas" data-images="['../Image/Fasilitas/Kelas_1.webp','../Image/Fasilitas/Kelas_2.webp','../Image/Fasilitas/Kelas_3.webp']">
+          <!-- Kelas -->
+          <div data-reveal="up" data-delay="100" class="fac-card" data-category="umum" id="Kelas" data-images="['../Image/Fasilitas/Kelas_1.webp','../Image/Fasilitas/Kelas_2.webp','../Image/Fasilitas/Kelas_3.webp']">
             <div class="fac-card__media">
               <img src="../Image/Fasilitas/Kelas_1.webp" alt="Kelas" loading="lazy" />
               <img src="../Image/Fasilitas/Kelas_2.webp" alt="Kelas" loading="lazy" />
@@ -458,7 +357,9 @@
               </p>
             </div>
           </div>
-          <div class="fac-card" data-category="umum" id="gereja" data-images="['../Image/Fasilitas/Gereja_1.webp','../Image/Fasilitas/Gereja_2.webp','../Image/Fasilitas/Gereja_3.webp']">
+
+          <!-- Gereja -->
+          <div data-reveal="up" data-delay="200" class="fac-card" data-category="umum" id="gereja" data-images="['../Image/Fasilitas/Gereja_1.webp','../Image/Fasilitas/Gereja_2.webp','../Image/Fasilitas/Gereja_3.webp']">
             <div class="fac-card__media">
               <img src="../Image/Fasilitas/Gereja_1.webp" alt="Gereja" loading="lazy" />
               <img src="../Image/Fasilitas/Gereja_2.webp" alt="Gereja" loading="lazy" />
@@ -476,39 +377,36 @@
             </div>
           </div>
 
-          <div class="fac-card" data-category="umum" id="r-bk" data-images="['../Image/Fasilitas/Ruang-BK_1.webp']">
+          <!-- Ruang BK -->
+          <div data-reveal="up" class="fac-card" data-category="umum" id="r-bk" data-images="['../Image/Fasilitas/Ruang-BK_1.webp']">
             <div class="fac-card__media">
-              <img
-                src="../Image/Fasilitas/Ruang-BK_1.webp"
-                alt="Ruang BK"
-                loading="lazy"
-              />
+              <img src="../Image/Fasilitas/Ruang-BK_1.webp" alt="Ruang BK" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Layanan Siswa</p>
-              <h2 class="fac-card__name">Ruang Bimbingan & Konseling</h2>
+              <h2 class="fac-card__name">Ruang Bimbingan &amp; Konseling</h2>
               <p class="fac-card__desc">
                 Ruang yang dirancang untuk memberikan layanan bimbingan dan
-                konseling kepada siswa.Sebagai tempat untuk mendiskusikan
+                konseling kepada siswa. Sebagai tempat untuk mendiskusikan
                 permasalahan pribadi, akademik, dan sosial secara nyaman dan
                 terbuka.
               </p>
             </div>
           </div>
-        </div>
-        <!-- /fac-grid -->
+
+        </div><!-- /fac-grid -->
       </section>
     </main>
 
     <!-- FOOTER -->
-    <footer id="footer" class="site-footer">
+    <footer data-reveal="up" id="footer" class="site-footer">
       <div class="site-footer__top">
-        <div class="site-footer__brand">
+        <div data-reveal="fade" data-delay="100" class="site-footer__brand">
           <div class="site-footer__logo-wrap">
             <img src="../Image/Template/Rectangle-Logo-Sekolah-Kristoforus.png" alt="Logo SMA Santo Kristoforus" class="site-footer__logo" loading="lazy" />
           </div>
         </div>
-        <div class="site-footer__col">
+        <div data-reveal="up" data-delay="200" class="site-footer__col">
           <p class="site-footer__col-title">Tautan Cepat</p>
           <ul class="footer-links">
             <li><a href="aboutus.html">Tentang Kami</a></li>
@@ -518,7 +416,7 @@
             <li><a href="contact.html">Hubungi Kami</a></li>
           </ul>
         </div>
-        <div class="site-footer__col">
+        <div data-reveal="up" data-delay="300" class="site-footer__col">
           <p class="site-footer__col-title">Ikuti Kami</p>
           <ul class="footer-socmed">
             <li>
@@ -559,7 +457,7 @@
             </li>
           </ul>
         </div>
-        <div class="site-footer__col">
+        <div data-reveal="up" data-delay="400" class="site-footer__col">
           <p class="site-footer__col-title">Hubungi Kami</p>
           <ul class="footer-contact">
             <li class="footer-contact__item">
@@ -590,21 +488,18 @@
 
     <script src="../Javascript/card-slider.js"></script>
     <script src="../Javascript/header.js"></script>
+    <script src="../Javascript/animation.js"></script>
     <script>
       /* ── Filter ── */
       const filterBtns = document.querySelectorAll(".fac-filter__btn");
       const cards = document.querySelectorAll(".fac-card[data-category]");
-      const sections = document.querySelectorAll(
-        ".fac-section-title[data-section]",
-      );
+      const sections = document.querySelectorAll(".fac-section-title[data-section]");
 
       filterBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
           filterBtns.forEach((b) => b.classList.remove("is-active"));
           btn.classList.add("is-active");
-
           const filter = btn.dataset.filter;
-
           cards.forEach((card) => {
             if (filter === "all" || card.dataset.category === filter) {
               card.classList.remove("is-hidden");
@@ -612,7 +507,6 @@
               card.classList.add("is-hidden");
             }
           });
-
           sections.forEach((sec) => {
             if (filter === "all" || sec.dataset.section === filter) {
               sec.classList.remove("is-hidden");
@@ -625,5 +519,3 @@
     </script>
   </body>
 </html>
-
-

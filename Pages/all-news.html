@@ -131,7 +131,7 @@
 
     <main>
       <!-- PAGE HERO -->
-      <section <section class="article-related" aria-labelledby="related-title">="up" class="page-hero" aria-label="Berita dan Pengumuman">
+      <section data-reveal="up" class="page-hero" aria-label="Berita dan Pengumuman">
         <div class="page-hero__inner">
           <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
             <a href="../index.html">Beranda</a>
@@ -171,14 +171,14 @@
       </div>
 
       <!-- NEWS PAGE CONTENT -->
-      <section <section class="article-related" aria-labelledby="related-title">="up" class="news-page" aria-label="Daftar berita">
+      <section data-reveal="up" class="news-page" aria-label="Daftar berita">
         <!-- FEATURED / PINNED -->
         <div class="news-pinned" id="pinnedSection">
           <p class="news-pinned__label">Berita Terkini</p>
           <a
             href="berita-ppdb.html"
             class="news-featured-card"
-            <section class="article-related" aria-labelledby="related-title">="up"
+            data-reveal="up"
             data-category="pengumuman"
           >
             <div class="news-featured-card__media">
@@ -222,7 +222,7 @@
 
         <ul class="news-grid" id="newsGrid" aria-label="Semua berita">
           <!-- Berita 1 -->
-          <li <section class="article-related" aria-labelledby="related-title">="up" data-delay="100" data-category="kegiatan">
+          <li data-reveal="up" data-delay="100" data-category="kegiatan">
             <a href="berita-juara-short-movie.html" class="news-item">
               <figure class="news-item__media">
                 <img
@@ -259,7 +259,7 @@
           </li>
 
           <!-- Berita 2 -->
-          <li <section class="article-related" aria-labelledby="related-title">="up" data-delay="200" data-category="kegiatan">
+          <li data-reveal="up" data-delay="200" data-category="kegiatan">
             <a href="berita-imlek.html" class="news-item">
               <figure class="news-item__media">
                 <img
@@ -296,7 +296,7 @@
           </li>
 
           <!-- Berita 3 -->
-          <li <section class="article-related" aria-labelledby="related-title">="up" data-delay="300" data-category="kegiatan">
+          <li data-reveal="up" data-delay="300" data-category="kegiatan">
             <a href="berita-live-in.html" class="news-item">
               <figure class="news-item__media">
                 <img
@@ -333,7 +333,7 @@
           </li>
 
           <!-- Berita 1 -->
-          <li <section class="article-related" aria-labelledby="related-title">="up" data-delay="100" data-category="prestasi">
+          <li data-reveal="up" data-delay="100" data-category="prestasi">
             <a href="berita-juara-3-xtofest.html" class="news-item">
               <figure class="news-item__media">
                 <img
@@ -368,7 +368,7 @@
           </li>
 
           <!-- Berita 2 -->
-          <li <section class="article-related" aria-labelledby="related-title">="up" data-delay="200" data-category="prestasi">
+          <li data-reveal="up" data-delay="200" data-category="prestasi">
             <a href="berita-juara-short-movie.html" class="news-item">
               <figure class="news-item__media">
                 <img
@@ -403,7 +403,7 @@
           </li>
 
           <!-- Berita 3 -->
-          <li <section class="article-related" aria-labelledby="related-title">="up" data-delay="300" data-category="kegiatan">
+          <li data-reveal="up" data-delay="300" data-category="kegiatan">
             <a href="berita-roadshow-dbl.html" class="news-item">
               <figure class="news-item__media">
                 <img
@@ -439,7 +439,7 @@
             </a>
           </li>
 
-          <li <section class="article-related" aria-labelledby="related-title">="up" data-delay="100" data-category="prestasi">
+          <li data-reveal="up" data-delay="100" data-category="prestasi">
             <a href="berita-live-in.html" class="news-item">
               <figure class="news-item__media">
                 <img
@@ -593,70 +593,9 @@
         >
       </div>
     </footer>
-
+    <script src="../Javascript/header.js"></script>
+    <script src="../Javascript/animation.js"></script>
     <script>
-      (function () {
-        "use strict";
-
-        /* ── Scroll Reveal ── */
-        const SELECTOR = "[<section class="article-related" aria-labelledby="related-title">]";
-        const THRESHOLD = 0.12;
-
-        function initReveal() {
-          const elements = document.querySelectorAll(SELECTOR);
-          if (!elements.length) return;
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("is-visible");
-                  observer.unobserve(entry.target);
-                }
-              });
-            },
-            { threshold: THRESHOLD },
-          );
-          elements.forEach((el) => observer.observe(el));
-        }
-
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", initReveal);
-        } else {
-          initReveal();
-        }
-
-        /* ── Mobile Nav ── */
-        document.addEventListener("DOMContentLoaded", function () {
-          const hamburger = document.getElementById("hamburgerBtn");
-          const mobileNav = document.getElementById("mobileNav");
-          const overlay = document.getElementById("mobileOverlay");
-          const closeBtn = document.getElementById("mobileNavClose");
-          const mobileLinks = document.querySelectorAll("[data-mobile-link]");
-
-          function openNav() {
-            mobileNav.classList.add("is-open");
-            overlay.classList.add("is-open");
-            overlay.style.display = "block";
-            hamburger.setAttribute("aria-expanded", "true");
-            document.body.style.overflow = "hidden";
-          }
-          function closeNav() {
-            mobileNav.classList.remove("is-open");
-            overlay.classList.remove("is-open");
-            hamburger.setAttribute("aria-expanded", "false");
-            document.body.style.overflow = "";
-            setTimeout(() => {
-              overlay.style.display = "none";
-            }, 300);
-          }
-
-          hamburger.addEventListener("click", openNav);
-          closeBtn.addEventListener("click", closeNav);
-          overlay.addEventListener("click", closeNav);
-          mobileLinks.forEach((link) =>
-            link.addEventListener("click", closeNav),
-          );
-
           /* ── Filter ── */
           const tabs = document.querySelectorAll(".filter-tab");
           const gridItems = document.querySelectorAll("#newsGrid li");
@@ -703,8 +642,6 @@
 
           // Initial count
           updateCount(1 + gridItems.length);
-        });
-      })();
     </script>
   </body>
 </html>

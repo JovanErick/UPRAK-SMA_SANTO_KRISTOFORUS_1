@@ -1,3 +1,4 @@
+/* ── Animation ────────────────── */
 (function () {
   "use strict";
 
