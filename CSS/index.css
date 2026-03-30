@@ -29,7 +29,27 @@
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("/Image/Index/Carousel_4.jpeg") center / cover no-repeat;
+  background: #000;
+}
+
+.hero__video-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero__video-wrap iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh;
+  height: 100vw;
+  min-width: 120%;
+  min-height: 120%;
+  transform: translate(-50%, -50%);
+  border: 0;
 }
 
 .hero::after {

@@ -20,7 +20,7 @@
     <!-- HEADER -->
     <header class="site-header">
       <a href="../index.html" class="site-header__logo-link">
-        <img src="/Image/Template/Logo-Sekolah-Kristoforus_REMAKE.png" alt="Logo Sekolah Katolik Santo Kristoforus" class="site-header__logo" />
+        <img src="../Image/Template/Logo-Sekolah-Kristoforus_REMAKE.png" alt="Logo Sekolah Katolik Santo Kristoforus" class="site-header__logo" />
       </a>
       <nav class="site-nav" id="main-nav" aria-label="Navigasi Utama">
         <a href="../index.html#tentang-kami" class="site-nav__link">Tentang</a>
@@ -45,15 +45,15 @@
         <button class="mobile-nav__close" id="mobileNavClose" aria-label="Tutup menu"><i class="fas fa-times"></i></button>
       </div>
       <div class="mobile-nav__links">
-        <a href="#tentang-kami" class="mobile-nav__link" data-mobile-link><i class="fas fa-school"></i> Tentang Kami</a>
-        <a href="#kristoforus-value" class="mobile-nav__link" data-mobile-link><i class="fas fa-heart"></i> Kristoforus Value</a>
-        <a href="#fasilitas-teaser" class="mobile-nav__link" data-mobile-link><i class="fas fa-building"></i> Fasilitas</a>
-        <a href="#academics" class="mobile-nav__link" data-mobile-link><i class="fas fa-star"></i> Ekstrakulikuler</a>
-        <a href="#berita" class="mobile-nav__link" data-mobile-link><i class="fas fa-newspaper"></i> Berita &amp; Pengumuman</a>
+        <a href="../index.html#tentang-kami" class="mobile-nav__link" data-mobile-link><i class="fas fa-school"></i> Tentang Kami</a>
+        <a href="../index.html#kristoforus-value" class="mobile-nav__link" data-mobile-link><i class="fas fa-heart"></i> Kristoforus Value</a>
+        <a href="../index.html#fasilitas-teaser" class="mobile-nav__link is-active" data-mobile-link><i class="fas fa-building"></i> Fasilitas</a>
+        <a href="../index.html#academics" class="mobile-nav__link" data-mobile-link><i class="fas fa-star"></i> Ekstrakulikuler</a>
+        <a href="../index.html#berita" class="mobile-nav__link" data-mobile-link><i class="fas fa-newspaper"></i> Berita &amp; Pengumuman</a>
       </div>
       <div style="padding: 20px 24px; display: flex; gap: 10px; flex-wrap: wrap">
-        <a href="#" class="btn btn--outline" style="font-size: 12px; padding: 8px 16px">Hubungi Kami</a>
-        <a href="#" class="btn btn--solid" style="font-size: 12px; padding: 8px 16px">Daftar</a>
+        <a href="contact.html" class="btn btn--outline" style="font-size: 12px; padding: 8px 16px">Hubungi Kami</a>
+        <a href="https://sma1.kristo.sch.id/psb/psb_v2.php" class="btn btn--solid" style="font-size: 12px; padding: 8px 16px">Daftar</a>
       </div>
       <div class="mobile-nav__footer">SMA Santo Kristoforus 1 &mdash; Jakarta Barat</div>
     </nav>
@@ -73,7 +73,7 @@
           </div>
           <div class="fac-hero__meta" aria-label="Ringkasan fasilitas">
             <div class="fac-hero__meta-item">
-              <span class="fac-hero__meta-num">13</span>
+              <span class="fac-hero__meta-num">15</span>
               <span class="fac-hero__meta-label">Fasilitas</span>
             </div>
           </div>
@@ -121,10 +121,10 @@
           </div>
 
           <!-- Ruang MD -->
-          <div class="fac-card" data-category="seni" id="r-md" data-images="['/Image/Fasilitas/Ruang-band_1.webp']">
+          <div class="fac-card" data-category="seni" id="r-md" data-images="['../Image/Fasilitas/Ruang-band_1.webp']">
             <div class="fac-card__media">
               <img
-                src="/Image/Fasilitas/Ruang-band_1.webp"
+                src="../Image/Fasilitas/Ruang-band_1.webp"
                 alt="Ruang Band"
                 loading="lazy"
               />
@@ -141,10 +141,10 @@
           </div>
 
           <!-- Ruang Padus -->
-          <div class="fac-card" data-category="seni" id="r-padus" data-images="['/Image/Fasilitas/Ruang-band_1.webp']">
+          <div class="fac-card" data-category="seni" id="r-padus" data-images="['../Image/Fasilitas/Ruang-padus_1.webp']">
             <div class="fac-card__media">
               <img
-                src="/Image/Fasilitas/Ruang-band_1.webp"
+                src="../Image/Fasilitas/Ruang-padus_1.webp"
                 alt="Ruang Paduan Suara"
                 loading="lazy"
               />
@@ -167,10 +167,15 @@
           </div>
 
           <!-- Lab Fisika -->
-          <div class="fac-card" data-category="lab" id="lab-fis" data-images="['/Image/Fasilitas/Lab-fisika_1.webp']">
+          <div class="fac-card" data-category="lab" id="lab-fis" data-images="['../Image/Fasilitas/Lab-fisika_1.webp','../Image/Fasilitas/Lab-fisika_2.webp']">
             <div class="fac-card__media">
               <img
-                src="/Image/Fasilitas/Lab-fisika_1.webp"
+                src="../Image/Fasilitas/Lab-fisika_1.webp"
+                alt="Laboratorium Fisika"
+                loading="lazy"
+              />
+              <img
+                src="../Image/Fasilitas/Lab-fisika_2.webp"
                 alt="Laboratorium Fisika"
                 loading="lazy"
               />
@@ -187,10 +192,20 @@
           </div>
 
           <!-- Lab Kimia -->
-          <div class="fac-card" data-category="lab" id="lab-kim" data-images="['/Image/Fasilitas/Lab-biologi_1.webp']">
+          <div class="fac-card" data-category="lab" id="lab-kim" data-images="['../Image/Fasilitas/Lab-kimia_1.webp','../Image/Fasilitas/Lab-kimia_2.webp','../Image/Fasilitas/Lab-kimia_3.webp']">
             <div class="fac-card__media">
               <img
-                src="/Image/Fasilitas/Lab-biologi_1.webp"
+                src="../Image/Fasilitas/Lab-kimia_1.webp"
+                alt="Laboratorium Kimia"
+                loading="lazy"
+              />
+              <img
+                src="../Image/Fasilitas/Lab-kimia_2.webp"
+                alt="Laboratorium Kimia"
+                loading="lazy"
+              />
+              <img
+                src="../Image/Fasilitas/Lab-kimia_3.webp"
                 alt="Laboratorium Kimia"
                 loading="lazy"
               />
@@ -207,21 +222,21 @@
           </div>
 
           <!-- Lab Biologi -->
-          <div class="fac-card" data-category="lab" id="lab-bio" data-images="['/Image/Fasilitas/Lab-biologi_1.webp','/Image/Fasilitas/Lab-biologi_2.webp', '/Image/Fasilitas/Lab-biologi_3.webp']">
+          <div class="fac-card" data-category="lab" id="lab-bio" data-images="['../Image/Fasilitas/Lab-biologi_1.webp','../Image/Fasilitas/Lab-biologi_2.webp','../Image/Fasilitas/Lab-biologi_3.webp']">
             <div class="fac-card__media">
               <img
-                src="/Image/Fasilitas/Lab-biologi_1.webp"
-                alt=""
+                src="../Image/Fasilitas/Lab-biologi_1.webp"
+                alt="Laboratorium Biologi"
                 loading="lazy"
               />
                             <img
-                src="/Image/Fasilitas/Lab-biologi_2.webp"
-                alt=""
+                src="../Image/Fasilitas/Lab-biologi_2.webp"
+                alt="Laboratorium Biologi"
                 loading="lazy"
               />
                                           <img
-                src="/Image/Fasilitas/Lab-biologi_3.webp"
-                alt=""
+                src="../Image/Fasilitas/Lab-biologi_3.webp"
+                alt="Laboratorium Biologi"
                 loading="lazy"
               />
             </div>
@@ -236,10 +251,20 @@
             </div>
           </div>
 
-          <div class="fac-card" data-category="lab" id="lab-komp" data-images="['/Image/Fasilitas/Lab-komputer_1.webp']">
+          <div class="fac-card" data-category="lab" id="lab-komp" data-images="['../Image/Fasilitas/Lab-komputer_1.webp','../Image/Fasilitas/Lab-komputer_2.webp','../Image/Fasilitas/Lab-komputer_3.webp']">
             <div class="fac-card__media">
               <img
-                src="/Image/Fasilitas/Lab-komputer_1.webp"
+                src="../Image/Fasilitas/Lab-komputer_1.webp"
+                alt="Laboratorium Komputer"
+                loading="lazy"
+              />
+              <img
+                src="../Image/Fasilitas/Lab-komputer_2.webp"
+                alt="Laboratorium Komputer"
+                loading="lazy"
+              />
+              <img
+                src="../Image/Fasilitas/Lab-komputer_3.webp"
                 alt="Laboratorium Komputer"
                 loading="lazy"
               />
@@ -264,10 +289,15 @@
           </div>
 
           <!-- Lapangan Bawah -->
-          <div class="fac-card" data-category="olahraga" id="lap-bawah" data-images="['/Image/Fasilitas/Lapangan-badminton_1.webp']">
+          <div class="fac-card" data-category="olahraga" id="lap-bawah" data-images="['../Image/Fasilitas/Lap-bawah_1.webp','../Image/Fasilitas/Lap-bawah_2.webp']">
             <div class="fac-card__media">
               <img
-                src="/Image/Fasilitas/Lapangan-badminton_1.webp"
+                src="../Image/Fasilitas/Lap-bawah_1.webp"
+                alt="Lapangan Basket"
+                loading="lazy"
+              />
+              <img
+                src="../Image/Fasilitas/Lap-bawah_2.webp"
                 alt="Lapangan Basket"
                 loading="lazy"
               />
@@ -284,10 +314,15 @@
           </div>
 
           <!-- Ruang Olahraga -->
-          <div class="fac-card" data-category="olahraga" id="r-olahraga" data-images="['/Image/Fasilitas/Lapangan-badminton_1.webp']">
+          <div class="fac-card" data-category="olahraga" id="r-olahraga" data-images="['../Image/Fasilitas/Lap-badmin_1.webp','../Image/Fasilitas/Lap-badmin_2.webp']">
             <div class="fac-card__media">
               <img
-                src="/Image/Fasilitas/Lapangan-badminton_1.webp"
+                src="../Image/Fasilitas/Lap-badmin_1.webp"
+                alt="Lapangan Badminton"
+                loading="lazy"
+              />
+              <img
+                src="../Image/Fasilitas/Lap-badmin_2.webp"
                 alt="Lapangan Badminton"
                 loading="lazy"
               />
@@ -311,10 +346,15 @@
           </div>
 
           <!-- Kantin -->
-          <div class="fac-card" data-category="umum" id="kantin" data-images="['/Image/Fasilitas/Ruang-guru_1.webp']">
+          <div class="fac-card" data-category="umum" id="kantin" data-images="['../Image/Fasilitas/Kantin_1.webp','../Image/Fasilitas/Kantin_2.webp']">
             <div class="fac-card__media">
               <img
-                src="/Image/Fasilitas/Ruang-guru_1.webp"
+                src="../Image/Fasilitas/Kantin_1.webp"
+                alt="Kantin"
+                loading="lazy"
+              />
+              <img
+                src="../Image/Fasilitas/Kantin_2.webp"
                 alt="Kantin"
                 loading="lazy"
               />
@@ -330,10 +370,64 @@
             </div>
           </div>
 
-          <!-- Toilet Atas -->
-          <div class="fac-card" data-category="umum" id="toilet" data-images="['/Image/Fasilitas/Toilet_2.webp']">
+          <!-- Parkiran -->
+          <div class="fac-card" data-category="umum" id="parkiran" data-images="['../Image/Fasilitas/Parkiran_1.webp','../Image/Fasilitas/Parkiran_2.webp','../Image/Fasilitas/Parkiran_3.webp']">
             <div class="fac-card__media">
-              <img src="/Image/Fasilitas/Toilet_2.webp" alt="Toilet" loading="lazy" />
+              <img
+                src="../Image/Fasilitas/Parkiran_1.webp"
+                alt="Parkiran"
+                loading="lazy"
+              />
+              <img
+                src="../Image/Fasilitas/Parkiran_2.webp"
+                alt="Parkiran"
+                loading="lazy"
+              />
+              <img
+                src="../Image/Fasilitas/Parkiran_3.webp"
+                alt="Parkiran"
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Fasilitas Umum</p>
+              <h2 class="fac-card__name">Parkiran</h2>
+              <p class="fac-card__desc">
+                Area parkir yang luas dan aman untuk kendaraan siswa, guru, dan
+                tamu. Dilengkapi dengan pengaturan lalu lintas yang rapi dan
+                sistem keamanan demi kenyamanan pengguna.
+              </p>
+            </div>
+          </div>
+
+          <!-- Gedung -->
+          <div class="fac-card" data-category="umum" id="gedung" data-images="['../Image/Fasilitas/Gedung_2.webp']">
+            <div class="fac-card__media">
+              <img
+                src="../Image/Fasilitas/Gedung_2.webp"
+                alt="Gedung Sekolah"
+                loading="lazy"
+              />
+            </div>
+            <div class="fac-card__body">
+              <p class="fac-card__category">Fasilitas Umum</p>
+              <h2 class="fac-card__name">Gedung Sekolah</h2>
+              <p class="fac-card__desc">
+                Gedung utama sekolah yang memuat ruang kelas, kantin, dan fasilitas
+                umum lain. Dirancang nyaman, bersih, dan modern untuk mendukung
+                kegiatan pembelajaran.
+              </p>
+            </div>
+          </div>
+
+          <!-- Toilet Atas -->
+          <div class="fac-card" data-category="umum" id="toilet" data-images="['../Image/Fasilitas/Toilet_1.webp','../Image/Fasilitas/Toilet_2.webp','../Image/Fasilitas/Toilet_3.webp','../Image/Fasilitas/Toilet_4.webp','../Image/Fasilitas/Toilet_5.webp']">
+            <div class="fac-card__media">
+              <img src="../Image/Fasilitas/Toilet_1.webp" alt="Toilet" loading="lazy" />
+              <img src="../Image/Fasilitas/Toilet_2.webp" alt="Toilet" loading="lazy" />
+              <img src="../Image/Fasilitas/Toilet_3.webp" alt="Toilet" loading="lazy" />
+              <img src="../Image/Fasilitas/Toilet_4.webp" alt="Toilet" loading="lazy" />
+              <img src="../Image/Fasilitas/Toilet_5.webp" alt="Toilet" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Sanitasi</p>
@@ -347,9 +441,11 @@
           </div>
 
           <!-- Toilet Bawah -->
-          <div class="fac-card" data-category="umum" id="Kelas" data-images="['/Image/Fasilitas/Kelas_1.webp']">
+          <div class="fac-card" data-category="umum" id="Kelas" data-images="['../Image/Fasilitas/Kelas_1.webp','../Image/Fasilitas/Kelas_2.webp','../Image/Fasilitas/Kelas_3.webp']">
             <div class="fac-card__media">
-              <img src="/Image/Fasilitas/Kelas_1.webp" alt="Kelas" loading="lazy" />
+              <img src="../Image/Fasilitas/Kelas_1.webp" alt="Kelas" loading="lazy" />
+              <img src="../Image/Fasilitas/Kelas_2.webp" alt="Kelas" loading="lazy" />
+              <img src="../Image/Fasilitas/Kelas_3.webp" alt="Kelas" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Pembelajaran</p>
@@ -362,9 +458,11 @@
               </p>
             </div>
           </div>
-          <div class="fac-card" data-category="umum" id="gereja" data-images="['/Image/Fasilitas/Gereja_1.webp']">
+          <div class="fac-card" data-category="umum" id="gereja" data-images="['../Image/Fasilitas/Gereja_1.webp','../Image/Fasilitas/Gereja_2.webp','../Image/Fasilitas/Gereja_3.webp']">
             <div class="fac-card__media">
-              <img src="/Image/Fasilitas/Gereja_1.webp" alt="Gereja" loading="lazy" />
+              <img src="../Image/Fasilitas/Gereja_1.webp" alt="Gereja" loading="lazy" />
+              <img src="../Image/Fasilitas/Gereja_2.webp" alt="Gereja" loading="lazy" />
+              <img src="../Image/Fasilitas/Gereja_3.webp" alt="Gereja" loading="lazy" />
             </div>
             <div class="fac-card__body">
               <p class="fac-card__category">Rohani</p>
@@ -378,10 +476,10 @@
             </div>
           </div>
 
-          <div class="fac-card" data-category="umum" id="r-bk" data-images="['/Image/Fasilitas/Ruang-BK_1.webp']">
+          <div class="fac-card" data-category="umum" id="r-bk" data-images="['../Image/Fasilitas/Ruang-BK_1.webp']">
             <div class="fac-card__media">
               <img
-                src="/Image/Fasilitas/Ruang-BK_1.webp"
+                src="../Image/Fasilitas/Ruang-BK_1.webp"
                 alt="Ruang BK"
                 loading="lazy"
               />
@@ -407,7 +505,7 @@
       <div class="site-footer__top">
         <div class="site-footer__brand">
           <div class="site-footer__logo-wrap">
-            <img src="/Image/Template/Rectangle-Logo-Sekolah-Kristoforus.png" alt="Logo SMA Santo Kristoforus" class="site-footer__logo" loading="lazy" />
+            <img src="../Image/Template/Rectangle-Logo-Sekolah-Kristoforus.png" alt="Logo SMA Santo Kristoforus" class="site-footer__logo" loading="lazy" />
           </div>
         </div>
         <div class="site-footer__col">
