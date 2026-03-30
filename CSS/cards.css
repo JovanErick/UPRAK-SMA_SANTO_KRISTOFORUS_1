@@ -300,7 +300,7 @@
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("/Image/Index/Carousel_1.jpeg") center / cover no-repeat;
+  background: url("../Image/Index/Carousel_1.jpeg") center / cover no-repeat;
 }
 
 .fac-hero::after {
