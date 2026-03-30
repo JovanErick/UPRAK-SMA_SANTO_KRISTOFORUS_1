@@ -1,6 +1,5 @@
 /* ============================================================
    INDEX.CSS — Home Page Stylesheet
-   Styling khusus halaman utama. Bergantung pada style.css.
    ============================================================ */
 
 /* ── Layout Umum Section ──────────────────────────────────── */
@@ -29,13 +28,12 @@
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("Image/Index/Carousel_4.jpeg") center / cover no-repeat;
+  background: url("../Image/Index/Carousel_4.jpeg") center / cover no-repeat;
 }
 
 .hero__video-wrap {
   display: none;
 }
-
 
 .hero::after {
   content: "";
