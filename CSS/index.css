@@ -22,17 +22,12 @@
   color: var(--clr-white);
 }
 
-/* Background & overlay */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("../Image/Index/Carousel_4.jpeg") center / cover no-repeat;
-}
-
-.hero__video-wrap {
-  display: none;
+  background: url("../Image/Index/Carousel_4.webp") center / cover no-repeat;
 }
 
 .hero::after {
@@ -54,6 +49,7 @@
   max-width: clamp(280px, 90vw, 700px);
   text-align: center;
   padding: 0 16px;
+  line-height: 1.25;
 }
 
 .hero__eyebrow {
@@ -64,9 +60,10 @@
   opacity: 0.8;
 }
 
-/* Keyword carousel */
 .hero__keyword-wrapper {
   overflow: hidden;
+  max-width: clamp(280px, 90vw, 700px);
+  margin: 0 auto;
 }
 
 .hero__keyword-track {
@@ -86,7 +83,6 @@
   white-space: nowrap;
 }
 
-/* Deskripsi bergantian */
 .hero__desc-wrapper {
   position: relative;
   height: clamp(52px, 8vw, 60px);
@@ -119,7 +115,6 @@
   transform: translateX(0);
 }
 
-/* Progress bar */
 .hero__progress-wrap {
   width: 120px;
   height: 2px;
@@ -152,7 +147,6 @@
   margin-bottom: 2rem;
 }
 
-/* Media: foto + stats */
 .about__media {
   display: flex;
   flex-direction: column;
@@ -218,7 +212,6 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* Body teks */
 .about__body {
   display: flex;
   flex-direction: column;
@@ -231,7 +224,6 @@
   margin-bottom: 28px;
 }
 
-/* Visi & Misi */
 .about__vm-list {
   display: flex;
   flex-direction: column;
@@ -271,7 +263,6 @@
   line-height: 1.75;
 }
 
-/* Tombol aksi */
 .about__actions,
 .facility__actions {
   width: 100%;
@@ -343,7 +334,6 @@
   min-height: 0;
 }
 
-/* Perpustakaan: 2 kolom × 2 baris di kiri atas */
 .facility-grid__item--featured {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
@@ -519,14 +509,12 @@
   line-height: 1.8;
 }
 
-/* Separator */
 .news-separator {
   border: none;
   border-top: 1px solid #dde4ef;
   margin: 32px 0;
 }
 
-/* 3 card kecil */
 .news-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -601,7 +589,6 @@
   -webkit-line-clamp: 4;
 }
 
-/* ── Shared: badge, date, readmore ── */
 .news-badge {
   position: absolute;
   top: 12px;
@@ -653,7 +640,6 @@
 .news-card:hover .news-readmore {
   gap: 10px;
 }
-
 /* ════════════════════════════════════════════════════════════
    RESPONSIVE — Tablet (≤ 992px)
    ════════════════════════════════════════════════════════════ */
@@ -679,6 +665,8 @@
   .section--split__text,
   .section--split__media {
     width: 100%;
+    align-items: center;
+    text-align: center;
   }
   .section--split .section-header {
     text-align: center;
@@ -690,10 +678,15 @@
   .section--ekskul {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 24px;
   }
   .ekskul__media,
   .ekskul__body {
     width: 80%;
+  }
+  .ekskul__media {
+    max-width: 350px;
+    margin: 0 auto;
   }
 
   .facility-grid {
@@ -719,15 +712,35 @@
   }
   .news-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
+  .news-header .section-header {
+    text-align: center;
+  }
+  .news-header .section-header__divider {
+    margin-inline: auto;  
+  }
+
 }
 
 /* ════════════════════════════════════════════════════════════
    RESPONSIVE — Mobile (≤ 768px)
    ════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
+  /* ── Hero ── */
+  .hero {
+    height: 100svh;
+    min-height: 520px;
+  }
+  .hero__desc-wrapper {
+    height: clamp(60px, 12vw, 80px);
+  }
+  .hero__keyword-track span {
+    font-size: clamp(38px, 14vw, 60px);
+  }
 
+  /* ── Tentang Kami ── */
   .about__grid {
     grid-template-columns: 1fr;
   }
@@ -739,26 +752,58 @@
     flex-wrap: wrap;
     gap: 12px;
   }
+  .about__body {
+    align-items: center;
+    text-align: center;
+  }
+  .about__vm-item {
+    text-align: left;
+  }
+  .about__stats {
+    justify-items: center;
+    align-items: center;
+  }
 
+  /* ── Kristoforus Value ── */
+  .section--split {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .section--split__text {
+    text-align: center;
+  }
+  .section--split__text .btn {
+    display: block;
+    margin-inline: auto;
+  }
+
+  /* ── Ekstrakulikuler ── */
   .section--ekskul {
     flex-direction: column;
     gap: 24px;
+    align-items: center;
+    text-align: center;
   }
   .ekskul__media,
   .ekskul__body {
     width: 100%;
   }
+  .ekskul__media {
+    max-width: 300px;
+    margin: 0 auto;
+  }
   .ekskul__media img {
     aspect-ratio: 16 / 9;
   }
+  .ekskul__body .btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: auto;
+  }
 
-  .hero {
-    height: 100svh;
-    min-height: 520px;
-  }
-  .hero__desc-wrapper {
-    height: clamp(60px, 12vw, 80px);
-  }
+  /* ── Berita & Pengumuman ── */
 
   .news-featured {
     grid-template-columns: 1fr;
@@ -766,8 +811,16 @@
   .news-featured__media {
     height: 220px;
   }
+  .news-featured__body {
+    align-items: center;
+    text-align: center;
+  }
   .news-list {
     grid-template-columns: 1fr;
+  }
+  .news-card__body {
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -801,9 +854,6 @@
     align-items: center;
     gap: 8px;
   }
-  .hero__keyword-track span {
-    font-size: clamp(38px, 14vw, 60px);
-  }
 }
 
 /* ════════════════════════════════════════════════════════════
@@ -825,109 +875,5 @@
   .about__stat-label {
     font-size: 11px;
     text-align: left;
-  }
-}
-
-@media (max-width: 768px) {
-  /* ── Tentang Kami ── */
-  .about__grid {
-    grid-template-columns: 1fr;
-  }
-  .about__photo {
-    aspect-ratio: 16 / 9;
-  }
-
-  .about__actions {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .about__body {
-    align-items: center;
-    text-align: center;
-  }
-
-  .about__vm-item {
-    text-align: left;
-  } /* teks visi misi tetap kiri agar mudah dibaca */
-
-  .about__stats {
-    justify-items: center;
-    align-items: center;
-    vertical-align: middle;
-  }
-
-  /* ── Section Header (global, berlaku untuk semua section) ── */
-  .section-header {
-    text-align: center;
-  }
-  .section-header__divider {
-    margin-inline: auto;
-  }
-
-  /* ── Kristoforus Value ── */
-  .section--split {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .section--split__text {
-    text-align: center;
-  }
-  .section--split__text .btn {
-    display: block;
-    margin-inline: auto;
-  }
-
-  /* ── Ekstrakulikuler ── */
-  .section--ekskul {
-    flex-direction: column;
-    gap: 24px;
-    align-items: center;
-    text-align: center;
-  }
-  .ekskul__media,
-  .ekskul__body {
-    width: 100%;
-  }
-  .ekskul__media img {
-    aspect-ratio: 16 / 9;
-  }
-  .ekskul__body .btn {
-    display: block;
-    margin-inline: auto;
-  }
-
-  /* ── Berita & Pengumuman ── */
-  .news-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .news-featured {
-    grid-template-columns: 1fr;
-  }
-  .news-featured__media {
-    height: 220px;
-  }
-  .news-featured__body {
-    align-items: center;
-    text-align: center;
-  }
-  .news-list {
-    grid-template-columns: 1fr;
-  }
-  .news-card__body {
-    align-items: center;
-    text-align: center;
-  }
-
-  /* Hero */
-  .hero {
-    height: 100svh;
-    min-height: 520px;
-  }
-  .hero__desc-wrapper {
-    height: clamp(60px, 12vw, 80px);
   }
 }

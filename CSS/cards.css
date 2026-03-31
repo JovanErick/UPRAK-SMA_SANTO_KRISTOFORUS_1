@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* ══════════════════════════════════════════════
-   SHARED: FILTER BAR
+   FILTER BAR — Bar filter kategori (sticky)
    ══════════════════════════════════════════════ */
 .fac-filter,
 .ekskul-filter {
@@ -60,7 +60,7 @@
 }
 
 /* ══════════════════════════════════════════════
-   SHARED: MAIN WRAPPER
+   MAIN WRAPPER — Area konten utama
    ══════════════════════════════════════════════ */
 .fac-main,
 .ekskul-main {
@@ -69,7 +69,7 @@
 }
 
 /* ══════════════════════════════════════════════
-   SHARED: SECTION DIVIDER LABEL
+   SECTION DIVIDER LABEL — Label pemisah antar kategori
    ══════════════════════════════════════════════ */
 .fac-section-title,
 .ekskul-section-label {
@@ -98,7 +98,7 @@
 }
 
 /* ══════════════════════════════════════════════
-   SHARED: GRID
+   GRID — Tata letak kartu
    ══════════════════════════════════════════════ */
 .fac-grid,
 .ekskul-grid {
@@ -108,7 +108,7 @@
 }
 
 /* ══════════════════════════════════════════════
-   SHARED: CARD BASE
+   CARD BASE — Kartu fasilitas & ekstrakulikuler
    ══════════════════════════════════════════════ */
 .fac-card,
 .ekskul-card {
@@ -148,6 +148,7 @@
   aspect-ratio: 16 / 10;
   background: var(--clr-tertiary);
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .fac-card__media img,
@@ -276,7 +277,7 @@
 .fac-card__tag i,
 .ekskul-card__tag i { color: var(--clr-primary); font-size: 10px; }
 
-/* ── Filter hide/show ── */
+/* ── Visibilitas filter ── */
 .fac-card.is-hidden,
 .ekskul-card.is-hidden          { display: none; }
 
@@ -284,7 +285,7 @@
 .ekskul-section-label.is-hidden { display: none; }
 
 /* ══════════════════════════════════════════════
-   FAC HERO
+   FAC HERO — Hero halaman fasilitas
    ══════════════════════════════════════════════ */
 .fac-hero {
   position: relative;
@@ -300,7 +301,7 @@
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("../Image/Index/Carousel_1.jpeg") center / cover no-repeat;
+  background: url("../Image/Index/Carousel_1.webp") center / cover no-repeat;
 }
 
 .fac-hero::after {
@@ -388,69 +389,87 @@
 }
 
 /* ══════════════════════════════════════════════
-   EKSKUL HERO
+   EKSKUL HERO — Hero halaman ekstrakulikuler
    ══════════════════════════════════════════════ */
-  .ekskul-hero {
-        position: relative;
-        padding: clamp(48px, 8vw, 80px) clamp(16px, 8vw, 275px) clamp(40px, 6vw, 64px);
-        background: var(--clr-secondary);
-        overflow: hidden;
-        color: var(--clr-white);
-      }
-      .ekskul-hero::before {
-        content: "";
-        position: absolute; inset: 0; z-index: 0;
-        background: linear-gradient(135deg, #1a2a4a 0%, var(--clr-secondary) 100%);
-        opacity: 0.95;
-      }
-      /* Dekoratif: lingkaran samar */
-      .ekskul-hero::after {
-        content: "";
-        position: absolute;
-        width: 520px; height: 520px;
-        border-radius: 50%;
-        border: 80px solid rgba(61,109,183,0.12);
-        top: -160px; right: -120px;
-        z-index: 0;
-        pointer-events: none;
-      }
-      .ekskul-hero__inner {
-        position: relative; z-index: 1;
-        max-width: 640px;
-      }
-      .ekskul-hero__breadcrumb {
-        display: flex; align-items: center; gap: 8px;
-        font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
-        color: rgba(255,255,255,0.5); margin-bottom: 20px;
-      }
-      .ekskul-hero__breadcrumb a { color: rgba(255,255,255,0.6); transition: color var(--transition); }
-      .ekskul-hero__breadcrumb a:hover { color: var(--clr-white); }
-      .ekskul-hero__breadcrumb i { font-size: 9px; }
-      .ekskul-hero__label {
-        font-size: 11px; font-weight: 600; letter-spacing: 3px;
-        text-transform: uppercase; color: var(--clr-primary);
-        margin-bottom: 12px; display: block;
-      }
-      .ekskul-hero__title {
-        font-family: var(--ff-heading);
-        font-size: clamp(28px, 5vw, 52px);
-        color: var(--clr-white);
-        line-height: 1.15;
-        margin-bottom: 16px;
-      }
-      .ekskul-hero__desc {
-        font-size: clamp(13px, 1.5vw, 15px);
-        color: rgba(255,255,255,0.6);
-        line-height: 1.8;
-        max-width: 500px;
-      }
+.ekskul-hero {
+  position: relative;
+  padding: clamp(48px, 8vw, 80px) clamp(16px, 8vw, 275px) clamp(40px, 6vw, 64px);
+  background: var(--clr-secondary);
+  overflow: hidden;
+  color: var(--clr-white);
+}
+
+.ekskul-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, #1a2a4a 0%, var(--clr-secondary) 100%);
+  opacity: 0.95;
+}
+
+.ekskul-hero::after {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 80px solid rgba(61,109,183,0.12);
+  top: -160px;
+  right: -120px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ekskul-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+.ekskul-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 20px;
+}
+
+.ekskul-hero__breadcrumb a { color: rgba(255,255,255,0.6); transition: color var(--transition); }
+.ekskul-hero__breadcrumb a:hover { color: var(--clr-white); }
+.ekskul-hero__breadcrumb i { font-size: 9px; }
+
+.ekskul-hero__label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.ekskul-hero__title {
+  font-family: var(--ff-heading);
+  font-size: clamp(28px, 5vw, 52px);
+  color: var(--clr-white);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.ekskul-hero__desc {
+  font-size: clamp(13px, 1.5vw, 15px);
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  max-width: 500px;
+}
 
 /* ══════════════════════════════════════════════
-   CARD IMAGE SLIDER
-   Aktif ketika card diklik — overlay slider manual
+   CARD IMAGE SLIDER — Overlay slider gambar kartu
    ══════════════════════════════════════════════ */
-
-/* Overlay backdrop */
 .card-slider-overlay {
   position: fixed;
   inset: 0;
@@ -470,7 +489,6 @@
   pointer-events: all;
 }
 
-/* Slider container */
 .card-slider {
   position: relative;
   width: 100%;
@@ -487,7 +505,7 @@
   transform: scale(1);
 }
 
-/* Image track */
+/* ── Image track ── */
 .card-slider__track-wrap {
   position: relative;
   overflow: hidden;
@@ -514,7 +532,7 @@
   user-select: none;
 }
 
-/* Placeholder slide */
+/* ── Placeholder slide ── */
 .card-slider__slide-placeholder {
   flex: 0 0 100%;
   height: 100%;
@@ -528,6 +546,7 @@
 }
 
 .card-slider__slide-placeholder i { font-size: 48px; }
+
 .card-slider__slide-placeholder span {
   font-size: 12px;
   font-weight: 600;
@@ -535,7 +554,7 @@
   text-transform: uppercase;
 }
 
-/* Prev / Next buttons */
+/* ── Tombol prev / next ── */
 .card-slider__btn {
   position: absolute;
   top: 50%;
@@ -570,7 +589,7 @@
   pointer-events: none;
 }
 
-/* Dots */
+/* ── Dots navigasi ── */
 .card-slider__dots {
   position: absolute;
   bottom: 12px;
@@ -597,7 +616,7 @@
   transform: scale(1.25);
 }
 
-/* Counter badge */
+/* ── Counter badge ── */
 .card-slider__counter {
   position: absolute;
   top: 12px;
@@ -613,7 +632,7 @@
   backdrop-filter: blur(4px);
 }
 
-/* Info panel below image */
+/* ── Info panel & tombol tutup ── */
 .card-slider__info {
   padding: 18px 24px 20px;
   display: flex;
@@ -638,7 +657,6 @@
   line-height: 1.3;
 }
 
-/* Close button */
 .card-slider__close {
   width: 36px;
   height: 36px;
@@ -658,17 +676,6 @@
 .card-slider__close:hover {
   background: rgba(255,255,255,0.18);
   color: #fff;
-}
-
-/* Cursor hint on cards */
-.fac-card__media,
-.ekskul-card__media {
-  cursor: pointer;
-}
-
-.fac-card__media img,
-.ekskul-card__media img{
-  object-fit: cover;
 }
 
 /* ══════════════════════════════════════════════
@@ -697,8 +704,7 @@
   .fac-hero__meta { gap: 16px; }
 
   .fac-main,
-  .ekskul-main { padding: 50px 32px;
-    min-height: unset;}
+  .ekskul-main { padding: 50px 32px; min-height: unset; }
 
   .fac-grid,
   .ekskul-grid { grid-template-columns: 1fr; }

@@ -1,3 +1,10 @@
+/* ============================================================
+   KONTAK — Halaman Kontak
+   ============================================================ */
+
+/* ════════════════════════════════════════════════════════════
+   HERO KONTAK
+   ════════════════════════════════════════════════════════════ */
 .contact-hero {
   position: relative;
   padding: clamp(48px, 8vw, 80px) clamp(16px, 8vw, 275px) clamp(40px, 6vw, 64px);
@@ -14,6 +21,7 @@
   background: linear-gradient(135deg, #1a2a4a 0%, var(--clr-secondary) 100%);
   opacity: 0.95;
 }
+
 .contact-hero__inner {
   position: relative;
   z-index: 1;
@@ -80,9 +88,9 @@
   max-width: 500px;
 }
 
-/* ══════════════════════════════════════════════
-         MAIN LAYOUT
-         ══════════════════════════════════════════════ */
+/* ════════════════════════════════════════════════════════════
+   LAYOUT UTAMA (Grid 2 Kolom)
+   ════════════════════════════════════════════════════════════ */
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1.35fr;
@@ -92,9 +100,9 @@
   align-items: start;
 }
 
-/* ══════════════════════════════════════════════
-         INFO PANEL (left)
-         ══════════════════════════════════════════════ */
+/* ════════════════════════════════════════════════════════════
+   PANEL INFORMASI (Kiri)
+   ════════════════════════════════════════════════════════════ */
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -117,7 +125,7 @@
   border-bottom: 1px solid #e8eef7;
 }
 
-/* Detail items */
+/* Detail informasi (alamat, telepon, email, dll) */
 .contact-detail {
   width: 100%;
   display: flex;
@@ -174,7 +182,7 @@
   color: var(--clr-primary);
 }
 
-/* Social links */
+/* Media sosial */
 .contact-socmed {
   display: flex;
   gap: 10px;
@@ -224,7 +232,7 @@
   background: #010101;
 }
 
-/* Map embed placeholder */
+/* Peta (iframe) */
 .contact-map {
   border-radius: var(--radius);
   overflow: hidden;
@@ -240,9 +248,9 @@
   border: none;
 }
 
-/* ══════════════════════════════════════════════
-         FORM PANEL (right)
-         ══════════════════════════════════════════════ */
+/* ════════════════════════════════════════════════════════════
+   FORMULIR KONTAK (Kanan)
+   ════════════════════════════════════════════════════════════ */
 .contact-form-wrap {
   background: var(--clr-tertiary);
   border-radius: var(--radius);
@@ -263,7 +271,6 @@
   line-height: 1.7;
 }
 
-/* Form fields */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -337,7 +344,6 @@
   line-height: 1.7;
 }
 
-/* Character counter */
 .form-footer-row {
   display: flex;
   align-items: center;
@@ -352,7 +358,6 @@
   flex-shrink: 0;
 }
 
-/* Submit */
 .form-submit {
   width: 100%;
   padding: 13px 24px;
@@ -386,60 +391,9 @@
   transform: translateY(0);
 }
 
-/* Success state */
-.form-success {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 16px;
-  padding: 40px 20px;
-}
-
-.form-success__icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: #e8f5ee;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #2e7d52;
-  font-size: 28px;
-}
-
-.form-success__title {
-  font-family: var(--ff-heading);
-  font-size: 22px;
-  color: var(--clr-secondary);
-}
-
-.form-success__desc {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.75;
-  max-width: 300px;
-}
-
-.form-success__back {
-  margin-top: 8px;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--clr-primary);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* ══════════════════════════════════════════════
-         RESPONSIVE
-         ══════════════════════════════════════════════ */
+/* ════════════════════════════════════════════════════════════
+   TAMPILAN RESPONSIF
+   ════════════════════════════════════════════════════════════ */
 @media (max-width: 992px) {
   .contact-layout {
     grid-template-columns: 1fr;

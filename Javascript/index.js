@@ -13,7 +13,7 @@ let locked     = false;
 
 // Fungsi untuk mengatur lebar setiap cell (span) agar sesuai dengan lebar wrapper
 function setCellWidths() {
-  const w = wrapper.offsetWidth;
+  const w = Math.min(wrapper.offsetWidth, 700); // Cap at 700px to prevent overflow
   track.querySelectorAll('span').forEach(s => s.style.width = w + 'px');
 }
 
@@ -38,9 +38,10 @@ function next() {
   locked = true;
 
   const nextIdx = current + 1;
+  const slideWidth = Math.min(wrapper.offsetWidth, 700); // Use same capped width
 
   track.style.transition = 'transform 0.72s cubic-bezier(0.77,0,0.18,1)';
-  track.style.transform  = `translateX(-${nextIdx * wrapper.offsetWidth}px)`;
+  track.style.transform  = `translateX(-${nextIdx * slideWidth}px)`;
 
   descs.forEach(d => d.classList.remove('is-active'));
   descs[nextIdx % total].classList.add('is-active');
@@ -97,7 +98,7 @@ const observer = new IntersectionObserver((entries) => {
     
     // Hanya set active jika scrollY > 0 (tidak sedang di paling atas)
     if (window.scrollY > 0) {
-      removeActiveClasses(); // hapus semua dulu
+      removeActiveClasses();
       const id = entry.target.id;
       const desktopLink = document.querySelector(`#main-nav a[href="#${id}"]`);
       const mobileLink  = document.querySelector(`[data-mobile-link][href="#${id}"]`);
