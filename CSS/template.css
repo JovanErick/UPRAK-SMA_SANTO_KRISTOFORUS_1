@@ -129,7 +129,6 @@ h3 { font-size: clamp(16px, 2.5vw, 24px); }
   height: 3px;
   background: var(--clr-primary);
   border-radius: 3px;
-  margin: auto;
 }
 
 .section-header--center { text-align: center; }
@@ -493,6 +492,7 @@ h3 { font-size: clamp(16px, 2.5vw, 24px); }
    RESPONSIVE — Tablet (≤ 992px)
    ════════════════════════════════════════════════════════════ */
 @media (max-width: 992px) {
+  
   .site-nav           { display: none; }
   .site-header__cta   { display: none; }
   .site-header__hamburger {
@@ -500,7 +500,9 @@ h3 { font-size: clamp(16px, 2.5vw, 24px); }
     align-items: center;
     justify-content: center;
   }
-
+.section-header__divider {
+  margin: auto;
+  
   .site-footer__top {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
