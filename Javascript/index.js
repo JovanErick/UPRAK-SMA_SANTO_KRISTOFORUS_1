@@ -26,7 +26,7 @@ function startProgress() {
   fill.style.width = '0%';
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
-      fill.style.transition = `width ${INTERVAL}ms linear`;
+      fill.style.transition = `width ${INTERVAL + 450}ms linear`;
       fill.style.width = '100%';
     });
   });

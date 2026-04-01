@@ -16,7 +16,7 @@
             entry.target.classList.add("is-visible");
             // Berhenti observasi setelah animasi selesai (one-shot)
             observer.unobserve(entry.target);
-          }
+          } 
         });
       },
       { threshold: THRESHOLD }

@@ -170,7 +170,6 @@
       if (imgs.length) return imgs;
     }
 
-    // 3. Fallback: placeholder
     return [null];
   }
 
