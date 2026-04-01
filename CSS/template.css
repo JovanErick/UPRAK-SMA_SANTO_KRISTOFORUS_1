@@ -502,7 +502,7 @@ h3 { font-size: clamp(16px, 2.5vw, 24px); }
   }
 .section-header__divider {
   margin: auto;
-  
+}
   .site-footer__top {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
