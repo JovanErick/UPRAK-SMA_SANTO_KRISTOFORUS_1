@@ -129,6 +129,7 @@ h3 { font-size: clamp(16px, 2.5vw, 24px); }
   height: 3px;
   background: var(--clr-primary);
   border-radius: 3px;
+  margin: auto;
 }
 
 .section-header--center { text-align: center; }

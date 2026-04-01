@@ -656,6 +656,7 @@
     gap: 12px;
     flex-wrap: wrap;
   }
+  
 
   .section--split {
     flex-direction: column;
