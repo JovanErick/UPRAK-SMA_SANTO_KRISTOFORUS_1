@@ -69,6 +69,7 @@
 .hero__keyword-track {
   display: flex;
   width: max-content;
+  max-width: none;
   transition: transform 0.72s cubic-bezier(0.77, 0, 0.18, 1);
 }
 
